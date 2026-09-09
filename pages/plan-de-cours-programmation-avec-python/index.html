@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<p><strong>8 séances de 2 heures - cours préparatoire au cours d&#39;intelligence artificielle</strong></p>
+<h2 style="background-color: #FBF3DB;">1. Informations générales</h2>
+<table>
+<thead>
+<tr>
+<th>Élément</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Établissement / Département</td>
+<td>ESIH</td>
+</tr>
+<tr>
+<td>Intitulé du cours</td>
+<td>Programmation avec Python</td>
+</tr>
+<tr>
+<td>Niveau</td>
+<td>3ᵉ année, Informatique</td>
+</tr>
+<tr>
+<td>Volume horaire</td>
+<td>8 séances de 2 h - 16 h en présentiel</td>
+</tr>
+<tr>
+<td>Travail personnel estimé</td>
+<td>3 h par semaine, soit 24 h sur le cours</td>
+</tr>
+<tr>
+<td>Crédits</td>
+<td>[à compléter]</td>
+</tr>
+<tr>
+<td>Langue d&#39;enseignement</td>
+<td>Français</td>
+</tr>
+<tr>
+<td>Enseignant</td>
+<td>Louis Midson LAJEANTY</td>
+</tr>
+<tr>
+<td>Contact</td>
+<td><a href="mailto:louismidson.lajeanty@esih.edu">louismidson.lajeanty@esih.edu</a></td>
+</tr>
+</tbody></table>
+<p></p>
+
+<h2 style="background-color: #FBF3DB;">2. Présentation du cours</h2>
+<p>Si vous savez déjà programmer. Vous avez écrit du C, du C++ ou du PHP, vous connaissez les boucles, les fonctions, les classes. Ce cours ne va donc pas vous réapprendre à programmer : il va vous apprendre Python, et surtout vous préparer à ce qui vient ensuite.</p>
+<p>Car ce cours a une suite. Le cours d&#39;intelligence artificielle qui suivra se fera en Python, et il supposera acquises un certain nombre de choses : savoir installer un environnement et des bibliothèques, savoir charger et nettoyer un jeu de données, savoir manipuler des tableaux de nombres sans écrire de boucles, et savoir lire la documentation d&#39;une bibliothèque qu&#39;on n&#39;a jamais utilisée. C&#39;est exactement ce qu&#39;on va construire ici.</p>
+<p>Le cours est donc rapide sur ce que vous connaissez déjà et prend son temps sur ce qui est propre à Python : sa façon de manipuler les données, ses raccourcis d&#39;écriture, et son écosystème scientifique.</p>
+<p><strong>Une mise en garde utile.</strong> Venant du C, du C++ ou du PHP, la tentation est d&#39;écrire du Python avec les réflexes de ces langages. Ça fonctionne, mais c&#39;est lent, verbeux, et illisible pour les autres. Une bonne partie du travail de ce cours consiste à désapprendre certains automatismes.</p>
+<p><strong>Place dans la formation.</strong> Ce cours prolonge les acquis en programmation des deux premières années et prépare directement le cours d&#39;intelligence artificielle.</p>
+<p><strong>Prérequis.</strong> Avoir suivi un cours de programmation (C, C++, PHP ou équivalent) et un cours d&#39;algorithmique. Aucune connaissance de Python n&#39;est nécessaire.</p>
+<p><strong>Si vous n&#39;avez jamais programmé</strong>, ou très peu : le module 0 contient un parcours de mise en route, non noté et non obligatoire, qui reprend variables, conditions et boucles depuis le début. Suivez-le avant la séance 1.</p>
+<h2 style="background-color: #FBF3DB;">3. Résultats d&#39;apprentissage</h2>
+<p>À la fin de ce cours, l&#39;étudiant sera capable de :</p>
+<table>
+<thead>
+<tr>
+<th><strong>Code</strong></th>
+<th><strong>Résultat d&#39;apprentissage</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>RA1</td>
+<td>Mettre en place un projet Python avec uv et VS Code : version de Python, dépendances, exécution d&#39;un script et d&#39;un carnet de notes</td>
+</tr>
+<tr>
+<td>RA2</td>
+<td>Écrire du code Python idiomatique, en identifiant ce qui diffère du C/C++ et du PHP</td>
+</tr>
+<tr>
+<td>RA3</td>
+<td>Choisir et manipuler la structure de données adaptée à un problème, et utiliser les compréhensions</td>
+</tr>
+<tr>
+<td>RA4</td>
+<td>Découper un programme en fonctions et en modules, et passer une fonction en argument d&#39;une autre</td>
+</tr>
+<tr>
+<td>RA5</td>
+<td>Interpréter un message d&#39;erreur, déboguer un programme et traiter les cas d&#39;erreur prévisibles</td>
+</tr>
+<tr>
+<td>RA6</td>
+<td>Lire et écrire des fichiers texte, CSV et JSON</td>
+</tr>
+<tr>
+<td>RA7</td>
+<td>Écrire une classe simple et lire du code orienté objet issu d&#39;une bibliothèque</td>
+</tr>
+<tr>
+<td>RA8</td>
+<td>Manipuler des tableaux NumPy et remplacer une boucle par une opération vectorisée</td>
+</tr>
+<tr>
+<td>RA9</td>
+<td>Charger, nettoyer et explorer un jeu de données avec pandas</td>
+</tr>
+<tr>
+<td>RA10</td>
+<td>Réaliser une chaîne complète : charger des données, les traiter, les analyser et présenter le résultat</td>
+</tr>
+</tbody></table>
+<h2 style="background-color: #FBF3DB;">4. Déroulement d&#39;une séance</h2>
+<p>Chaque séance suit la même structure :</p>
+<table>
+<thead>
+<tr>
+<th><strong>Temps</strong></th>
+<th><strong>Activité</strong></th>
+<th><strong>Durée</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Contenu du cours</strong> - exposé avec démonstrations en direct, les étudiants codent en même temps</td>
+<td>55 min</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Exercices pratiques</strong> - courts exercices d&#39;application, seul ou à deux, corrigés en classe</td>
+<td>35 min</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Quiz en salle</strong> - questions sur ce qui vient d&#39;être vu, noté</td>
+<td>15 min</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Présentation du travail à rendre</strong> - consignes et questions</td>
+<td>10 min</td>
+</tr>
+</tbody></table>
+<p>Le travail à rendre est terminé chez soi et déposé avant la séance suivante.</p>
+<h2 style="background-color: #FBF3DB;">5. Calendrier des séances</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Séance</strong></th>
+<th><strong>Thème</strong></th>
+<th><strong>RA visés</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Python pour ceux qui programment déjà</td>
+<td>RA1, RA2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Structures de données et compréhensions</td>
+<td>RA3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Fonctions, modules et style Python</td>
+<td>RA4, RA2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Erreurs, fichiers et formats de données</td>
+<td>RA5, RA6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Classes et lecture de code de bibliothèque</td>
+<td>RA7</td>
+</tr>
+<tr>
+<td>6</td>
+<td>NumPy : penser en tableaux</td>
+<td>RA8</td>
+</tr>
+<tr>
+<td>7</td>
+<td>pandas : charger, nettoyer, explorer</td>
+<td>RA9</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Visualisation et chaîne complète</td>
+<td>RA10</td>
+</tr>
+</tbody></table>
+<p>Les séances 1 à 5 posent les bases du langage. Les séances 6 à 8 construisent la passerelle vers le cours d&#39;intelligence artificielle.</p>
+<h2 style="background-color: #FBF3DB;">6. Détail des séances</h2>
+<h3>Séance 1 - Python pour ceux qui programment déjà</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Ce qui change par rapport au C/C++ et au PHP : typage dynamique, indentation significative, pas de compilation, pas de gestion mémoire, tout est objet. Les types de base et leurs pièges. Conditions et boucles : la syntaxe en accéléré, et surtout la boucle for qui parcourt directement les éléments plutôt que les index. Les conventions d&#39;écriture (PEP 8). L&#39;outillage du cours : installation de uv, uv init pour créer un projet, uv add pour ajouter une bibliothèque, uv run pour exécuter, uv sync pour reproduire l&#39;environnement d&#39;un autre. Le rôle de pyproject.toml et de uv.lock. VS Code : extensions Python et Jupyter, sélection de l&#39;interpréteur du projet, carnets de notes.</p>
+</li>
+<li><p><strong>Exercices.</strong> Traduction en Python de courts programmes C++ ou PHP fournis, puis réécriture pour qu&#39;ils ressemblent à du vrai Python. Installation de uv et de VS Code, création d&#39;un premier projet, ajout d&#39;une bibliothèque et exécution.</p>
+</li>
+<li><p><strong>Quiz.</strong> Différences C/C++/PHP/Python, résultat d&#39;expressions simples, repérage de code écrit « en C++ déguisé ».</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Traduire un programme plus long, livré sous forme de projet uv complet (pyproject.toml inclus), avec un court texte expliquant les choix d&#39;écriture.</p>
+</li>
+</ul>
+<h3>Séance 2 - Structures de données et compréhensions</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Listes : indexation, découpage, index négatifs, méthodes courantes, mutabilité et effets de bord. Tuples et quand les préférer. Dictionnaires : accès, parcours, imbrication - la structure la plus utilisée en Python. Ensembles. Les compréhensions de listes et de dictionnaires : la façon idiomatique de transformer et filtrer des données. zip, enumerate, sorted avec clé.</p>
+</li>
+<li><p><strong>Exercices.</strong> Comptage d&#39;occurrences, filtrage et transformation d&#39;une liste de dictionnaires, regroupement de données, réécriture de boucles en compréhensions.</p>
+</li>
+<li><p><strong>Quiz.</strong> Choix de la bonne structure, résultat d&#39;un découpage, lecture d&#39;une compréhension, effets de bord sur une liste.</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Traitement d&#39;un petit jeu de données fourni sous forme de liste de dictionnaires : filtrage, regroupement, statistiques.</p>
+</li>
+</ul>
+<h3>Séance 3 - Fonctions, modules et style Python</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Définir une fonction, paramètres par défaut, arguments nommés, *args et **kwargs. Retours multiples. Portée des variables et pièges classiques. Docstrings et annotations de type. Les fonctions comme objets : passer une fonction en argument, lambda, map, filter, sorted(key=...) - indispensable pour comprendre le code des bibliothèques scientifiques. Organiser un projet en modules, import, if __name__ == &quot;__main__&quot;.</p>
+</li>
+<li><p><strong>Exercices.</strong> Écriture d&#39;une petite boîte à outils réutilisable, tri d&#39;une liste selon plusieurs critères, fonction qui prend une autre fonction en paramètre.</p>
+</li>
+<li><p><strong>Quiz.</strong> Passage d&#39;arguments, portée, lecture d&#39;une lambda, résultat d&#39;un sorted avec clé.</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Restructurer le travail de la séance 2 en modules et fonctions documentées.</p>
+</li>
+</ul>
+<h3>Séance 4 - Erreurs, fichiers et formats de données</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Lire une pile d&#39;appels et un message d&#39;erreur. Les erreurs les plus fréquentes. try, except, else, finally, lever une exception. Quand traiter et quand laisser remonter. Lire et écrire un fichier texte, le bloc with, chemins avec pathlib, encodage. Le format CSV et le module csv. Le format JSON et le module json. Passer d&#39;un fichier à une structure Python et l&#39;inverse.</p>
+</li>
+<li><p><strong>Exercices.</strong> Débogage de programmes cassés fournis par l&#39;enseignant, lecture d&#39;un CSV et calcul de statistiques, conversion CSV vers JSON, fiabilisation d&#39;un chargement de fichier.</p>
+</li>
+<li><p><strong>Quiz.</strong> Type d&#39;erreur à partir d&#39;un message, comportement d&#39;un bloc try, modes d&#39;ouverture, correspondance JSON/Python.</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Un programme qui charge un fichier de données réel, le valide, signale proprement les lignes défectueuses et produit un rapport.</p>
+</li>
+</ul>
+<h3>Séance 5 - Classes et lecture de code de bibliothèque</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Classes en Python : __init__, self, attributs, méthodes, __str__ et __repr__. Ce qui diffère du C++ et du PHP : pas de private réel, pas de surcharge de méthode, attributs ajoutés dynamiquement. Héritage simple, rapidement. Puis l&#39;objectif réel de la séance : savoir lire du code orienté objet qu&#39;on n&#39;a pas écrit. Anatomie d&#39;une bibliothèque, lecture d&#39;une documentation, sens du schéma objet = Classe(paramètres) puis objet.methode(données) qu&#39;on retrouve partout en apprentissage automatique.</p>
+</li>
+<li><p><strong>Exercices.</strong> Transformation d&#39;une structure de données en classe. Prise en main guidée d&#39;une bibliothèque tierce inconnue à partir de sa seule documentation.</p>
+</li>
+<li><p><strong>Quiz.</strong> Rôle de self, différences avec le C++ et le PHP, lecture d&#39;un extrait de code de bibliothèque.</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Utiliser une bibliothèque non vue en cours pour résoudre un petit problème, en documentant la démarche de lecture de la documentation.</p>
+</li>
+</ul>
+<h3>Séance 6 - NumPy : penser en tableaux</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Pourquoi une liste Python ne suffit pas pour du calcul numérique. Le tableau NumPy : création, forme, type, dimensions. Indexation, découpage, indexation booléenne. Opérations élément par élément et diffusion (<em>broadcasting</em>). Fonctions d&#39;agrégation et notion d&#39;axe. Le changement de réflexe central : remplacer une boucle par une opération sur le tableau entier. Comparaison de performance mesurée en direct.</p>
+</li>
+<li><p><strong>Exercices.</strong> Réécriture sans boucle de traitements écrits avec boucles, filtrage par condition, statistiques par ligne et par colonne, normalisation d&#39;un tableau de données.</p>
+</li>
+<li><p><strong>Quiz.</strong> Forme d&#39;un tableau après opération, résultat d&#39;une indexation booléenne, notion d&#39;axe, repérage d&#39;une boucle inutile.</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Reprendre un traitement écrit à la séance 2 avec des boucles et le réécrire en NumPy, en comparant les temps d&#39;exécution. <strong>Le sujet du projet final est distribué à cette séance.</strong></p>
+</li>
+</ul>
+<h3>Séance 7 - pandas : charger, nettoyer, explorer</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Series et DataFrame. Charger un fichier CSV. Inspecter un jeu de données : dimensions, types, premières lignes, statistiques descriptives. Sélectionner des colonnes et des lignes, loc et iloc. Filtrer avec des conditions. Créer des colonnes calculées. Gérer les valeurs manquantes. Regrouper avec groupby et agréger. Trier. Pourquoi le nettoyage des données occupe la majorité du temps d&#39;un projet d&#39;IA.</p>
+</li>
+<li><p><strong>Exercices.</strong> Exploration guidée d&#39;un jeu de données réel : première lecture, repérage des anomalies, nettoyage, réponses à une série de questions par filtrage et regroupement.</p>
+</li>
+<li><p><strong>Quiz.</strong> Différence entre loc et iloc, résultat d&#39;un filtrage, lecture d&#39;un groupby, traitement des valeurs manquantes.</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Nettoyer un jeu de données volontairement sale fourni par l&#39;enseignant et répondre à cinq questions d&#39;analyse.</p>
+</li>
+</ul>
+<h3>Séance 8 - Visualisation et chaîne complète</h3>
+<ul>
+<li><p><strong>Contenu du cours.</strong> Bases de la visualisation avec Matplotlib : courbe, histogramme, nuage de points, titres et légendes. Choisir le bon graphique selon la question posée. Puis la synthèse : assembler une chaîne complète, du fichier brut au résultat présenté. Organisation d&#39;un projet Python propre. Ce qui vous attend au cours d&#39;intelligence artificielle et ce que vous avez déjà entre les mains pour l&#39;aborder.</p>
+</li>
+<li><p><strong>Exercices.</strong> Production de trois graphiques à partir du jeu de données de la séance 7 et justification du choix de chacun.</p>
+</li>
+<li><p><strong>Quiz.</strong> Quiz récapitulatif couvrant l&#39;ensemble du cours.</p>
+</li>
+<li><p><strong>Travail à rendre.</strong> Finalisation et remise du projet final.</p>
+</li>
+</ul>
+<h2 style="background-color: #FBF3DB;">7. Modalités d&#39;évaluation</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Évaluation</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Compétences évaluées</strong></th>
+<th><strong>Pondération</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Quiz en salle</td>
+<td>8 quiz de 15 minutes, un par séance. Les 6 meilleurs résultats sont retenus.</td>
+<td>RA1 à RA9</td>
+<td>25 %</td>
+</tr>
+<tr>
+<td>Travaux à rendre</td>
+<td>7 travaux, remis avant la séance suivante.</td>
+<td>RA2 à RA9</td>
+<td>35 %</td>
+</tr>
+<tr>
+<td>Participation aux exercices</td>
+<td>Présence active et remise des exercices de séance.</td>
+<td>RA1 à RA9</td>
+<td>10 %</td>
+</tr>
+<tr>
+<td>Projet final</td>
+<td>Analyse complète d&#39;un jeu de données : chargement, nettoyage, traitement, visualisation et présentation des résultats. Sujet distribué à la séance 6, remis à la séance 8. Évalué sur une grille critériée remise avec le sujet.</td>
+<td>RA5, RA6, RA8, RA9, RA10</td>
+<td>30 %</td>
+</tr>
+</tbody></table>
+<p><strong>Critères communs à tous les travaux :</strong> le programme fonctionne, le code est lisible et écrit à la manière de Python, les structures choisies sont adaptées, les cas d&#39;erreur sont pris en compte, la démarche est expliquée.</p>
+<p>Les 6 meilleurs quiz sur 8 sont retenus : une absence ponctuelle ou une mauvaise journée ne pénalise pas durablement.</p>
+<h2 style="background-color: #FBF3DB;">8. Règles de fonctionnement</h2>
+<p><strong>Présence.</strong> La présence est nécessaire : le quiz se fait en salle et n&#39;est pas rattrapable, sauf absence justifiée signalée à l&#39;avance.</p>
+<p><strong>Remise des travaux.</strong> Les travaux se déposent sur <strong>Classmoji</strong>, sous forme de dépôt Git, avant le début de la séance suivante. Chaque travail est un dépôt privé à votre nom, et on remet en fermant l&#39;issue du travail. Le mode d&#39;emploi complet est dans le module 0.</p>
+<p>Vous disposez de <strong>trois tokens</strong> pour le semestre. Un token repousse une échéance de 24 heures, sans justification à fournir : vous le posez vous-même. Ils existent pour les coupures de courant et les connexions perdues, qui ne sont pas des négligences. Une fois les trois tokens dépensés, tout retard entraîne une pénalité de 10 % par jour entamé, jusqu&#39;à trois jours. Au-delà, le travail n&#39;est plus accepté.</p>
+<p><strong>Entraide et plagiat.</strong> Discuter d&#39;un problème entre étudiants est encouragé. En revanche, le code que vous remettez doit être écrit par vous et vous devez pouvoir l&#39;expliquer. Copier le travail d&#39;un autre, ou le laisser copier, expose aux sanctions prévues par le règlement de l&#39;établissement. En cas de doute, l&#39;enseignant peut demander à l&#39;étudiant d&#39;expliquer son code.</p>
+<p><strong>Intelligence artificielle.</strong> Les assistants d&#39;IA sont autorisés pour comprendre une notion, expliquer une erreur ou explorer une piste. Ils ne sont pas autorisés pour produire le code que vous remettez. Tout usage doit être mentionné en commentaire en tête du fichier. Rappel utile : le quiz et le projet se défendent en salle, sans assistance.</p>
+<p><strong>Outillage.</strong> Le cours utilise deux outils, et deux seulement : <strong>uv</strong> pour gérer Python, les projets et les bibliothèques, et <strong>VS Code</strong> comme éditeur. Ce choix est volontaire : moins de temps passé sur l&#39;outillage, plus de temps sur le langage. Tous les travaux sont remis sous forme de projet uv.</p>
+<p><strong>Git et GitHub</strong> servent uniquement à la remise des travaux. Ce ne sont pas des outils du cours : ils ne figurent dans aucun résultat d&#39;apprentissage et ne sont évalués nulle part. Le module 0 en donne le strict nécessaire, et une voie entièrement dans le navigateur existe pour ceux qui n&#39;ont pas d&#39;ordinateur.</p>
+<p><strong>Matériel.</strong> Un appareil connecté est nécessaire à chaque séance : ordinateur portable, ou à défaut téléphone ou tablette. Aucun étudiant n&#39;est pénalisé parce qu&#39;il ne possède pas d&#39;ordinateur. La section 9 détaille les solutions disponibles, et les travaux sont conçus pour être réalisables dans chacune d&#39;elles.</p>
+<h2 style="background-color: #FBF3DB;">9. Outils, accès au matériel et ressources</h2>
+<h3>9.1 Trois façons de travailler</h3>
+<p>Le cours ne suppose pas que vous possédiez un ordinateur. Trois configurations sont acceptées, et toutes les trois permettent de suivre les huit séances et de rendre les travaux. Choisissez la vôtre à la séance 1, avec l&#39;enseignant.</p>
+<h4>Option A - Ordinateur personnel avec uv et VS Code (configuration de référence)</h4>
+<ul>
+<li><p><strong>uv</strong>, depuis <a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a> - une seule installation à faire</p>
+</li>
+<li><p>uv installe lui-même la version de Python nécessaire : rien à télécharger séparément depuis python.org</p>
+</li>
+<li><p><strong>VS Code</strong>, avec les extensions Python et Jupyter</p>
+</li>
+<li><p>Les bibliothèques du cours s&#39;ajoutent au projet avec uv add numpy pandas matplotlib</p>
+</li>
+<li><p>Avantage : vous travaillez hors ligne, et l&#39;enseignant peut distribuer un projet que vous reproduisez à l&#39;identique avec uv sync</p>
+</li>
+</ul>
+<h4>Option B - Google Colab, depuis un navigateur</h4>
+<ul>
+<li><p>Adresse : <a href="https://colab.research.google.com">https://colab.research.google.com</a> - gratuit, un compte Google suffit</p>
+</li>
+<li><p>Rien à installer : Python, NumPy, pandas, Matplotlib et Jupyter sont déjà présents</p>
+</li>
+<li><p>Fonctionne sur ordinateur, sur tablette et sur téléphone</p>
+</li>
+<li><p>Les carnets s&#39;enregistrent automatiquement sur Google Drive et se rendent par lien partagé</p>
+</li>
+<li><p>Limite : il faut une connexion internet pendant toute la durée du travail, et uv n&#39;y est pas utilisé - les bibliothèques y sont déjà installées</p>
+</li>
+</ul>
+<h4>Option C - Téléphone, hors connexion</h4>
+<ul>
+<li><p>Pydroid 3 sur Android : interpréteur Python complet, fonctionne sans internet, permet d&#39;installer NumPy, pandas et Matplotlib</p>
+</li>
+<li><p>Pythonista sur iOS, ou Google Colab en mode connecté pour les appareils iOS</p>
+</li>
+<li><p>Limite : la saisie de code sur un petit écran est lente. Cette option convient pour les exercices courts et la révision, moins pour le projet final</p>
+</li>
+</ul>
+<h4>Mesures d&#39;accompagnement</h4>
+<ul>
+<li><p>Les étudiants sans ordinateur travaillent en binôme pendant les exercices en salle</p>
+</li>
+<li><p>La salle machine est ouverte [créneaux à préciser] pour le travail personnel et le projet</p>
+</li>
+<li><p>Tout travail est accepté sous forme de carnet Colab partagé, au même titre qu&#39;un projet uv</p>
+</li>
+<li><p>Les postes de la salle machine sont équipés de uv et de VS Code</p>
+</li>
+<li><p>L&#39;installation, quelle que soit l&#39;option, se fait en séance 1 avec l&#39;enseignant</p>
+</li>
+</ul>
+<h3>9.2 Ressources</h3>
+<h4>Site officiel et documentation</h4>
+<ul>
+<li><p>Documentation de uv : <a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a></p>
+</li>
+<li><p>Site officiel de Python : <a href="https://www.python.org">https://www.python.org</a></p>
+</li>
+<li><p>Documentation officielle en français : <a href="https://docs.python.org/fr/3/">https://docs.python.org/fr/3/</a></p>
+</li>
+<li><p>Guide de style PEP 8 : <a href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a></p>
+</li>
+<li><p>Documentation NumPy : <a href="https://numpy.org/doc/stable/">https://numpy.org/doc/stable/</a></p>
+</li>
+<li><p>Documentation pandas : <a href="https://pandas.pydata.org/docs/">https://pandas.pydata.org/docs/</a></p>
+</li>
+<li><p>Documentation Matplotlib : <a href="https://matplotlib.org/stable/">https://matplotlib.org/stable/</a></p>
+</li>
+</ul>
+<h4>Ressources complémentaires</h4>
+<ul>
+<li><p><em>Python Data Science Handbook</em>, Jake VanderPlas - disponible gratuitement en ligne</p>
+</li>
+<li><p><em>Automate the Boring Stuff with Python</em>, Al Sweigart - disponible gratuitement en ligne</p>
+</li>
+</ul>
+
+</body>
+</html>
