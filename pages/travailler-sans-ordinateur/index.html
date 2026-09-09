@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="background-color: #FBF3DB;">Le principe</h2>
+<p>Ce cours ne suppose pas que vous possédiez un ordinateur. <strong>Aucune opération du cours n&#39;en exige un</strong> : lire les supports, écrire du code, rendre un travail, lire les remarques de l&#39;enseignant - tout se fait depuis un navigateur, y compris sur téléphone.</p>
+<p>Ce n&#39;est pas une version au rabais. Vous rendez le même travail, il est évalué sur la même grille, et rien dans la note ne dépend de votre matériel. La seule chose que vous perdez, c&#39;est du confort de saisie, et il existe des façons de le compenser.</p>
+<p>Dites à l&#39;enseignant, à la séance 1, dans quelle situation vous êtes. Pas pour être traité différemment : pour qu&#39;il prévoie les créneaux de salle machine et les binômes en conséquence.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Trois configurations, toutes acceptées</h2>
+<h3>Option A - Ordinateur personnel avec uv et VS Code</h3>
+<p>La configuration de référence, décrite dans la page « Installer son environnement ». Vous travaillez hors ligne, et vous reproduisez à l&#39;identique un projet distribué en cours.</p>
+<h3>Option B - Google Colab, dans un navigateur</h3>
+<p><strong><a href="https://colab.research.google.com">colab.research.google.com</a></strong> - gratuit, un compte Google suffit.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Ce qui est déjà là</strong></td>
+<td>Python, NumPy, pandas, Matplotlib, Jupyter. Rien à installer</td>
+</tr>
+<tr>
+<td><strong>Où ça marche</strong></td>
+<td>Ordinateur, tablette, téléphone</td>
+</tr>
+<tr>
+<td><strong>Sauvegarde</strong></td>
+<td>Automatique, sur Google Drive</td>
+</tr>
+<tr>
+<td><strong>La limite</strong></td>
+<td>Il faut une connexion pendant toute la durée du travail</td>
+</tr>
+<tr>
+<td><strong>L&#39;autre limite</strong></td>
+<td>uv n&#39;y est pas utilisé - les bibliothèques y sont déjà installées, donc vous ne pratiquerez pas cette partie du cours. Voir plus bas</td>
+</tr>
+</tbody></table>
+<h3>Option C - Téléphone, hors connexion</h3>
+<table>
+<thead>
+<tr>
+<th>Système</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Android</td>
+<td><strong>Pydroid 3</strong> - interpréteur Python complet, fonctionne sans internet, permet d&#39;installer NumPy, pandas et Matplotlib</td>
+</tr>
+<tr>
+<td>iOS</td>
+<td><strong>Pythonista</strong>, ou Colab en mode connecté</td>
+</tr>
+</tbody></table>
+<p>Convient pour les exercices courts et la révision. Moins pour le projet final, où la saisie sur petit écran devient pénible.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Rendre un travail depuis un navigateur</h2>
+<p>Aucune commande Git. Cinq étapes, sur la page de votre dépôt GitHub.</p>
+<ol>
+<li><strong>Ouvrez le lien du dépôt</strong> que vous avez reçu. Vous voyez la liste des fichiers et l&#39;énoncé</li>
+<li><strong>Lisez l&#39;issue</strong> attachée au dépôt : c&#39;est là qu&#39;est décrit ce qui est attendu</li>
+<li><strong>Écrivez votre code</strong> dans Colab, ou dans Pydroid, ou directement sur GitHub en cliquant sur un fichier puis sur l&#39;icône du crayon</li>
+<li><strong>Déposez vos fichiers</strong> : bouton <code>Add file</code> → <code>Upload files</code>, glissez vos fichiers, écrivez un court message, puis <code>Commit changes</code></li>
+<li><strong>Fermez l&#39;issue.</strong> C&#39;est ça, remettre</li>
+</ol>
+<p>Vérifiez toujours que vos fichiers apparaissent bien dans la liste du dépôt. Ce que vous voyez sur cette page est exactement ce que l&#39;enseignant voit.</p>
+<p><strong>Pour lire les remarques de l&#39;enseignant :</strong> onglet <code>Pull requests</code> du dépôt. Ses commentaires sont attachés aux lignes concernées de votre code.</p>
+<blockquote>
+<p><strong>Astuce.</strong> Sur la page d&#39;un dépôt, appuyez sur la touche <code>.</code> (le point) : GitHub ouvre un éditeur complet dans votre navigateur, avec l&#39;arborescence des fichiers. C&#39;est presque VS Code, sans rien installer. Ça marche aussi sur tablette.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Rendre un travail depuis Colab</h2>
+<p>Si vous travaillez en carnet Colab plutôt qu&#39;en projet uv :</p>
+<ol>
+<li>Nommez votre carnet comme l&#39;énoncé le demande - en général <code>tpN-nom-prenom</code></li>
+<li>Téléchargez-le : <code>Fichier → Télécharger → .ipynb</code></li>
+<li>Déposez le <code>.ipynb</code> dans votre dépôt, comme n&#39;importe quel fichier</li>
+<li>Ou, si l&#39;énoncé l&#39;autorise, remettez simplement le <strong>lien de partage</strong> du carnet dans l&#39;issue</li>
+</ol>
+<p><strong>Dans un carnet Colab, rendez visible ce qu&#39;un projet uv aurait montré :</strong> une première cellule de texte qui liste les bibliothèques utilisées et remplace le <code>pyproject.toml</code>, et un carnet qui <strong>s&#39;exécute de haut en bas sans erreur</strong>. C&#39;est ce qui sera vérifié. Avant de rendre : <code>Exécution → Redémarrer et tout exécuter</code>, et regardez que ça passe.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Le point à ne pas laisser passer : uv</h2>
+<p>Le premier résultat d&#39;apprentissage du cours - RA1 - porte sur la mise en place d&#39;un projet Python avec uv. <strong>Sur Colab, vous ne pratiquerez pas ça.</strong></p>
+<p>Ce n&#39;est pas une raison pour l&#39;ignorer : il est évalué dans les quiz, et il vous servira dès que vous aurez accès à une machine.</p>
+<p><strong>La solution prévue :</strong> un créneau en salle machine autour de la séance 1, pour que vous fassiez l&#39;installation et créiez un projet uv <strong>au moins une fois</strong>, de vos mains. Une heure suffit. Demandez le créneau à l&#39;enseignant à la séance 1, il est prévu au calendrier.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les séances qui demandent plus qu&#39;un téléphone</h2>
+<p>Toutes les séances se suivent sur téléphone. Deux sont nettement plus confortables sur une machine :</p>
+<table>
+<thead>
+<tr>
+<th>Séance</th>
+<th>Pourquoi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>4 - Erreurs, fichiers et formats de données</strong></td>
+<td>Chemins de fichiers, lecture et écriture, modules. C&#39;est la séance qui s&#39;adapte le moins bien. Un accès salle machine ce jour-là est recommandé</td>
+</tr>
+<tr>
+<td><strong>8 - Visualisation et projet final</strong></td>
+<td>Les graphiques et l&#39;assemblage du projet demandent de la place à l&#39;écran</td>
+</tr>
+</tbody></table>
+<p>Prévoyez un créneau en salle machine pour ces deux-là. Là encore : demandez, c&#39;est prévu.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les mesures du cours</h2>
+<p>Elles s&#39;appliquent sans que vous ayez à les demander :</p>
+<ul>
+<li><strong>Binômes pendant les exercices en salle</strong> - personne ne reste sans machine pendant les 35 minutes d&#39;exercices</li>
+<li><strong>La salle machine est ouverte</strong> pour le travail personnel et le projet, aux créneaux annoncés en séance</li>
+<li><strong>Les postes de la salle machine ont déjà uv et VS Code</strong> installés</li>
+<li><strong>Tout travail est accepté sous forme de carnet Colab</strong>, au même titre qu&#39;un projet uv</li>
+<li><strong>Trois tokens de report</strong> pour le semestre, à poser sans justification - ils existent pour les coupures de courant et les connexions perdues</li>
+</ul>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant la séance 1</h2>
+<ul>
+<li><input disabled="" type="checkbox"> J&#39;ai choisi ma configuration : A, B ou C</li>
+<li><input disabled="" type="checkbox"> Option B : mon compte Google fonctionne et j&#39;ai ouvert un carnet Colab</li>
+<li><input disabled="" type="checkbox"> Option C : Pydroid 3 est installé et exécute un <code>print(&quot;bonjour&quot;)</code></li>
+<li><input disabled="" type="checkbox"> Mon compte GitHub est créé et je sais ouvrir un dépôt dans le navigateur</li>
+<li><input disabled="" type="checkbox"> J&#39;ai déposé un fichier dans le dépôt d&#39;entraînement <code>00-prise-en-main</code> et fermé son issue</li>
+<li><input disabled="" type="checkbox"> Je signale ma situation à l&#39;enseignant à la séance 1, pour le créneau salle machine</li>
+</ul>
+
+</body>
+</html>
