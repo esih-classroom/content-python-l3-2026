@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="background-color: #FBF3DB;">Pourquoi ce cours vous demande ça</h2>
+<p>Vous ne rendrez pas des fichiers dans ce cours, vous rendrez des <strong>projets</strong>. Un projet Python, ce n&#39;est pas un <code>.py</code> isolé : c&#39;est un dossier avec le programme, la liste des bibliothèques dont il a besoin (<code>pyproject.toml</code>), et les versions exactes de ces bibliothèques (<code>uv.lock</code>). C&#39;est ce qui permet à l&#39;enseignant de reconstruire votre environnement à l&#39;identique avec une seule commande et d&#39;obtenir le même résultat que vous.</p>
+<p>Envoyer ça par courriel ou en archive ne marche pas : il manque toujours un fichier, ou l&#39;archive pèse 200 Mo parce qu&#39;elle contient un dossier qui n&#39;avait rien à y faire. Git règle le problème une fois pour toutes.</p>
+<p><strong>Ce que vous devez savoir avant de continuer :</strong> Git n&#39;est pas au programme de ce cours. Il ne figure dans aucun résultat d&#39;apprentissage, il n&#39;est évalué nulle part, et personne ne vous demandera de faire un <code>rebase</code>. Vous en apprenez ici le strict nécessaire pour rendre votre travail. Cette page est un mode d&#39;emploi, pas un chapitre.</p>
+<p>Cela dit, vous en aurez besoin dans à peu près tous les emplois de développeur qui existent. Autant commencer maintenant, dans un cadre où une erreur ne coûte rien.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">1. Six mots à comprendre</h2>
+<p>C&#39;est tout le vocabulaire dont vous avez besoin.</p>
+<table>
+<thead>
+<tr>
+<th>Mot</th>
+<th>Ce que c&#39;est</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Dépôt</strong> <em>(repository, « repo »)</em></td>
+<td>Un dossier de projet dont on garde l&#39;historique. Votre dossier de travail, plus sa mémoire</td>
+</tr>
+<tr>
+<td><strong>Commit</strong></td>
+<td>Une photo de l&#39;état du projet à un instant, avec un message qui dit ce que vous venez de faire. C&#39;est l&#39;unité de base : on ne sauvegarde pas un fichier, on enregistre un état</td>
+</tr>
+<tr>
+<td><strong>Historique</strong></td>
+<td>La suite des commits. On peut y revenir, comparer deux états, voir qui a écrit quoi et quand</td>
+</tr>
+<tr>
+<td><strong>Distant</strong> <em>(remote)</em></td>
+<td>La copie du dépôt qui vit sur GitHub. La vôtre est sur votre machine ; les deux se synchronisent quand vous le demandez</td>
+</tr>
+<tr>
+<td><strong>Issue</strong></td>
+<td>Un fil de discussion attaché au dépôt. Dans ce cours, <strong>chaque travail à rendre est une issue</strong> - l&#39;énoncé y est écrit, et vous la fermez pour remettre</td>
+</tr>
+<tr>
+<td><strong>Pull request</strong> <em>(PR)</em></td>
+<td>Une proposition de modification, avec une discussion ligne par ligne. Dans ce cours, <strong>c&#39;est là que l&#39;enseignant écrit ses remarques sur votre code</strong></td>
+</tr>
+</tbody></table>
+<p>Deux précisions qui évitent des malentendus :</p>
+<ul>
+<li><strong>Git et GitHub ne sont pas la même chose.</strong> Git est le programme qui gère l&#39;historique, sur votre machine, hors connexion. GitHub est un site qui héberge des dépôts Git et ajoute autour des issues, des pull requests, des permissions. Vous pouvez utiliser Git sans GitHub. Ici, vous utiliserez les deux.</li>
+<li><strong>Un commit n&#39;est pas une sauvegarde automatique.</strong> Rien ne part tant que vous ne le demandez pas. C&#39;est déroutant au début, et c&#39;est aussi ce qui fait que vous contrôlez exactement ce que l&#39;enseignant voit.</li>
+</ul>
+<hr>
+<h2 style="background-color: #FBF3DB;">2. Créer votre compte GitHub</h2>
+<p>À faire maintenant, avant la séance 1 - sans compte, vous ne pouvez rien recevoir.</p>
+<ol>
+<li>Allez sur <strong><a href="https://github.com/signup">github.com/signup</a></strong></li>
+<li>Choisissez un nom d&#39;utilisateur. <strong>Il sera visible par tout le monde et vous le garderez des années.</strong> Prenez votre nom, ou une variante lisible : <code>jsaintil</code>, <code>ana-pierre</code>. Évitez <code>xX_dark_coder_Xx</code>, vous le regretterez au premier entretien d&#39;embauche</li>
+<li>Utilisez une adresse de courriel que vous consultez : les notifications du cours y arriveront</li>
+<li>Activez la <strong>double authentification</strong> quand GitHub vous le propose. C&#39;est obligatoire sur GitHub, et vous serez bloqué plus tard si vous la reportez</li>
+<li>Envoyez votre nom d&#39;utilisateur à l&#39;enseignant, par le canal indiqué en séance</li>
+</ol>
+<blockquote>
+<p><strong>Le compte est gratuit et le restera.</strong> Vos dépôts de cours sont privés : seuls vous et l&#39;enseignant les voyez.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">3. Deux façons de travailler - choisissez la vôtre</h2>
+<p>Les deux sont acceptées toute l&#39;année, et vous pouvez passer de l&#39;une à l&#39;autre.</p>
+<h3>Voie A - Git installé sur votre machine</h3>
+<p>C&#39;est la voie normale si vous avez un ordinateur. Vous travaillez dans VS Code, comme pour le reste du cours.</p>
+<p><strong>Installer Git</strong></p>
+<table>
+<thead>
+<tr>
+<th>Système</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows</td>
+<td><a href="https://git-scm.com/download/win">git-scm.com/download/win</a>, installateur, tout par défaut</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td><code>xcode-select --install</code> dans le Terminal</td>
+</tr>
+<tr>
+<td>Linux</td>
+<td><code>sudo apt install git</code>, ou l&#39;équivalent de votre distribution</td>
+</tr>
+</tbody></table>
+<p>Vérifiez, puis dites à Git qui vous êtes - ces deux lignes ne se font <strong>qu&#39;une fois dans votre vie</strong> :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-bash">git --version
+git config --global user.name &quot;Votre Nom&quot;
+git config --global user.email &quot;votre.adresse@exemple.com&quot;</code></pre></div></div></div>
+<p>Mettez la même adresse que sur GitHub, sinon vos commits ne seront pas reliés à votre compte.</p>
+<h3>Voie B - Tout dans le navigateur</h3>
+<p><strong>Rien à installer, et ça marche sur téléphone.</strong> Vous ne tapez aucune commande Git : vous ouvrez la page de votre dépôt sur GitHub, vous téléversez ou modifiez vos fichiers, et c&#39;est fait.</p>
+<p>C&#39;est la voie prévue pour ceux qui n&#39;ont pas d&#39;ordinateur personnel. Elle n&#39;est pas un rabais : vous rendez exactement le même dépôt et vous êtes noté exactement pareil. La page « Travailler sans ordinateur » de ce module détaille la marche à suivre.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">4. Le déroulé d&#39;un travail, du début à la fin</h2>
+<p>Cinq étapes, les mêmes toute l&#39;année.</p>
+<h3>1. Vous recevez le dépôt</h3>
+<p>Quand l&#39;enseignant publie un travail, Classmoji crée <strong>un dépôt privé à votre nom</strong>, à partir d&#39;un modèle. Vous recevez un lien. Le dépôt contient déjà l&#39;énoncé, les fichiers de départ, et une <strong>issue</strong> qui décrit ce qui est attendu.</p>
+<p>Vous ne créez jamais de dépôt vous-même dans ce cours.</p>
+<h3>2. Vous le récupérez</h3>
+<p><em>Voie A :</em></p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-bash">git clone https://github.com/ORGANISATION/tp1-votre-nom.git
+cd tp1-votre-nom</code></pre></div></div></div>
+<p><code>git clone</code> copie le dépôt sur votre machine, avec tout son historique. Vous ne le faites qu&#39;une fois par travail.</p>
+<p><em>Voie B :</em> rien à faire, vous travaillez directement sur la page du dépôt.</p>
+<h3>3. Vous travaillez</h3>
+<p>Comme d&#39;habitude : <code>uv run</code>, VS Code, les exercices du cours. Codez, testez, faites tourner.</p>
+<h3>4. Vous enregistrez et vous envoyez</h3>
+<p><em>Voie A :</em></p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-bash">git status                        # que s&#39;est-il passé depuis la dernière fois ?
+git add .                         # je prépare tout ce qui a changé
+git commit -m &quot;Traduction du programme et notes&quot;
+git push                          # j&#39;envoie sur GitHub</code></pre></div></div></div>
+<p><strong>Faites-le plusieurs fois pendant votre travail, pas une seule fois à la fin.</strong> Un commit toutes les demi-heures, avec un message qui dit ce que vous venez de faire. C&#39;est votre filet de sécurité : tant que vous n&#39;avez pas poussé, votre travail n&#39;existe que sur votre machine.</p>
+<p><em>Voie B :</em> sur la page du dépôt, <code>Add file</code> → <code>Upload files</code>, puis un message et <code>Commit changes</code>. Le commit se fait dans le navigateur.</p>
+<p>Vérifiez toujours que vos fichiers sont bien visibles sur la page GitHub du dépôt. Si vous ne les voyez pas là, l&#39;enseignant ne les voit pas non plus.</p>
+<h3>5. Vous remettez</h3>
+<p><strong>Fermer l&#39;issue du travail, c&#39;est remettre.</strong> Tant que l&#39;issue est ouverte, le travail n&#39;est pas rendu, même si votre code est poussé. Tant qu&#39;elle est fermée, il est rendu, à l&#39;heure de la fermeture.</p>
+<p>Écrivez un dernier commentaire dans l&#39;issue si vous avez quelque chose à signaler - un point que vous n&#39;avez pas réussi, un choix que vous voulez expliquer - puis fermez-la.</p>
+<h3>Et ensuite : le retour</h3>
+<p>L&#39;enseignant ouvre une <strong>pull request de retour</strong> sur votre dépôt. Ses remarques y sont attachées aux lignes concernées de votre code. Allez la lire : c&#39;est là que se trouve l&#39;essentiel de ce que vous avez à gagner, bien plus que dans la note.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">5. Les six commandes, et rien d&#39;autre</h2>
+<p>Voie A uniquement. Affichez cette table à côté de vous les premières semaines.</p>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Ce qu&#39;elle fait</th>
+<th>Quand</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>git clone &lt;lien&gt;</code></td>
+<td>Récupère un dépôt sur votre machine</td>
+<td>Une fois par travail</td>
+</tr>
+<tr>
+<td><code>git status</code></td>
+<td>Dit ce qui a changé et ce qui est prêt à partir</td>
+<td>Tout le temps. En cas de doute, c&#39;est la réponse</td>
+</tr>
+<tr>
+<td><code>git add .</code></td>
+<td>Prépare tout ce qui a changé</td>
+<td>Avant chaque commit</td>
+</tr>
+<tr>
+<td><code>git commit -m &quot;message&quot;</code></td>
+<td>Enregistre un état, avec sa description</td>
+<td>Plusieurs fois par séance de travail</td>
+</tr>
+<tr>
+<td><code>git push</code></td>
+<td>Envoie vos commits sur GitHub</td>
+<td>Après chaque commit, ou groupés</td>
+</tr>
+<tr>
+<td><code>git pull</code></td>
+<td>Récupère ce qui a changé sur GitHub</td>
+<td>Si l&#39;enseignant a modifié le dépôt</td>
+</tr>
+</tbody></table>
+<p>Vous n&#39;aurez besoin de rien d&#39;autre cette année. Si un tutoriel vous parle de branches, de <code>merge</code> ou de <code>rebase</code>, c&#39;est utile et intéressant - ce n&#39;est pas nécessaire ici.</p>
+<p><strong>Sur les messages de commit.</strong> Une phrase courte qui dit ce que vous venez de faire : <code>Traduction littérale du programme C++</code>, <code>Réécriture avec zip et f-strings</code>, <code>Ajout de NOTES.md</code>. Pas <code>update</code>, pas <code>fix</code>, pas <code>.</code>. Ce sont vos propres notes, et vous les relirez.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">6. Ce qu&#39;on ne met jamais dans un dépôt</h2>
+<p>Un dépôt contient <strong>votre travail</strong>, pas ce qu&#39;une machine peut régénérer.</p>
+<table>
+<thead>
+<tr>
+<th>À ne jamais envoyer</th>
+<th>Pourquoi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>.venv/</code></td>
+<td>Des centaines de mégaoctets, reconstructibles en une commande. C&#39;est la faute n° 1</td>
+</tr>
+<tr>
+<td><code>__pycache__/</code></td>
+<td>Généré automatiquement par Python</td>
+</tr>
+<tr>
+<td>Fichiers de données volumineux</td>
+<td>Sauf si l&#39;énoncé le demande explicitement</td>
+</tr>
+<tr>
+<td>Mots de passe, jetons, clés</td>
+<td>Un dépôt garde tout dans son historique. Ce qui y entre une fois y reste</td>
+</tr>
+</tbody></table>
+<p><strong>Bonne nouvelle : uv s&#39;en occupe déjà.</strong> Quand uv crée l&#39;environnement <code>.venv/</code> d&#39;un projet, il y dépose un fichier qui dit à Git de l&#39;ignorer entièrement. Vous ne l&#39;enverrez pas par accident, même sans y penser. Les dépôts modèles du cours ajoutent une règle pour <code>__pycache__/</code>.</p>
+<p>Le réflexe qui vous protège reste le même : <strong>regardez ce que <code>git status</code> affiche avant de commiter.</strong> Si vous y voyez apparaître des dizaines de fichiers que vous n&#39;avez pas écrits, arrêtez-vous et demandez.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">7. Ce qui va coincer, et quoi faire</h2>
+<h3>« GitHub me demande un mot de passe et le refuse »</h3>
+<p>Normal : GitHub n&#39;accepte plus les mots de passe pour envoyer du code. Trois solutions, de la plus simple à la plus manuelle :</p>
+<ol>
+<li><strong>Passez par VS Code.</strong> Il propose de vous connecter à GitHub et gère l&#39;authentification tout seul. C&#39;est de loin le plus simple, et vous avez déjà VS Code</li>
+<li><strong>Installez GitHub CLI</strong> (<a href="https://cli.github.com">cli.github.com</a>) et lancez <code>gh auth login</code>. Une fois, et c&#39;est réglé</li>
+<li><strong>Créez un jeton d&#39;accès personnel</strong> dans les réglages GitHub (<em>Settings → Developer settings → Personal access tokens</em>) et utilisez-le à la place du mot de passe. À faire seulement si les deux premières ne marchent pas</li>
+</ol>
+<h3>« Updates were rejected »</h3>
+<p>Le dépôt sur GitHub contient quelque chose que vous n&#39;avez pas. Faites <code>git pull</code>, puis <code>git push</code>. Si Git vous demande de résoudre un conflit et que vous ne savez pas quoi en faire, <strong>ne bricolez pas</strong> : demandez. Un conflit mal résolu perd du travail.</p>
+<h3>« J&#39;ai poussé, mais l&#39;enseignant ne voit rien »</h3>
+<p>Trois causes, dans l&#39;ordre de fréquence : vous avez commité sans pousser ; vous avez travaillé dans le mauvais dossier ; vous n&#39;avez pas fermé l&#39;issue. Ouvrez la page du dépôt sur GitHub - ce que vous y voyez est exactement ce que l&#39;enseignant voit.</p>
+<h3>« J&#39;ai tout cassé »</h3>
+<p>Vous n&#39;avez rien cassé. Git conserve l&#39;historique : tant que vous avez commité, l&#39;état précédent existe encore. Ne supprimez pas le dossier, ne recréez pas de dépôt, n&#39;effacez rien. Écrivez dans l&#39;issue ce que vous avez fait, et attendez.</p>
+<h3>Pas de connexion au moment de rendre</h3>
+<p>Vos commits restent sur votre machine et partiront au premier <code>git push</code> avec du réseau. Utilisez un <strong>token</strong> de report - le cours vous en donne, justement pour ça. Le mode d&#39;emploi est sur la page « Comment fonctionne ce cours ».</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Aide-mémoire</h2>
+<table>
+<thead>
+<tr>
+<th>Je veux…</th>
+<th>Voie A (machine)</th>
+<th>Voie B (navigateur)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Récupérer un travail</td>
+<td><code>git clone &lt;lien&gt;</code></td>
+<td>Ouvrir la page du dépôt</td>
+</tr>
+<tr>
+<td>Voir où j&#39;en suis</td>
+<td><code>git status</code></td>
+<td>Regarder la liste des fichiers</td>
+</tr>
+<tr>
+<td>Enregistrer</td>
+<td><code>git add .</code> puis <code>git commit -m &quot;…&quot;</code></td>
+<td><code>Add file</code> → <code>Upload files</code> → <code>Commit</code></td>
+</tr>
+<tr>
+<td>Envoyer</td>
+<td><code>git push</code></td>
+<td>Automatique, le commit envoie</td>
+</tr>
+<tr>
+<td>Remettre</td>
+<td>Fermer l&#39;issue</td>
+<td>Fermer l&#39;issue</td>
+</tr>
+<tr>
+<td>Lire le retour</td>
+<td>Onglet <code>Pull requests</code></td>
+<td>Onglet <code>Pull requests</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 style="background-color: #FBF3DB;">Pour aller plus loin</h2>
+<p>Rien de ceci n&#39;est exigé par le cours.</p>
+<ul>
+<li><a href="https://rogerdudler.github.io/git-guide/index.fr.html">Git - le guide en 15 minutes</a> - en français, très court</li>
+<li><a href="https://docs.github.com/fr">Documentation GitHub en français</a> - la référence, à consulter par recherche plutôt qu&#39;à lire</li>
+<li><a href="https://learngitbranching.js.org/?locale=fr_FR">Learn Git Branching</a> - un jeu pour comprendre les branches, quand vous en aurez besoin</li>
+</ul>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant la séance 1</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Mon compte GitHub est créé, la double authentification est activée</li>
+<li><input disabled="" type="checkbox"> J&#39;ai envoyé mon nom d&#39;utilisateur à l&#39;enseignant</li>
+<li><input disabled="" type="checkbox"> J&#39;ai choisi ma voie : Git installé, ou tout dans le navigateur</li>
+<li><input disabled="" type="checkbox"> Voie A seulement : <code>git --version</code> répond, et <code>user.name</code> et <code>user.email</code> sont réglés</li>
+<li><input disabled="" type="checkbox"> J&#39;ai récupéré le dépôt d&#39;entraînement <code>00-prise-en-main</code> du module 0</li>
+<li><input disabled="" type="checkbox"> J&#39;y ai fait un premier commit et fermé son issue</li>
+</ul>
+<p>Le dépôt d&#39;entraînement n&#39;est pas noté. Il existe pour que votre première remise ne soit pas celle qui compte.</p>
+
+</body>
+</html>
