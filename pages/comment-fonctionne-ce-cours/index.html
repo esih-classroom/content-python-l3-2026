@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="background-color: #FBF3DB;">Où se trouve quoi</h2>
+<p>Tout le cours vit ici, organisé en <strong>modules</strong>. Un module par séance, plus celui-ci.</p>
+<p>Un module apparaît le jour de sa séance et ne disparaît plus. Vous y trouverez, dans cet ordre :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Les diapositives</strong></td>
+<td>Ce qui a été projeté pendant la séance</td>
+</tr>
+<tr>
+<td><strong>Le support de cours</strong></td>
+<td>Le contenu de la séance, rédigé pour être lu seul. C&#39;est le document à conserver</td>
+</tr>
+<tr>
+<td><strong>Les exercices</strong></td>
+<td>Ceux faits en salle, avec leurs variantes pour travailler sans ordinateur</td>
+</tr>
+<tr>
+<td><strong>Le travail à rendre</strong></td>
+<td>L&#39;énoncé, les contraintes, la grille d&#39;évaluation</td>
+</tr>
+<tr>
+<td><strong>Le quiz</strong></td>
+<td>Passé en salle, noté</td>
+</tr>
+<tr>
+<td><strong>Les dépôts</strong></td>
+<td>Un par travail : c&#39;est là que vous codez et que vous rendez</td>
+</tr>
+</tbody></table>
+<p>Si un module n&#39;est pas encore visible, c&#39;est qu&#39;il n&#39;a pas eu lieu. Ce n&#39;est pas une erreur de votre côté.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Le déroulé d&#39;une séance</h2>
+<p>Les huit séances suivent exactement la même structure. Il n&#39;y a pas de surprise.</p>
+<table>
+<thead>
+<tr>
+<th>Temps</th>
+<th>Quoi</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>55 min</td>
+<td><strong>Le cours.</strong> Vous codez en même temps que l&#39;enseignant, sur votre machine</td>
+</tr>
+<tr>
+<td>35 min</td>
+<td><strong>Les exercices.</strong> Seul ou à deux, corrigés en classe</td>
+</tr>
+<tr>
+<td>15 min</td>
+<td><strong>Le quiz</strong>, noté</td>
+</tr>
+<tr>
+<td>10 min</td>
+<td><strong>Le travail à rendre</strong> est présenté. Vous le terminez chez vous</td>
+</tr>
+</tbody></table>
+<p>Venez avec de quoi coder : un ordinateur portable, ou à défaut un téléphone ou une tablette. Vous ne serez pas pénalisé si vous n&#39;avez pas d&#39;ordinateur lisez la page « Travailler sans ordinateur » de ce module.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Comment on rend un travail</h2>
+<p>C&#39;est la seule mécanique nouvelle du cours, et elle est toujours la même.</p>
+<ol>
+<li>Le travail vous arrive sous forme de <strong>dépôt privé à votre nom</strong>, créé automatiquement. Vous recevez un lien</li>
+<li>Le dépôt contient l&#39;énoncé, les fichiers de départ, et une <strong>issue</strong> qui décrit ce qui est attendu</li>
+<li>Vous travaillez et vous envoyez votre code au fur et à mesure</li>
+<li><strong>Vous fermez l&#39;issue.</strong> C&#39;est ça, remettre. L&#39;heure de fermeture est l&#39;heure de remise</li>
+<li>L&#39;enseignant ouvre une <strong>pull request de retour</strong> avec ses remarques, attachées aux lignes de votre code</li>
+</ol>
+<p>Tout ceci est expliqué pas à pas dans la page « Git et GitHub » de ce module. Lisez-la avant la séance 1 : c&#39;est la seule vraie préparation que le cours vous demande.</p>
+<blockquote>
+<p><strong>La règle qui explique tout le reste :</strong> on ne rend pas un fichier, on rend un <strong>projet complet</strong>. Un programme Python vient avec la liste des bibliothèques dont il a besoin et leurs versions exactes. C&#39;est ce qui permet à quelqu&#39;un d&#39;autre de reconstruire votre environnement et d&#39;obtenir votre résultat. Un <code>.py</code> seul ne vaut rien.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce qui fait votre note</h2>
+<table>
+<thead>
+<tr>
+<th>Poste</th>
+<th>Part</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Quiz en salle</strong></td>
+<td>25 %</td>
+<td>8 quiz de 15 minutes. <strong>Les 6 meilleurs sont retenus</strong></td>
+</tr>
+<tr>
+<td><strong>Travaux à rendre</strong></td>
+<td>35 %</td>
+<td>7 travaux, remis avant la séance suivante</td>
+</tr>
+<tr>
+<td><strong>Participation aux exercices</strong></td>
+<td>10 %</td>
+<td>Les exercices de séance sont rendus. On regarde qu&#39;ils sont faits, pas qu&#39;ils sont justes</td>
+</tr>
+<tr>
+<td><strong>Projet final</strong></td>
+<td>30 %</td>
+<td>Sujet donné à la séance 6, remis à la séance 8</td>
+</tr>
+</tbody></table>
+<p>Les six meilleurs quiz sur huit : une absence, une panne de courant ou une mauvaise journée ne se paient pas. C&#39;est prévu, ne vous inquiétez pas au premier accident.</p>
+<p><strong>Ce qui est regardé dans chaque travail</strong>, et qui vaut autant que « ça marche » : le code est lisible et écrit à la manière de Python, les structures choisies sont adaptées, les cas d&#39;erreur sont pris en compte, la démarche est expliquée.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les retards, et les tokens</h2>
+<p>Vous disposez de <strong>trois tokens</strong> pour le semestre. Un token repousse une échéance de 24 heures, sans avoir à écrire à qui que ce soit ni à vous justifier. Vous le posez vous-même sur le travail concerné.</p>
+<p>Ils existent pour une raison précise : une coupure de courant de deux jours ou une connexion perdue n&#39;est pas une négligence, et vous ne devriez pas avoir à en faire la demande - souvent, vous ne pouvez pas non plus.</p>
+<p>Une fois vos trois tokens dépensés, la règle du plan de cours s&#39;applique : <strong>−10 % par jour entamé, jusqu&#39;à trois jours, puis le travail n&#39;est plus accepté.</strong></p>
+<p>Conseil : gardez-en au moins un pour la fin du semestre, quand le projet final et le reste de vos cours tomberont en même temps.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Entraide, plagiat, et assistants d&#39;IA</h2>
+<p><strong>Discuter d&#39;un problème entre vous est encouragé.</strong> C&#39;est comme ça qu&#39;on apprend, et c&#39;est comme ça qu&#39;on travaille ensuite.</p>
+<p><strong>Le code que vous remettez doit être écrit par vous, et vous devez pouvoir l&#39;expliquer.</strong> Copier le travail d&#39;un autre, ou le laisser copier, expose aux sanctions du règlement de l&#39;établissement. En cas de doute, l&#39;enseignant peut vous demander d&#39;expliquer votre code et les quiz se passent en salle, sans assistance.</p>
+<p><strong>Les assistants d&#39;IA</strong> sont autorisés pour comprendre une notion, expliquer une erreur, explorer une piste. Ils ne le sont pas pour produire le code que vous rendez. Tout usage se mentionne en commentaire en tête de fichier. Une ligne suffit :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python"># Usage d&#39;IA : aucun
+# ou : Usage d&#39;IA : j&#39;ai demandé une explication de la fonction zip. Le code est de moi.</code></pre></div></div>
+<p>Ce n&#39;est pas un piège. Déclarer un usage honnête ne coûte aucun point. Ne pas le déclarer en coûte deux.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant la séance 1</h2>
+<p>Cinq choses, dans cet ordre. Comptez une heure en tout.</p>
+<ol>
+<li>Lire <strong>le plan de cours</strong> - c&#39;est le document de référence de l&#39;année</li>
+<li>Lire <strong>« Git et GitHub »</strong> et créer votre compte</li>
+<li>Lire <strong>« Installer son environnement »</strong> et installer uv et VS Code</li>
+<li>Si vous n&#39;avez pas d&#39;ordinateur : lire <strong>« Travailler sans ordinateur »</strong> et préparer votre solution</li>
+<li>Récupérer le dépôt d&#39;entraînement <strong><code>00-prise-en-main</code></strong>, y faire un commit, fermer son issue</li>
+</ol>
+<p>Le dépôt d&#39;entraînement n&#39;est pas noté. Il sert à ce que votre première remise ne soit pas celle qui compte.</p>
+<p><strong>Si quelque chose bloque</strong>, ne restez pas dessus la veille au soir : écrivez dans l&#39;issue du dépôt d&#39;entraînement. C&#39;est fait pour ça, et l&#39;enseignant y répond avant la séance.</p>
+
+</body>
+</html>
