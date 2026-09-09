@@ -1,0 +1,4186 @@
+{
+  "blocks": [
+    {
+      "id": "a1a5b375-e453-4733-8b54-1090bf44b6ee",
+      "type": "video",
+      "props": {
+        "url": "https://www.youtube.com/watch?v=V6Zo68uQPqE",
+        "caption": ""
+      },
+      "children": []
+    },
+    {
+      "id": "af97c63b-caf0-4b6b-acc1-e7d3b7a369ed",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pourquoi ce cours vous demande ça",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "70012cb9-109a-4f38-b026-e7a29dedee6f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous ne rendrez pas des fichiers dans ce cours, vous rendrez des ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "projets",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Un projet Python, ce n'est pas un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": ".py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " isolé : c'est un dossier avec le programme, la liste des bibliothèques dont il a besoin (",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "pyproject.toml",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "), et les versions exactes de ces bibliothèques (",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "uv.lock",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "). C'est ce qui permet à l'enseignant de reconstruire votre environnement à l'identique avec une seule commande et d'obtenir le même résultat que vous.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e183eb0d-17b9-4ee8-80b7-50d0d9190821",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Envoyer ça par courriel ou en archive ne marche pas : il manque toujours un fichier, ou l'archive pèse 200 Mo parce qu'elle contient un dossier qui n'avait rien à y faire. Git règle le problème une fois pour toutes.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "67501f3e-c326-4ef9-9bc1-0fc6d963922e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce que vous devez savoir avant de continuer :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Git n'est pas au programme de ce cours. Il ne figure dans aucun résultat d'apprentissage, il n'est évalué nulle part, et personne ne vous demandera de faire un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "rebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Vous en apprenez ici le strict nécessaire pour rendre votre travail. Cette page est un mode d'emploi, pas un chapitre.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f051c7e8-258a-40f1-b4fc-86054d014fb1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Cela dit, vous en aurez besoin dans à peu près tous les emplois de développeur qui existent. Autant commencer maintenant, dans un cadre où une erreur ne coûte rien.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7dc7b6de-7b23-475c-9a7d-cba2aa2bef42",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "5afef3ab-2789-4234-9574-d40d3f0182ec",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1. Six mots à comprendre",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "03f9455a-a397-45f7-a7ef-2b69dc1138e0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est tout le vocabulaire dont vous avez besoin.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b93f44ee-bfd6-4154-802e-fd4222c354c1",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Mot",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce que c'est",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Dépôt",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "(repository, « repo »)",
+                    "styles": {
+                      "italic": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Un dossier de projet dont on garde l'historique. Votre dossier de travail, plus sa mémoire",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Commit",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une photo de l'état du projet à un instant, avec un message qui dit ce que vous venez de faire. C'est l'unité de base : on ne sauvegarde pas un fichier, on enregistre un état",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Historique",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "La suite des commits. On peut y revenir, comparer deux états, voir qui a écrit quoi et quand",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Distant",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "(remote)",
+                    "styles": {
+                      "italic": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "La copie du dépôt qui vit sur GitHub. La vôtre est sur votre machine ; les deux se synchronisent quand vous le demandez",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Issue",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Un fil de discussion attaché au dépôt. Dans ce cours, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "chaque travail à rendre est une issue",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " - l'énoncé y est écrit, et vous la fermez pour remettre",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Pull request",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "(PR)",
+                    "styles": {
+                      "italic": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une proposition de modification, avec une discussion ligne par ligne. Dans ce cours, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "c'est là que l'enseignant écrit ses remarques sur votre code",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "78e6cfbf-e296-4fb8-ae85-6f1be8012e47",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Deux précisions qui évitent des malentendus :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0f1466ca-079e-43eb-a62e-b2583786aa04",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Git et GitHub ne sont pas la même chose.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Git est le programme qui gère l'historique, sur votre machine, hors connexion. GitHub est un site qui héberge des dépôts Git et ajoute autour des issues, des pull requests, des permissions. Vous pouvez utiliser Git sans GitHub. Ici, vous utiliserez les deux.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3d5d9b8c-31ab-41e9-91cd-515a24b15f8a",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un commit n'est pas une sauvegarde automatique.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Rien ne part tant que vous ne le demandez pas. C'est déroutant au début, et c'est aussi ce qui fait que vous contrôlez exactement ce que l'enseignant voit.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9d35bd82-5243-4e01-9f2a-ac33c122d421",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "09478bb5-f9eb-4acb-85a9-74f374904451",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2. Créer votre compte GitHub",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6e7a8a97-a2c5-4cf3-ad29-e1448ea08eda",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À faire maintenant, avant la séance 1 - sans compte, vous ne pouvez rien recevoir.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "52b21ca4-d671-44f8-a151-9e8926523da7",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Allez sur ",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://github.com/signup",
+          "content": [
+            {
+              "type": "text",
+              "text": "github.com/signup",
+              "styles": {
+                "bold": true
+              }
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "72a84466-b630-4ed5-9b83-b72a3d6469c6",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Choisissez un nom d'utilisateur. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Il sera visible par tout le monde et vous le garderez des années.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Prenez votre nom, ou une variante lisible : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "jsaintil",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ana-pierre",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Évitez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "xX_dark_coder_Xx",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", vous le regretterez au premier entretien d'embauche",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3eb79984-290d-413e-810d-30ee5097e0d3",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Utilisez une adresse de courriel que vous consultez : les notifications du cours y arriveront",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8613c265-ca4d-46c6-a5cb-c53a04d332e2",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Activez la ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "double authentification",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " quand GitHub vous le propose. C'est obligatoire sur GitHub, et vous serez bloqué plus tard si vous la reportez",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d1e3a214-a653-4ef7-a8f6-9c10e619cfb5",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Envoyez votre nom d'utilisateur à l'enseignant, par le canal indiqué en séance",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "566696d2-12cb-4fdf-b310-5394da3d77e4",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Le compte est gratuit et le restera.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Vos dépôts de cours sont privés : seuls vous et l'enseignant les voyez.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "29a16346-8d2f-4e70-8560-e49b77d5e060",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "26d277f9-c46e-47d7-b8ba-6c5d57040014",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "3. Deux façons de travailler - choisissez la vôtre",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ca1a1bee-18ff-4545-bdb9-992ee95b23af",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les deux sont acceptées toute l'année, et vous pouvez passer de l'une à l'autre.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "29ddd446-6c2a-4eea-bfba-12ac7ce033ea",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "ed381914-bed3-400b-9524-739ac00521ee",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie A - Git installé sur votre machine",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b55bd06e-f11b-40fe-a8bf-83bece343723",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est la voie normale si vous avez un ordinateur. Vous travaillez dans VS Code, comme pour le reste du cours.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9792c160-3d7f-4501-969f-ed62cce94201",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Installer Git",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "259bfc07-c4e9-46bf-a0b1-57ca96d20dc0",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Système",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Comment",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Windows",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "link",
+                    "href": "https://git-scm.com/download/win",
+                    "content": [
+                      {
+                        "type": "text",
+                        "text": "git-scm.com/download/win",
+                        "styles": {}
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "text": ", installateur, tout par défaut",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "macOS",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "xcode-select --install",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " dans le Terminal",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Linux",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "sudo apt install git",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ou l'équivalent de votre distribution",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "f83a8d35-3fc6-4b06-9cee-1b7093baf4a1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vérifiez, puis dites à Git qui vous êtes - ces deux lignes ne se font ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "qu'une fois dans votre vie",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "122cb9f6-4c6b-4c93-99fa-dd7c5463a16f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "910269a7-836f-489f-8ea6-becec93a7dc2",
+      "type": "terminal",
+      "props": {
+        "code": "git --version\ngit config --global user.name \"Votre Nom\"\ngit config --global user.email \"votre.adresse@exemple.com\"",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "c21b4d5b-4855-42a0-b835-188fd6e2a9a1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Mettez la même adresse que sur GitHub, sinon vos commits ne seront pas reliés à votre compte.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "52772ad4-dbe6-48c7-a663-f6bbbe9d0be1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "ed2a351d-c16e-4e65-b54b-34d8a575368a",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie B - Tout dans le navigateur",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "10e6d29b-d19a-4992-92c6-460e53c24793",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rien à installer, et ça marche sur téléphone.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Vous ne tapez aucune commande Git : vous ouvrez la page de votre dépôt sur GitHub, vous téléversez ou modifiez vos fichiers, et c'est fait.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "eb52bdf6-2be6-4cf0-afd1-c78c4bd727be",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est la voie prévue pour ceux qui n'ont pas d'ordinateur personnel. Elle n'est pas un rabais : vous rendez exactement le même dépôt et vous êtes noté exactement pareil. La page « Travailler sans ordinateur » de ce module détaille la marche à suivre.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bc9f999e-69c7-4003-83b1-c81341e21dd1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "2a33aed0-8c0e-499a-be57-56d93bdbf592",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "4. Le déroulé d'un travail, du début à la fin",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "27fe4e1d-f002-4300-abae-378af0425f93",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Cinq étapes, les mêmes toute l'année.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1f1a43e2-0be1-4032-8899-a7014bc72ebb",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "3bab7719-24be-4c02-a01d-2122a6a520b1",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1. Vous recevez le dépôt",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3fe611e5-4153-4b05-bda4-03283f45d246",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quand l'enseignant publie un travail, Classmoji crée ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "un dépôt privé à votre nom",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", à partir d'un modèle. Vous recevez un lien. Le dépôt contient déjà l'énoncé, les fichiers de départ, et une ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "issue",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " qui décrit ce qui est attendu.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "015ac000-0abc-4623-bf3a-23f49a246db2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous ne créez jamais de dépôt vous-même dans ce cours.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8a1de674-6c07-4cb6-8228-c3892580e4aa",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "be139ec3-5c26-4ddd-a367-7c1c881f252c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2. Vous le récupérez",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5faf614a-96a7-4230-b5db-04bbc0fcf35a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie A :",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "27505982-57c5-41d2-a1a4-082bfddffb44",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "26d989d5-dd0b-453e-ac11-ab7946dcaf03",
+      "type": "terminal",
+      "props": {
+        "code": "git clone https://github.com/ORGANISATION/tp1-votre-nom.git\ncd tp1-votre-nom",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "8e293d84-8638-4aa5-bc6e-57bf81c64673",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "git clone",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " copie le dépôt sur votre machine, avec tout son historique. Vous ne le faites qu'une fois par travail.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4d4e77b8-49c8-4af8-bea6-a65c780fa7f4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie B :",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " rien à faire, vous travaillez directement sur la page du dépôt.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "307d55fb-5719-4f3c-b66b-5dde21a799f6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "dbf5bcca-6733-4b6a-b5da-23a0f189ce37",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "3. Vous travaillez",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f08c972d-0fa8-4bab-b774-1e74e11d67d7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Comme d'habitude : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "uv run",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", VS Code, les exercices du cours. Codez, testez, faites tourner.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e9128dc9-1a6e-4beb-b8a2-ad95e7534f92",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "42755b9f-0a80-4f35-aa93-d468583b9ef5",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "4. Vous enregistrez et vous envoyez",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "08532418-88ac-4f20-aab4-5f2c90e28a09",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie A :",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "75a004dd-0ead-4824-bd62-3b5d2db27ffd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "852590aa-b548-4764-b713-ec4f4558b19e",
+      "type": "terminal",
+      "props": {
+        "code": "git status                        # que s'est-il passé depuis la dernière fois ?\ngit add .                         # je prépare tout ce qui a changé\ngit commit -m \"Traduction du programme et notes\"\ngit push                          # j'envoie sur GitHub",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "fe5e245e-d18f-419e-87be-a47b2f127fbe",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Faites-le plusieurs fois pendant votre travail, pas une seule fois à la fin.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Un commit toutes les demi-heures, avec un message qui dit ce que vous venez de faire. C'est votre filet de sécurité : tant que vous n'avez pas poussé, votre travail n'existe que sur votre machine.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5d07f2d2-6dc6-4bf6-bbd5-4b3fe9463905",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie B :",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sur la page du dépôt, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Add file",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " → ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Upload files",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", puis un message et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Commit changes",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Le commit se fait dans le navigateur.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "844346ed-7e51-4bfa-8aee-686a0505aa7b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vérifiez toujours que vos fichiers sont bien visibles sur la page GitHub du dépôt. Si vous ne les voyez pas là, l'enseignant ne les voit pas non plus.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e3dafb26-cd75-4f5f-b942-194a1dc288db",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "7c3e06a3-6d09-4e45-bc7d-5e5ef74c379a",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "5. Vous remettez",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8935f8e5-37c0-4a43-a5a4-fa28f5609897",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Fermer l'issue du travail, c'est remettre.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Tant que l'issue est ouverte, le travail n'est pas rendu, même si votre code est poussé. Tant qu'elle est fermée, il est rendu, à l'heure de la fermeture.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1c236ae2-3275-4dc0-a6c2-34ebfba3b377",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Écrivez un dernier commentaire dans l'issue si vous avez quelque chose à signaler - un point que vous n'avez pas réussi, un choix que vous voulez expliquer - puis fermez-la.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0b3100fb-e9d4-4813-bcb8-679dc18da87a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "a9e87561-cc78-48e3-95f5-b938d932ee8a",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Et ensuite : le retour",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e6e7db43-c114-4bb4-95cd-790113f1571a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'enseignant ouvre une ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "pull request de retour",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sur votre dépôt. Ses remarques y sont attachées aux lignes concernées de votre code. Allez la lire : c'est là que se trouve l'essentiel de ce que vous avez à gagner, bien plus que dans la note.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2a31147b-8faa-4d3e-938f-ee31bfc41257",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "30fa31eb-d9f9-4a60-ba15-037db2fbb1ed",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "5. Les six commandes, et rien d'autre",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "50e788cc-0392-4a69-8774-7e43983f2ba4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie A uniquement. Affichez cette table à côté de vous les premières semaines.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a7275cbc-d7b5-4ea3-ade6-b3757bf28aaa",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Commande",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce qu'elle fait",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Quand",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git clone <lien>",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Récupère un dépôt sur votre machine",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une fois par travail",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git status",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Dit ce qui a changé et ce qui est prêt à partir",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Tout le temps. En cas de doute, c'est la réponse",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git add .",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Prépare tout ce qui a changé",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Avant chaque commit",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git commit -m \"message\"",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Enregistre un état, avec sa description",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Plusieurs fois par séance de travail",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git push",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Envoie vos commits sur GitHub",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Après chaque commit, ou groupés",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git pull",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Récupère ce qui a changé sur GitHub",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Si l'enseignant a modifié le dépôt",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "c8e8c6ff-bca2-405b-8826-9f99ca15c0ab",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous n'aurez besoin de rien d'autre cette année. Si un tutoriel vous parle de branches, de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "merge",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ou de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "rebase",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", c'est utile et intéressant - ce n'est pas nécessaire ici.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "feb734be-ed88-44f7-8ed8-679549d2673c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Sur les messages de commit.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Une phrase courte qui dit ce que vous venez de faire : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Traduction littérale du programme C++",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Réécriture avec zip et f-strings",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Ajout de NOTES.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Pas ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "update",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pas ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fix",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pas ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Ce sont vos propres notes, et vous les relirez.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7685efe2-d0fa-485b-84f3-3264f1b4a74c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "fcffbd7b-f39f-43a5-9b21-b92d06e09183",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "6. Ce qu'on ne met jamais dans un dépôt",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "90492e28-3748-4e08-ad81-9b5f8a06c263",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un dépôt contient ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "votre travail",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pas ce qu'une machine peut régénérer.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f5e354de-c428-4fba-b34f-a91ca956e62f",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "À ne jamais envoyer",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Pourquoi",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": ".venv/",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Des centaines de mégaoctets, reconstructibles en une commande. C'est la faute n° 1",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "__pycache__/",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Généré automatiquement par Python",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Fichiers de données volumineux",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Sauf si l'énoncé le demande explicitement",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Mots de passe, jetons, clés",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Un dépôt garde tout dans son historique. Ce qui y entre une fois y reste",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "dd1a5f0a-64b0-482d-9871-2490ed53dcfc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Bonne nouvelle : uv s'en occupe déjà.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Quand uv crée l'environnement ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": ".venv/",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " d'un projet, il y dépose un fichier qui dit à Git de l'ignorer entièrement. Vous ne l'enverrez pas par accident, même sans y penser. Les dépôts modèles du cours ajoutent une règle pour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "__pycache__/",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "61898d35-f8b6-4fd9-a115-62dc9331b93b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le réflexe qui vous protège reste le même : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "regardez ce que ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "git status",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " affiche avant de commiter.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Si vous y voyez apparaître des dizaines de fichiers que vous n'avez pas écrits, arrêtez-vous et demandez.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2a7b04d4-4979-4431-98b2-e5f2374a5130",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "57159949-ef5b-475a-b3f1-2033535ebcf6",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "7. Ce qui va coincer, et quoi faire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "42897642-c053-4e5b-ac88-90661e48fd81",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "acfa1b79-364b-4fd1-ae03-2c0ef06aa294",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "« GitHub me demande un mot de passe et le refuse »",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1471bfbc-3bc4-4fbc-a6fa-acb49e7b9905",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Normal : GitHub n'accepte plus les mots de passe pour envoyer du code. Trois solutions, de la plus simple à la plus manuelle :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9744ba89-f84b-4fcd-b389-ec3cf082de69",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Passez par VS Code.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Il propose de vous connecter à GitHub et gère l'authentification tout seul. C'est de loin le plus simple, et vous avez déjà VS Code",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "86b167fb-00e7-4cc8-b5c7-9dc871729718",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Installez GitHub CLI",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " (",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://cli.github.com",
+          "content": [
+            {
+              "type": "text",
+              "text": "cli.github.com",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ") et lancez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "gh auth login",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Une fois, et c'est réglé",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "16919762-aa62-42a9-bf65-a9701f4327b2",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Créez un jeton d'accès personnel",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " dans les réglages GitHub (",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Settings → Developer settings → Personal access tokens",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ") et utilisez-le à la place du mot de passe. À faire seulement si les deux premières ne marchent pas",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e6ae62b4-075a-4d7d-9cfb-57aaf7483c3b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "108d6417-611a-4109-96e2-d854c8788319",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "« Updates were rejected »",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b8826ffe-7558-4e0f-a021-35cb37611ab7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le dépôt sur GitHub contient quelque chose que vous n'avez pas. Faites ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "git pull",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", puis ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "git push",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Si Git vous demande de résoudre un conflit et que vous ne savez pas quoi en faire, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ne bricolez pas",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : demandez. Un conflit mal résolu perd du travail.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "05e79529-ad85-4807-9416-f7eccbd828d5",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "6fc870cc-2e24-41ed-b5b1-fea6e11c09f9",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "« J'ai poussé, mais l'enseignant ne voit rien »",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1937799a-c21f-49f9-b1c0-e301559fad35",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois causes, dans l'ordre de fréquence : vous avez commité sans pousser ; vous avez travaillé dans le mauvais dossier ; vous n'avez pas fermé l'issue. Ouvrez la page du dépôt sur GitHub - ce que vous y voyez est exactement ce que l'enseignant voit.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b7e5cc4b-af98-47d1-bfb9-3488786f376c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "94d6b314-bf6f-4e05-993b-de1cb1561803",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "« J'ai tout cassé »",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d38bc55b-137e-442a-ac2b-880c2a84789f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous n'avez rien cassé. Git conserve l'historique : tant que vous avez commité, l'état précédent existe encore. Ne supprimez pas le dossier, ne recréez pas de dépôt, n'effacez rien. Écrivez dans l'issue ce que vous avez fait, et attendez.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "af9387eb-571f-4484-98ef-5ed88e009bfe",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "ae078639-0310-4456-97b1-bdd9f414b520",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pas de connexion au moment de rendre",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f2c8e3a9-31e7-4bf0-a18c-66aaeebb00da",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vos commits restent sur votre machine et partiront au premier ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "git push",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " avec du réseau. Utilisez un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "token",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de report - le cours vous en donne, justement pour ça. Le mode d'emploi est sur la page « Comment fonctionne ce cours ».",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6e25f7a1-8ffd-49f8-8cca-c3becb6b478c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "88cb23ca-f8aa-43a3-8480-f7ea1961328c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Aide-mémoire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1686ce56-bdeb-4000-95e7-a19eb4e93e93",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          226,
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Je veux…",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Voie A (machine)",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Voie B (navigateur)",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Récupérer un travail",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git clone <lien>",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ouvrir la page du dépôt",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Voir où j'en suis",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git status",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Regarder la liste des fichiers",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Enregistrer",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git add .",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " puis ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "git commit -m \"…\"",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Add file",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " → ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "Upload files",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " → ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "Commit",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Envoyer",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "git push",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Automatique, le commit envoie",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Remettre",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Fermer l'issue",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Fermer l'issue",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Lire le retour",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Onglet ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "Pull requests",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Onglet ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "Pull requests",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "059f4874-3556-4e4d-b248-35267f67e46d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "0129aec1-16b5-4e53-9f50-c5951bd46259",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pour aller plus loin",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "17ae1c9f-2688-4abf-b88d-34092a52e8f3",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rien de ceci n'est exigé par le cours.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7249d2a2-07ba-4e77-8e5d-f97c490a0cc1",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "link",
+          "href": "https://rogerdudler.github.io/git-guide/index.fr.html",
+          "content": [
+            {
+              "type": "text",
+              "text": "Git - le guide en 15 minutes",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " - en français, très court",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dd966227-4037-43f0-a028-45a22218f852",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "link",
+          "href": "https://docs.github.com/fr",
+          "content": [
+            {
+              "type": "text",
+              "text": "Documentation GitHub en français",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " - la référence, à consulter par recherche plutôt qu'à lire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "521976cb-285a-4e1c-b67e-91e0f23bca68",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "link",
+          "href": "https://learngitbranching.js.org/?locale=fr_FR",
+          "content": [
+            {
+              "type": "text",
+              "text": "Learn Git Branching",
+              "styles": {}
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": " - un jeu pour comprendre les branches, quand vous en aurez besoin",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0279d458-cce7-4db3-a4d8-7de511c5018c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "38907e12-6b17-419e-9d06-6a15acef1e31",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Avant la séance 1",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "74231f81-b4bc-4157-ac3a-c97594a617fb",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Mon compte GitHub est créé, la double authentification est activée",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fa43bccf-3ff3-48ed-b13c-3280dd3cf022",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "J'ai envoyé mon nom d'utilisateur à l'enseignant",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7b95c2ef-4adf-4bf0-bb59-aad1bf223bfc",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "J'ai choisi ma voie : Git installé, ou tout dans le navigateur",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c68668a3-0bc2-4e91-b3c3-f029549b0fd0",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voie A seulement : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "git --version",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " répond, et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "user.name",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "user.email",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sont réglés",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "11b68685-ec73-4b67-ad22-2ca5a877aa0b",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "J'ai récupéré le dépôt d'entraînement ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "00-prise-en-main",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " du module 0",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "594436b3-2f81-45f9-8dc0-d61421a6a0bb",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "J'y ai fait un premier commit et fermé son issue",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "50eebff5-e952-4236-aaa7-476013de0619",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "47c55216-bd5a-4b09-be87-ee89175df8c4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le dépôt d'entraînement n'est pas noté. Il existe pour que votre première remise ne soit pas celle qui compte.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "12c9ff7f-a0ff-422e-b93d-320a2354f32a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
