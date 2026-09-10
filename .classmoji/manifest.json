@@ -1,10 +1,17 @@
 {
-  "repositories": {},
+  "repositories": {
+    "prise-en-main-dpt-dentranement": {
+      "pages": [
+        "git-et-github-lessentiel-pour-ce-cours"
+      ],
+      "slides": [],
+      "assignments": {}
+    }
+  },
   "general": {
     "pages": [
       "plan-de-cours-programmation-avec-python",
       "comment-fonctionne-ce-cours",
-      "git-et-github-lessentiel-pour-ce-cours",
       "installer-son-environnement",
       "travailler-sans-ordinateur"
     ],
