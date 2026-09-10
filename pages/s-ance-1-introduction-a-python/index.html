@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<p><strong>Support de cours — à conserver</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce que vous saurez faire à la fin de cette séance</h2>
+<ul>
+<li>Installer uv et VS Code, et créer un projet Python qui fonctionne</li>
+<li>Reconnaître ce qui change entre le C/C++ ou le PHP et Python</li>
+<li>Écrire un programme court avec des variables, des conditions et des boucles</li>
+<li>Repérer, dans votre propre code, ce qui trahit une habitude venue d&#39;un autre langage</li>
+</ul>
+<blockquote>
+<p><strong>Si vous n&#39;avez jamais programmé, ou très peu :</strong> cette séance suppose que vous savez déjà ce qu&#39;est une variable, une condition et une boucle. Si ce n&#39;est pas votre cas, ne restez pas en difficulté en silence — le module 0 contient un parcours de mise en route qui reprend ces notions depuis le début. Il n&#39;est pas noté, il n&#39;est pas obligatoire, et personne ne saura qui le suit.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">1. Une même logique, une autre façon de l&#39;écrire</h2>
+<p>Vous savez déjà programmer. Ce cours ne va pas vous réapprendre les boucles ou les conditions : vous les connaissez. Il va vous apprendre à les exprimer en Python, ce qui n&#39;est pas la même chose.</p>
+<p>Regardez ces trois programmes. Ils font exactement la même chose.</p>
+<p><strong>En C++</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">C++</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int nombres[] = {4, 8, 15, 16, 23, 42};
+    int taille = 6;
+    int total = 0;
+    for (int i = 0; i &lt; taille; i++) {
+        total += nombres[i];
+    }
+    cout &lt;&lt; &quot;Total : &quot; &lt;&lt; total &lt;&lt; endl;
+    return 0;
+}</code></pre></div></div>
+<p><strong>En PHP</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">PHP</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-php">&lt;?php
+$nombres = [4, 8, 15, 16, 23, 42];
+$total = 0;
+foreach ($nombres as $nombre) {
+    $total += $nombre;
+}
+echo &quot;Total : &quot; . $total . &quot;\n&quot;;</code></pre></div></div>
+<p><strong>En Python</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">nombres = [4, 8, 15, 16, 23, 42]
+print(&quot;Total :&quot;, sum(nombres))</code></pre></div></div>
+<p>Les trois affichent <code>Total : 108</code>.</p>
+<p>Ce qui a disparu depuis le C++ : les <code>#include</code>, la fonction <code>main</code>, les déclarations de types, la taille du tableau, les accolades, les points-virgules, et la boucle elle-même.</p>
+<p>Depuis le PHP, moins de choses ont disparu — et c&#39;est instructif. Si vous venez du PHP, vous avez déjà l&#39;essentiel : pas de compilation, pas de déclaration de type, un tableau qui se crée d&#39;une ligne. Ce qui vous reste à perdre, ce sont les <code>$</code>, les points-virgules, les accolades — et le réflexe d&#39;écrire une boucle là où une fonction existe. En PHP vous auriez pu écrire <code>array_sum($nombres)</code>. Python a l&#39;équivalent : <code>sum(nombres)</code>.</p>
+<h3>Les différences à retenir</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>C / C++</th>
+<th>PHP</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Exécution</td>
+<td>On compile, puis on exécute</td>
+<td>On exécute directement le fichier source</td>
+<td>On exécute directement le fichier source</td>
+</tr>
+<tr>
+<td>Types</td>
+<td>Déclarés à l&#39;avance, vérifiés à la compilation</td>
+<td>Attachés à la valeur, vérifiés à l&#39;exécution</td>
+<td>Attachés à la valeur, vérifiés à l&#39;exécution</td>
+</tr>
+<tr>
+<td>Blocs</td>
+<td>Accolades</td>
+<td>Accolades</td>
+<td><strong>Indentation</strong></td>
+</tr>
+<tr>
+<td>Fin d&#39;instruction</td>
+<td>Point-virgule obligatoire</td>
+<td>Point-virgule obligatoire</td>
+<td>Retour à la ligne</td>
+</tr>
+<tr>
+<td>Nom de variable</td>
+<td><code>int total = 0;</code></td>
+<td><code>$total = 0;</code></td>
+<td><code>total = 0</code></td>
+</tr>
+<tr>
+<td>Mémoire</td>
+<td>Gérée à la main en C</td>
+<td>Gérée automatiquement</td>
+<td>Gérée automatiquement</td>
+</tr>
+<tr>
+<td>Structure minimale</td>
+<td>Des <code>#include</code> et une fonction <code>main</code></td>
+<td>Une balise <code>&lt;?php</code></td>
+<td>Une ligne de code suffit</td>
+</tr>
+</tbody></table>
+<p><strong>Lisez la colonne qui est la vôtre.</strong> Si vous venez du C ou du C++, presque tout change. Si vous venez du PHP, seules trois lignes vous concernent vraiment : les blocs, la fin d&#39;instruction, et le <code>$</code>. Le reste, vous l&#39;avez déjà.</p>
+<h3>L&#39;indentation fait partie du langage</h3>
+<p>C&#39;est la différence que <strong>personne</strong> n&#39;a déjà, ni les uns ni les autres. En Python, décaler une ligne change le programme. Ce n&#39;est pas une question de présentation.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">for i in range(3):
+    print(&quot;dans la boucle&quot;)
+print(&quot;après la boucle&quot;)</code></pre></div></div>
+<p>Si vous décalez la dernière ligne de quatre espaces, elle entre dans la boucle et s&#39;exécute trois fois.</p>
+<p><strong>Règle du cours : quatre espaces, jamais de tabulation.</strong> Le mélange des deux est la première cause d&#39;erreurs chez les débutants en Python. VS Code s&#39;en occupe pour vous si vous le laissez faire.</p>
+<h3>Typage dynamique ne veut pas dire absence de types</h3>
+<p>C&#39;est le malentendu le plus fréquent — surtout chez ceux qui viennent du PHP, où le langage se montre beaucoup plus tolérant.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">x = 10          # x est un entier
+x = &quot;bonjour&quot;   # x est maintenant une chaîne : c&#39;est autorisé
+resultat = 10 + &quot;bonjour&quot;   # erreur : Python refuse</code></pre></div></div>
+<p>Python ne vous demande pas de déclarer les types, mais il les vérifie quand même — au moment de l&#39;exécution, pas avant. Conséquence pratique : une erreur de type ne se révèle que lorsque la ligne concernée est effectivement exécutée. Un programme peut donc tourner dix minutes avant de s&#39;arrêter sur une erreur qu&#39;un compilateur C++ aurait signalée tout de suite.</p>
+<p><strong>Le point qui surprend ceux qui viennent du PHP :</strong> en PHP, <code>10 . &quot;bonjour&quot;</code> fonctionne et <code>&quot;5&quot; + 3</code> vaut <code>8</code>. Python refuse les deux. Il est dynamiquement typé, mais il ne convertit rien tout seul.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">2. Votre environnement de travail : uv et VS Code</h2>
+<p>Le cours utilise deux outils, et deux seulement.</p>
+<ul>
+<li><strong>uv</strong> s&#39;occupe de Python : la version du langage, vos projets, les bibliothèques</li>
+<li><strong>VS Code</strong> est l&#39;endroit où vous écrivez le code</li>
+</ul>
+<p>Vous n&#39;avez pas besoin d&#39;installer Python séparément. uv s&#39;en charge.</p>
+<blockquote>
+<p><strong>Le module 0 contient une page « Installer son environnement » avec les mêmes instructions, à faire avant la séance.</strong> Si c&#39;est déjà fait, cette partie est un rappel.</p>
+</blockquote>
+<h3>Installer uv</h3>
+<p><strong>macOS et Linux</strong></p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">curl -LsSf https://astral.sh/uv/install.sh | sh</code></pre></div></div></div>
+<p><strong>Windows, dans PowerShell</strong></p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;</code></pre></div></div></div>
+<p><strong>Fermez ensuite votre terminal et rouvrez-le</strong>, sinon la commande ne sera pas trouvée. Puis vérifiez :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">uv --version</code></pre></div></div></div>
+<h3>Créer votre premier projet</h3>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-bash">uv init cours-python
+cd cours-python
+uv run main.py</code></pre></div></div></div>
+<p>Ces trois lignes créent un projet, y entrent et exécutent le programme de départ. La première exécution prend quelques secondes : uv télécharge Python si nécessaire et prépare l&#39;environnement.</p>
+<h3>Ce que uv a créé, et à quoi ça sert</h3>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Rôle</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>pyproject.toml</code></td>
+<td>La carte d&#39;identité du projet : son nom, la version de Python, les bibliothèques dont il a besoin</td>
+</tr>
+<tr>
+<td><code>uv.lock</code></td>
+<td>Les versions exactes installées, au numéro près</td>
+</tr>
+<tr>
+<td><code>.venv/</code></td>
+<td>L&#39;environnement isolé du projet : son Python et ses bibliothèques, à lui seul</td>
+</tr>
+<tr>
+<td><code>main.py</code></td>
+<td>Votre fichier de départ</td>
+</tr>
+<tr>
+<td><code>.python-version</code></td>
+<td>La version de Python de ce projet</td>
+</tr>
+</tbody></table>
+<p><strong>Pourquoi l&#39;isolation compte.</strong> Deux projets sur votre machine peuvent avoir besoin de deux versions différentes de la même bibliothèque. Sans isolation, l&#39;un des deux cesse de fonctionner. Chaque projet a donc son propre <code>.venv</code>, et ils s&#39;ignorent mutuellement.</p>
+<p><em>Si vous venez du PHP, vous connaissez déjà l&#39;idée : <code>pyproject.toml</code> joue le rôle de <code>composer.json</code>, <code>uv.lock</code> celui de <code>composer.lock</code>, et <code>.venv/</code> celui de <code>vendor/</code>. La ressemblance est presque parfaite.</em></p>
+<h3>Ajouter une bibliothèque</h3>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">uv add numpy</code></pre></div></div></div>
+<p>La bibliothèque est enregistrée dans <code>pyproject.toml</code>, c&#39;est-à-dire dans le projet — et non installée quelque part sur votre machine.</p>
+<h3>Récupérer le projet de quelqu&#39;un d&#39;autre</h3>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">uv sync</code></pre></div></div></div>
+<p>uv lit <code>pyproject.toml</code> et <code>uv.lock</code> et reconstitue exactement le même environnement. C&#39;est ce qui vous permettra de récupérer un projet distribué en cours et d&#39;obtenir le même résultat que tout le monde. C&#39;est aussi pour cette raison que vos travaux se rendent sous forme de projet complet, et non de fichier isolé.</p>
+<h3>Les cinq commandes du cours</h3>
+<table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Ce qu&#39;elle fait</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>uv init nom</code></td>
+<td>Crée un projet</td>
+</tr>
+<tr>
+<td><code>uv add bibliotheque</code></td>
+<td>Ajoute une bibliothèque au projet</td>
+</tr>
+<tr>
+<td><code>uv run fichier.py</code></td>
+<td>Exécute un fichier dans l&#39;environnement du projet</td>
+</tr>
+<tr>
+<td><code>uv sync</code></td>
+<td>Reconstruit l&#39;environnement à partir du projet</td>
+</tr>
+<tr>
+<td><code>uv python list</code></td>
+<td>Montre les versions de Python disponibles</td>
+</tr>
+</tbody></table>
+<p><strong>Règle du cours : toujours <code>uv run fichier.py</code>, jamais <code>python fichier.py</code>.</strong> La seconde commande utilise un Python quelconque de votre machine plutôt que celui du projet, et c&#39;est la source de la plupart des problèmes inexplicables.</p>
+<blockquote>
+<p><strong>Une fois vos bibliothèques téléchargées, uv fonctionne hors connexion.</strong> C&#39;est important ici : téléchargez en salle, sur le réseau de l&#39;établissement, et travaillez chez vous sans réseau. C&#39;est le principal avantage de uv sur un carnet en ligne.</p>
+</blockquote>
+<h3>Configurer VS Code</h3>
+<ol>
+<li>Installez les extensions <strong>Python</strong> et <strong>Jupyter</strong></li>
+<li>Ouvrez le <strong>dossier</strong> du projet, pas seulement le fichier</li>
+<li>Sélectionnez l&#39;interpréteur du projet : ouvrez la palette de commandes, tapez <code>Python: Select Interpreter</code>, et choisissez celui qui se trouve dans <code>.venv</code></li>
+</ol>
+<p>L&#39;étape 3 est celle qu&#39;on oublie. Si vous la sautez, VS Code vous dira qu&#39;une bibliothèque est introuvable alors qu&#39;elle est bien installée.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">3. Variables et types de base</h2>
+<h3>Une variable est une étiquette, pas une boîte</h3>
+<p>En C++, une variable est un emplacement mémoire d&#39;une taille fixée. En Python, une variable est un nom collé sur un objet. Réaffecter une variable, c&#39;est décoller l&#39;étiquette et la coller ailleurs.</p>
+<p>Cela a une conséquence qui surprend :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python">a = [1, 2, 3]
+b = a          # b est une deuxième étiquette sur le MÊME objet
+b.append(4)
+print(a)       # [1, 2, 3, 4]</code></pre></div></div>
+<p><code>a</code> a changé alors que vous n&#39;y avez pas touché. Nous reviendrons sur ce point en séance 2.</p>
+<p><em>Attention si vous venez du PHP : là-bas, <code>$b = $a</code> sur un tableau en fait une <strong>copie</strong>, et le tableau d&#39;origine ne bouge pas. Python fait l&#39;inverse. C&#39;est le piège numéro un pour un développeur PHP.</em></p>
+<h3>Les types de base</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Exemple</th>
+<th>À savoir</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>int</code></td>
+<td><code>42</code></td>
+<td>Aucune limite de taille : <code>2 ** 200</code> donne le résultat exact</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>3.14</code></td>
+<td>Mêmes imprécisions qu&#39;ailleurs : <code>0.1 + 0.2</code> ne vaut pas exactement <code>0.3</code></td>
+</tr>
+<tr>
+<td><code>str</code></td>
+<td><code>&quot;bonjour&quot;</code></td>
+<td>Pas de type caractère séparé. Une chaîne ne se modifie pas</td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>True</code>, <code>False</code></td>
+<td>Avec une majuscule, contrairement au C++ et au PHP</td>
+</tr>
+<tr>
+<td><code>NoneType</code></td>
+<td><code>None</code></td>
+<td>L&#39;équivalent de <code>NULL</code></td>
+</tr>
+</tbody></table>
+<p>Deux fonctions utiles pour explorer :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">type(42)        # &lt;class &#39;int&#39;&gt;
+type(&quot;42&quot;)      # &lt;class &#39;str&#39;&gt;</code></pre></div></div>
+<h3>Les opérateurs qui surprennent</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python">7 / 2       # 3.5   division réelle, même entre deux entiers
+7 // 2      # 3     division entière
+7 % 2       # 1     reste
+2 ** 10     # 1024  puissance</code></pre></div></div>
+<p>La première ligne est le piège classique : en C++, <code>7 / 2</code> vaut <code>3</code>. En Python, la division simple donne toujours un nombre décimal. Si vous voulez le comportement auquel vous êtes habitué, utilisez <code>//</code>.</p>
+<p><em>En PHP, <code>7 / 2</code> vaut déjà <code>3.5</code> — vous êtes en terrain connu. En revanche <code>**</code> remplace votre <code>pow()</code>, et il existe aussi en PHP depuis longtemps.</em></p>
+<h3>Une chaîne ne se modifie pas</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">mot = &quot;bonjour&quot;
+mot[0] = &quot;B&quot;          # erreur
+mot = &quot;B&quot; + mot[1:]   # on construit une nouvelle chaîne</code></pre></div></div>
+<p><em>Là encore une différence avec le PHP, où <code>$mot[0] = &quot;B&quot;</code> fonctionne.</em></p>
+<h3>Afficher et saisir</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">nom = input(&quot;Votre nom : &quot;)
+print(&quot;Bonjour&quot;, nom)</code></pre></div></div>
+<p>Attention à ceci, qui tombera dans les exercices :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">age = input(&quot;Votre âge : &quot;)
+print(age + 1)                      # erreur : age est une chaîne
+
+age = int(input(&quot;Votre âge : &quot;))    # correct
+print(age + 1)</code></pre></div></div>
+<p><code>input</code> renvoie <strong>toujours</strong> une chaîne, quoi que l&#39;utilisateur tape. La conversion est à votre charge. Le PHP, lui, aurait converti tout seul — pas Python.</p>
+<h3>Les f-strings</h3>
+<p>C&#39;est la façon moderne d&#39;assembler du texte et des valeurs. Utilisez-les dans ce cours plutôt que la concaténation.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">nom = &quot;Ana&quot;
+note = 17.456
+print(f&quot;{nom} a obtenu {note:.1f} sur 20&quot;)   # Ana a obtenu 17.5 sur 20</code></pre></div></div>
+<p>Le <code>:.1f</code> demande un affichage avec une décimale.</p>
+<p><em>C&#39;est l&#39;équivalent de l&#39;interpolation <code>&quot;$nom a obtenu...&quot;</code> du PHP, en plus puissant : vous pouvez mettre une expression et un format entre les accolades. Et cela remplace définitivement la concaténation avec <code>.</code> en PHP ou avec <code>&lt;&lt;</code> en C++.</em></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">4. Conditions et boucles</h2>
+<p>La logique vous est connue. Ce qui suit ne concerne que la façon de l&#39;écrire, et ce qui est propre à Python.</p>
+<h3>Conditions</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-python">note = 14
+
+if note &gt;= 16:
+    mention = &quot;très bien&quot;
+elif note &gt;= 14:
+    mention = &quot;bien&quot;
+else:
+    mention = &quot;passable&quot;</code></pre></div></div>
+<p>Trois points d&#39;attention :</p>
+<ul>
+<li>On écrit <code>elif</code>, pas <code>else if</code> ni <code>elseif</code></li>
+<li>Les deux-points en fin de ligne sont obligatoires. C&#39;est l&#39;oubli le plus fréquent des premiers jours</li>
+<li>Pas de parenthèses autour de la condition</li>
+</ul>
+<p>Les opérateurs logiques s&#39;écrivent en toutes lettres : <code>and</code>, <code>or</code>, <code>not</code> — et non <code>&amp;&amp;</code>, <code>||</code>, <code>!</code>.</p>
+<p>Python autorise aussi les comparaisons enchaînées, ce qui n&#39;existe ni en C++ ni en PHP :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">if 0 &lt;= note &lt;= 20:
+    print(&quot;note valide&quot;)</code></pre></div></div>
+<p><em>Méfiez-vous d&#39;un réflexe PHP : le <code>==</code> de Python est strict, comme le <code>===</code> du PHP. Il n&#39;existe pas d&#39;équivalent au <code>==</code> permissif du PHP, et c&#39;est une bonne nouvelle.</em></p>
+<h3>Ce que Python considère comme faux</h3>
+<p>Une liste vide, une chaîne vide, le nombre zéro et <code>None</code> sont considérés comme faux. Tout le reste est vrai.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-python">notes = []
+
+if notes:                  # façon habituelle en Python
+    print(&quot;il y a des notes&quot;)
+
+if len(notes) &gt; 0:         # fonctionne aussi, mais plus lourd
+    print(&quot;il y a des notes&quot;)</code></pre></div></div>
+<p><em>L&#39;idée existe en PHP avec <code>if ($notes)</code>, mais la liste de ce qui est « faux » n&#39;est pas la même — en PHP, la chaîne <code>&quot;0&quot;</code> est fausse ; en Python, elle est vraie.</em></p>
+<h3>La boucle <code>while</code></h3>
+<p>Identique à ce que vous connaissez, à un détail près : <code>++</code> et <code>--</code> n&#39;existent pas en Python.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python">compteur = 3
+while compteur &gt; 0:
+    print(compteur)
+    compteur -= 1</code></pre></div></div>
+<h3>La boucle <code>for</code> : c&#39;est ici que ça change vraiment</h3>
+<p>En C et en C++, <code>for</code> compte. En Python, <code>for</code> parcourt.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">for fruit in [&quot;pomme&quot;, &quot;mangue&quot;, &quot;avocat&quot;]:
+    print(fruit)</code></pre></div></div>
+<p>Pas d&#39;index, pas de condition d&#39;arrêt, pas d&#39;incrément. Vous dites à Python : pour chaque élément de cette collection, fais ceci.</p>
+<p><em>Si vous venez du PHP, c&#39;est exactement votre <code>foreach</code>. Vous n&#39;avez presque rien à changer — sauf à ne plus jamais écrire la version indexée.</em></p>
+<p><strong>Le réflexe à perdre :</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-python"># Ce que vous écrirez spontanément en venant du C++ ou du PHP
+for i in range(len(fruits)):
+    print(fruits[i])
+
+# Ce qu&#39;on écrit en Python
+for fruit in fruits:
+    print(fruit)</code></pre></div></div>
+<p>La première version fonctionne. Elle n&#39;est pas fausse. Mais elle indique que vous n&#39;écrivez pas encore en Python, et dans ce cours elle sera comptée comme une erreur de style.</p>
+<p><strong>Si vous avez réellement besoin de l&#39;indice :</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">for position, fruit in enumerate(fruits):
+    print(position, fruit)</code></pre></div></div>
+<p><em>C&#39;est l&#39;équivalent du <code>foreach ($fruits as $position =&gt; $fruit)</code> du PHP.</em></p>
+<p><strong>Pour parcourir deux collections en parallèle :</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">noms = [&quot;Ana&quot;, &quot;Jean&quot;, &quot;Marie&quot;]
+notes = [17, 12, 15]
+
+for nom, note in zip(noms, notes):
+    print(f&quot;{nom} : {note}&quot;)</code></pre></div></div>
+<p><code>range</code>, <code>enumerate</code> et <code>zip</code> sont les trois outils à retenir. Ils reviendront pendant tout le cours.</p>
+<p><code>break</code> et <code>continue</code> se comportent comme dans les autres langages.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">5. Écrire du Python lisible</h2>
+<p>PEP 8 est le guide de style officiel de Python. Presque tous les programmeurs Python le suivent, ce qui fait qu&#39;un code conforme est lisible par n&#39;importe qui. Les règles ci-dessous seront appliquées à la correction dès le premier travail.</p>
+<table>
+<thead>
+<tr>
+<th>Règle</th>
+<th>À faire</th>
+<th>À éviter</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Variables et fonctions</td>
+<td><code>note_finale</code>, <code>calculer_moyenne</code></td>
+<td><code>noteFinale</code>, <code>NoteFinale</code></td>
+</tr>
+<tr>
+<td>Classes</td>
+<td><code>EtudiantInscrit</code></td>
+<td><code>etudiant_inscrit</code></td>
+</tr>
+<tr>
+<td>Constantes</td>
+<td><code>NOTE_MAXIMALE = 20</code></td>
+<td><code>noteMaximale = 20</code></td>
+</tr>
+<tr>
+<td>Indentation</td>
+<td>4 espaces</td>
+<td>Tabulations, ou 2 espaces</td>
+</tr>
+<tr>
+<td>Espaces autour des opérateurs</td>
+<td><code>total = a + b</code></td>
+<td><code>total=a+b</code></td>
+</tr>
+</tbody></table>
+<p>Le point le plus visible : Python utilise le <code>snake_case</code>, avec des tirets bas. C&#39;est le premier signe qui trahit un code écrit par quelqu&#39;un venu du PHP, où le <code>camelCase</code> domine. <em>En C++, les conventions varient d&#39;un projet à l&#39;autre — mais notez que la bibliothèque standard du C++ utilise elle aussi le <code>snake_case</code>.</em></p>
+<h3>Un exemple</h3>
+<p>Ce code fonctionne, mais il est écrit comme du PHP :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">def calculerMoyenne(listeNotes):
+    somme=0
+    for i in range(len(listeNotes)):
+        somme=somme+listeNotes[i]
+    return somme/len(listeNotes)</code></pre></div></div>
+<p>Voici la version attendue dans ce cours :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">def calculer_moyenne(notes):
+    &quot;&quot;&quot;Retourne la moyenne d&#39;une liste de notes.&quot;&quot;&quot;
+    return sum(notes) / len(notes)</code></pre></div></div>
+<p>Cinq changements : le nom de la fonction, le nom du paramètre, la boucle devenue inutile, les espaces autour des opérateurs, et la ligne de documentation.</p>
+<p><em>Les fonctions seront traitées en séance 3. Il n&#39;y a rien à retenir de la syntaxe <code>def</code> pour l&#39;instant : cet exemple ne sert qu&#39;à montrer la différence de style.</em></p>
+<h3>Commentaires</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python"># Un commentaire explique POURQUOI, pas ce que le code montre déjà</code></pre></div></div>
+<p>Le texte entre triples guillemets placé au début d&#39;une fonction s&#39;appelle une docstring. Il décrit ce que fait la fonction. Prenez l&#39;habitude d&#39;en écrire.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">À retenir de cette séance</h2>
+<ol>
+<li>Python exprime la même logique avec beaucoup moins de cérémonie, et l&#39;indentation remplace les accolades</li>
+<li>Un projet se crée avec <code>uv init</code>, s&#39;exécute avec <code>uv run</code>, se partage tel quel et se reconstruit avec <code>uv sync</code></li>
+<li>La boucle <code>for</code> parcourt des éléments, elle ne compte pas. C&#39;est le premier réflexe à changer</li>
+<li><code>input</code> renvoie toujours une chaîne</li>
+<li>On écrit en <code>snake_case</code>, avec quatre espaces d&#39;indentation</li>
+</ol>
+<hr>
+<h2 style="background-color: #FBF3DB;">Aide-mémoire : erreurs fréquentes</h2>
+<p>Gardez cette table sous la main pendant les exercices.</p>
+<table>
+<thead>
+<tr>
+<th>Message d&#39;erreur</th>
+<th>Cause probable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>IndentationError</code></td>
+<td>Mélange d&#39;espaces et de tabulations, ou ligne mal décalée</td>
+</tr>
+<tr>
+<td><code>SyntaxError: expected &#39;:&#39;</code></td>
+<td>Deux-points oubliés après <code>if</code>, <code>for</code>, <code>while</code> ou <code>def</code></td>
+</tr>
+<tr>
+<td><code>TypeError: can only concatenate str</code></td>
+<td>Vous additionnez une chaîne et un nombre, souvent après un <code>input</code></td>
+</tr>
+<tr>
+<td><code>ValueError: could not convert string to float</code></td>
+<td>Vous avez tapé une virgule décimale au lieu d&#39;un point</td>
+</tr>
+<tr>
+<td><code>NameError</code></td>
+<td>Nom mal orthographié, ou <code>true</code> écrit au lieu de <code>True</code></td>
+</tr>
+<tr>
+<td><code>TypeError: &#39;int&#39; object is not callable</code></td>
+<td>Vous avez nommé une variable <code>max</code>, <code>sum</code>, <code>list</code> ou <code>type</code></td>
+</tr>
+<tr>
+<td><code>uv: command not found</code></td>
+<td>Terminal non relancé après l&#39;installation de uv</td>
+</tr>
+<tr>
+<td><code>ModuleNotFoundError</code></td>
+<td>Interpréteur non sélectionné dans VS Code, ou <code>python</code> utilisé au lieu de <code>uv run</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 style="background-color: #FBF3DB;">Aller plus loin</h2>
+<p><strong>Rien dans cette section n&#39;est au programme, rien n&#39;est évalué, et rien n&#39;est nécessaire pour suivre la séance 2.</strong> C&#39;est une liste de portes ouvertes, pour ceux qui veulent aller voir. Prenez-en une, ou aucune.</p>
+<p>Chaque point donne : ce que c&#39;est, pourquoi ce n&#39;est pas dans le cours, et où chercher.</p>
+<h3>L&#39;opérateur ternaire</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">mention = &quot;reçu&quot; if note &gt;= 10 else &quot;ajourné&quot;</code></pre></div></div>
+<p>Le <code>?:</code> que vous connaissez, écrit à l&#39;endroit. <strong>Pourquoi pas au cours :</strong> un <code>if</code> classique est plus lisible pour qui débute, et le ternaire devient vite illisible dès qu&#39;on l&#39;imbrique. <strong>Où chercher :</strong> documentation Python, « expressions conditionnelles ».</p>
+<h3>Les annotations de type</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">def calculer_moyenne(notes: list[float]) -&gt; float:
+    return sum(notes) / len(notes)</code></pre></div></div>
+<p>Python permet d&#39;écrire les types sans pour autant les vérifier à l&#39;exécution — ce sont des indications, pour vous, pour votre éditeur et pour des outils comme <code>mypy</code>. <strong>Pourquoi pas au cours :</strong> on n&#39;a que 16 heures, et ce serait perdre le bénéfice du typage dynamique avant même de l&#39;avoir compris. <strong>Mais ça vous parlera</strong> si vous venez du C++, et c&#39;est très utilisé en entreprise. <strong>Où chercher :</strong> <code>typing</code> dans la documentation, puis l&#39;outil <code>mypy</code>.</p>
+<h3><code>match</code> / <code>case</code></h3>
+<p>L&#39;équivalent du <code>switch</code>, arrivé dans Python 3.10, en beaucoup plus puissant : il sait décomposer des structures, pas seulement comparer des valeurs. <strong>Pourquoi pas au cours :</strong> récent, et une chaîne de <code>elif</code> suffit à tout ce qu&#39;on fera. <strong>Où chercher :</strong> « structural pattern matching ».</p>
+<h3>Le REPL, et <code>python -i</code></h3>
+<p>Tapez <code>uv run python</code> sans nom de fichier : vous obtenez un interpréteur interactif où chaque ligne s&#39;exécute immédiatement. C&#39;est l&#39;outil le plus sous-estimé de Python — idéal pour tester une idée en trois secondes au lieu d&#39;écrire un fichier. <strong>Pourquoi pas au cours :</strong> on l&#39;utilisera en démonstration, sans en faire un chapitre. <strong>Essayez tout de suite</strong> : <code>uv run python</code>, puis <code>2 ** 200</code>.</p>
+<h3><code>uvx</code> et <code>uv run --with</code></h3>
+<p>uv sait exécuter un outil sans l&#39;installer dans votre projet :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-bash">uvx ruff check mon_fichier.py</code></pre></div></div></div>
+<p><code>ruff</code> est un vérificateur de style : il vous dira, gratuitement, tout ce que la correction de vos travaux vous reprochera sur PEP 8. <strong>Pourquoi pas au cours :</strong> on veut que vous appreniez à voir les problèmes vous-même avant de laisser un outil les voir pour vous. <strong>Mais à partir du travail n° 3, servez-vous-en.</strong> <strong>Où chercher :</strong> documentation de uv, section « tools ».</p>
+<h3>Pourquoi l&#39;indentation ?</h3>
+<p>Python n&#39;a pas choisi l&#39;indentation par excentricité. Son créateur, Guido van Rossum, venait d&#39;un langage d&#39;enseignement appelé ABC, et le raisonnement était simple : les programmeurs indentent déjà correctement leur code, donc autant que cette indentation <em>soit</em> la structure, plutôt que de la dupliquer avec des accolades qui peuvent la contredire. <strong>Où chercher :</strong> « The History of Python », le blog de van Rossum.</p>
+<h3>Regarder ce que Python fait vraiment</h3>
+<p>Pour ceux qui viennent du C++ et à qui l&#39;absence de compilation manque :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">import dis
+dis.dis(lambda: sum([1, 2, 3]))</code></pre></div></div>
+<p>Vous verrez le bytecode que Python exécute réellement. Ça ne sert à rien pour le cours, et c&#39;est fascinant. <strong>Où chercher :</strong> module <code>dis</code> de la bibliothèque standard.</p>
+<h3>Un défi, si vous voulez en tenter un</h3>
+<p>Écrivez un programme de dix lignes maximum qui affiche les nombres de 1 à 100, en remplaçant les multiples de 3 par <code>Fizz</code>, les multiples de 5 par <code>Buzz</code>, et les multiples des deux par <code>FizzBuzz</code>.</p>
+<p>C&#39;est un exercice d&#39;entretien d&#39;embauche classique. Avec ce que vous savez à la fin de cette séance, vous pouvez le faire. Le vrai défi n&#39;est pas de le réussir : c&#39;est de le réussir sans écrire <code>for i in range(len(...))</code> et sans concaténer avec <code>+</code>.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Pour aller plus loin — les liens</h2>
+<ul>
+<li>Documentation de uv : <a href="https://docs.astral.sh/uv">https://docs.astral.sh/uv</a></li>
+<li>Documentation officielle de Python en français : <a href="https://docs.python.org/fr/3/">https://docs.python.org/fr/3/</a></li>
+<li>Guide de style PEP 8 : <a href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a></li>
+</ul>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant la prochaine séance</h2>
+<ul>
+<li><input disabled="" type="checkbox"> uv est installé et <code>uv --version</code> répond</li>
+<li><input disabled="" type="checkbox"> VS Code est installé, avec les extensions Python et Jupyter</li>
+<li><input disabled="" type="checkbox"> Un projet créé avec <code>uv init</code> s&#39;exécute avec <code>uv run</code></li>
+<li><input disabled="" type="checkbox"> L&#39;interpréteur du projet est sélectionné dans VS Code</li>
+<li><input disabled="" type="checkbox"> Le travail à rendre est déposé, sous forme de projet complet</li>
+</ul>
+
+</body>
+</html>
