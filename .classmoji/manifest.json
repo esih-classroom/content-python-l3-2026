@@ -10,6 +10,7 @@
   },
   "general": {
     "pages": [
+      "sance-1-introduction-a-python",
       "plan-de-cours-programmation-avec-python",
       "comment-fonctionne-ce-cours",
       "installer-son-environnement",
