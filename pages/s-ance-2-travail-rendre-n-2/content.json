@@ -1,0 +1,3926 @@
+{
+  "blocks": [
+    {
+      "id": "c7df9545-5328-4b63-928d-0e316f1718d6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "59f25936-9eb7-4629-8994-227f4ed98649",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Analyser un relevé de ventes",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bdb85d9d-e396-4d72-b1fc-903adda4796e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À remettre avant le début de la séance 3",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "cbeb054e-af02-4243-9170-ed3e318710b0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Résultats d'apprentissage évalués : RA2, RA3 — noté sur 20",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "10c5a7f7-5842-4214-9e1d-26b0b7e970d4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "0886401e-5bac-4a3d-b17f-fef856a36562",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce qu'on vous demande, en trois phrases",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "40ac88b3-508f-4b87-ac42-f9dc62ecad86",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous recevez une ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "liste de dictionnaires",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : dix ventes de produits agricoles, avec pour chacune le produit, sa catégorie, le département, la quantité et le prix unitaire. Vous devez écrire un programme qui produit un rapport chiffré à partir de ces données. Vous remettez un projet uv complet et un court texte qui explique trois de vos choix.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "17def5cb-8b23-4798-8c7c-4bed6bced078",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Comptez deux heures. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Ce travail n'a rien d'un exercice artificiel",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : c'est exactement ce que vous ferez à la séance 5 avec pandas, en trois lignes au lieu de trente. Écrivez-le à la main maintenant, et pandas vous paraîtra évident plus tard.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ef623d58-18c8-40d2-a7c1-a978174bd0d1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "466e00a7-5b2d-47cb-8f9b-dc361fab331c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les données",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ca654e2f-f301-4afd-9816-12bce9885b27",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le fichier ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "donnees.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " est déjà dans votre dépôt. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Ne le modifiez pas.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f78f5567-fcf2-478a-a242-5c5f4ba64aba",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "ventes = [\n    {\"produit\": \"riz\",      \"categorie\": \"cereales\", \"departement\": \"Ouest\",      \"quantite\": 120, \"prix_unitaire\": 285.0},\n    {\"produit\": \"mais\",     \"categorie\": \"cereales\", \"departement\": \"Artibonite\", \"quantite\": 340, \"prix_unitaire\": 95.0},\n    {\"produit\": \"haricot\",  \"categorie\": \"legumes\",  \"departement\": \"Ouest\",      \"quantite\": 85,  \"prix_unitaire\": 410.0},\n    {\"produit\": \"banane\",   \"categorie\": \"fruits\",   \"departement\": \"Sud\",        \"quantite\": 200, \"prix_unitaire\": 45.0},\n    {\"produit\": \"mangue\",   \"categorie\": \"fruits\",   \"departement\": \"Sud\",        \"quantite\": 310, \"prix_unitaire\": 30.0},\n    {\"produit\": \"riz\",      \"categorie\": \"cereales\", \"departement\": \"Artibonite\", \"quantite\": 500, \"prix_unitaire\": 270.0},\n    {\"produit\": \"avocat\",   \"categorie\": \"fruits\",   \"departement\": \"Ouest\",      \"quantite\": 150, \"prix_unitaire\": 62.0},\n    {\"produit\": \"haricot\",  \"categorie\": \"legumes\",  \"departement\": \"Nord\",       \"quantite\": 95,  \"prix_unitaire\": 425.0},\n    {\"produit\": \"igname\",   \"categorie\": \"legumes\",  \"departement\": \"Nord\",       \"quantite\": 180, \"prix_unitaire\": 130.0},\n    {\"produit\": \"mangue\",   \"categorie\": \"fruits\",   \"departement\": \"Ouest\",      \"quantite\": 260, \"prix_unitaire\": 35.0},\n]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "906ba543-301e-4bd0-b795-5e0c6ae09b81",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Dans votre programme ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "analyse.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", la première ligne les récupère :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ceb9441e-5b9f-49c0-ac8a-e5b9ae66804b",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "from donnees import ventes",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8c768b75-da3f-44f2-b5c2-592ac6af0fcb",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est tout. Vous n'avez pas à comprendre aujourd'hui comment ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "from … import",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " fonctionne — c'est la séance 3. Retenez que les données arrivent dans une variable ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ventes",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", et que le fichier d'origine reste intact.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8b8bf99e-87e9-4262-95a6-2465154e770f",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Regardez la forme de ces données avant d'écrire une ligne.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Une ligne par vente, une clé par colonne. C'est un fichier CSV, écrit en Python. Toutes les données réelles ont cette forme.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "01628469-b4c5-4878-b8c3-2211a2ce1a9b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "9bf38221-3d15-4377-af35-fee4f00284eb",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'affichage attendu",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0d23ee75-d8e9-4f84-9c85-c8764c4b687f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Votre programme doit produire ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exactement",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ceci :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e3181574-3861-4948-9c44-45cc0a47a25a",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "=== Relevé des ventes ===\n10 ventes, 7 produits distincts, 4 départements\nChiffre d'affaires total : 336825.00 HTG\n\n=== Chiffre d'affaires par département ===\nArtibonite    167300.00 HTG    49.7 %\nOuest          87450.00 HTG    26.0 %\nNord           63775.00 HTG    18.9 %\nSud            18300.00 HTG     5.4 %\n\n=== Chiffre d'affaires par produit ===\nriz           169200.00 HTG\nharicot        75225.00 HTG\nmais           32300.00 HTG\nigname         23400.00 HTG\nmangue         18400.00 HTG\navocat          9300.00 HTG\nbanane          9000.00 HTG\n\n=== Les ventes de plus de 30000 HTG ===\nriz (Ouest) : 34200.00 HTG\nmais (Artibonite) : 32300.00 HTG\nharicot (Ouest) : 34850.00 HTG\nriz (Artibonite) : 135000.00 HTG\nharicot (Nord) : 40375.00 HTG\n\nMeilleure vente : riz en Artibonite, 135000.00 HTG\nQuantité moyenne par vente : 224.0\nProduits : avocat, banane, haricot, igname, mais, mangue, riz",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "031a878e-468a-4568-b4cd-969202b8d352",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les deux tableaux du milieu sont triés par montant décroissant.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " La liste des ventes de plus de 30 000, elle, garde l'ordre du fichier d'origine.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fb66a8f1-ee95-4dd5-ac3a-b53748438dd8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "586cbfa9-e089-4eac-8ce1-85d1efe6abca",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les six étapes, dans l'ordre",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fcd00733-bec7-44f0-8507-3539f9433c8f",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce qu'il faut produire",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce que ça mobilise",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "1",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une clé ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "montant",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " ajoutée à ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "chaque",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " vente, valant ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "quantite × prix_unitaire",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une colonne calculée",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le nombre de produits distincts et de départements distincts",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Un ensemble",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le chiffre d'affaires total",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "sum",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " sur une compréhension",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le chiffre d'affaires ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "par département",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", avec sa part en pourcentage",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Un regroupement avec ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "get",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "5",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le chiffre d'affaires ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "par produit",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le même regroupement, sur une autre clé",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "6",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Les ventes au-dessus du seuil, la meilleure vente, la quantité moyenne, la liste des produits",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Filtrer, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "max(…, key=…)",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sorted(set(…))",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "ea44c37b-d73e-4d64-b74c-89fafc57a724",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'étape 4 est le cœur du travail.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Si elle passe, tout le reste est de la variation.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3ecdfecd-e1dc-454b-8f63-aa559008cce8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "2f4b0e1b-e5da-4876-840e-88ecf5e76150",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le seuil",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "17fe5cf9-09de-44f9-8e80-2c3a1ed92e74",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "En tête de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "analyse.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a305cb7c-7fc3-4ddf-ab45-d1ba05983a31",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "SEUIL = 30000",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "592e118c-d408-4af5-899d-c27758d972aa",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les majuscules signalent une valeur qu'on ne change pas en cours de programme. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Votre programme doit continuer à fonctionner si on met une autre valeur ici",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — le titre de la section s'adapte tout seul. Ce sera vérifié avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "SEUIL = 100000",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", qui ne doit laisser qu'une seule vente.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "823241a1-2076-4723-9deb-67bf55fcb3ab",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "e61e248b-31ac-4922-a58e-540e976d197d",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La mise en forme des colonnes",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9e717922-11f2-4206-93ed-aa5ae62a7de1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous n'avez pas encore vu l'alignement dans les f-strings. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "On vous le donne",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — ce n'est pas là-dessus que vous êtes évalué :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7939682b-c9b3-4fb4-9718-a3ca7cc0d740",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "print(f\"{dep:<12} {montant:>10.2f} HTG   {part:>5.1f} %\")\nprint(f\"{produit:<12} {montant:>10.2f} HTG\")",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "255d6830-ad28-4a8d-a97c-9f63f30095ee",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "<12",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " cale le texte ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "à gauche",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sur douze caractères. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": ">10.2f",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " cale le nombre ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "à droite",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sur dix caractères, avec deux décimales. C'est ce qui aligne les colonnes.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c182f5e8-4dc4-4bbc-949a-c5d441e8e951",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "bc308ee6-6595-49f9-b7bd-5ee973d476c3",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les contraintes d'écriture",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b1ba4702-80ba-4915-a1ac-b27bdfe16a26",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce sont elles qui font la différence entre 12 et 18.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5b5d4e6e-9e1d-414a-82c7-bcc9a9c64373",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce qui est exigé",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "1",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Aucun ",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": "for i in range(len(...))",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ".",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " Chaque occurrence coûte 1 point",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Les regroupements des étapes 4 et 5 utilisent ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "get(cle, 0)",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ". Pas de test ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "if cle in …",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " en quatre lignes",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le filtrage de l'étape 6 est une ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "compréhension de liste",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", sur une ligne",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "La liste des produits distincts est obtenue avec un ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "ensemble",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", pas avec un test d'appartenance dans une boucle",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "5",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Toutes les sorties passent par des f-strings. Aucune concaténation avec ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "+",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "6",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "snake_case",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", quatre espaces d'indentation. Aucune variable ne porte le nom d'un outil du langage — pas de ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sum",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "max",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "list",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "dict",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "set",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "7",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le fichier ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "donnees.py",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " est ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "inchangé",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "b446f226-1333-4d5a-9d67-49333854b911",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une remarque sur la contrainte 3.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Filtrer se fait en compréhension ; regrouper ne se fait pas en compréhension. Si vous vous acharnez à écrire l'étape 4 sur une ligne, vous perdrez une heure et vous produirez quelque chose d'illisible. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "La boucle est la bonne réponse à l'étape 4.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Savoir quand ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ne pas",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " écrire une compréhension fait partie de ce qu'on évalue.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e7f3394e-13dc-4e1f-9645-0a49ab422317",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une remarque sur l'étape 1.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Vous modifiez les dictionnaires de la liste ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ventes",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", sur place. Ce n'est pas une faute : c'est le geste normal pour ajouter une colonne. Mais souvenez-vous de la séance 1 — après cette boucle, les dictionnaires d'origine ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ont changé",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Vérifiez que ça ne vous surprend pas.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4585ba3b-00e7-4302-b6c9-1083018bd481",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "c6fc3399-3711-414b-a7d1-35dfcafc747f",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce que vous remettez",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "83b532b6-87dd-4370-803e-29642f4c4a9e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous avez reçu un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "dépôt privé à votre nom",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "tp2-ventes-votre-nom",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Il contient déjà ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "donnees.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "README.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de travail et le squelette de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NOTES.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ded16258-f5b6-426b-93ba-fea958f1ee11",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À la racine de ce dépôt, après l'avoir récupéré :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "896e03e2-e9f5-4280-b1eb-713d72079568",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7a9ac720-9c13-44d4-adb5-d7b0af760be4",
+      "type": "terminal",
+      "props": {
+        "code": "uv init\nuv run main.py",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "c026a41b-fde6-4466-8e02-4d84adcba716",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Renommez ensuite ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "main.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " en ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "analyse.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "uv init",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ne touche ni au ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "README.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ni au ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": ".gitignore",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " déjà présents, et ne crée pas de second dépôt Git.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "de555cfb-12ba-43c2-8cde-18f84f9efc97",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À la remise, le dépôt doit contenir :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3f5224bf-c7e3-4389-b502-4aec34cb618f",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Fichier",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Contenu",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "analyse.py",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Votre programme, avec la déclaration d'usage de l'IA en tête",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NOTES.md",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Vos explications, voir ci-dessous",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "donnees.py",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Inchangé",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "pyproject.toml",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Créé par ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv init",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "uv.lock",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Créé au premier ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv run",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": ".gitignore",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "README.md",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Déjà présents. Ne les supprimez pas",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "95d07c7d-fae6-44a7-af51-6288fa5632ef",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "70d53063-85f1-4345-b9fe-522ccaea5e56",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ca6fe7c9-c04c-40b9-b4d7-b770ab5f7cdd",
+      "type": "terminal",
+      "props": {
+        "code": "git add .\ngit commit -m \"Analyse du relevé de ventes\"\ngit push",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "ed44d194-fbb2-4069-ace0-9d09cfe98e3e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Et vous fermez l'issue du travail.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " C'est ça, remettre : l'heure de fermeture est l'heure de remise. Tant que l'issue est ouverte, le travail n'est pas rendu, même si votre code est en ligne.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6d68d292-f1f2-45c4-9c1b-3cfa7ee7cecb",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Faites plusieurs commits pendant votre travail, pas un seul à la fin. Un commit par étape du tableau ci-dessus est un bon rythme.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1eca5281-77fd-4e58-bebe-89c155ec6980",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pour vérifier que votre remise est complète : ouvrez la page du dépôt sur GitHub. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Ce que vous y voyez est exactement ce que l'enseignant voit.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c6209635-0252-4068-bc72-0c6390bb6ea0",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Si vous travaillez sur Google Colab.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Remettez un carnet nommé ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "tp2-nom-prenom",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", déposé dans le dépôt ou partagé par lien dans l'issue. Collez la liste ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ventes",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " dans la première cellule de code au lieu du ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "from donnees import ventes",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", et signalez-le dans vos notes. Une cellule de texte tient lieu de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NOTES.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Signalez aussi dans l'issue que c'est votre voie. Même barème, à un point près : les 2 points « projet uv complet » deviennent 2 points « carnet propre, exécutable de haut en bas sans erreur ».\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "00088a81-9644-4456-875f-5f996de40b66",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "6d316672-8a34-4faa-b0d8-6e8fa23849dd",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le contenu de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NOTES.md",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0d37028b-9aa4-40bd-ac63-0e80f27421bd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " paragraphes courts cette fois, pas cinq. Répondez à ces trois questions précises :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "48e85199-856f-4af6-8fe9-6f65245cfbbd",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'étape 4.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Décrivez votre boucle de regroupement en français, ligne par ligne. Que contient le dictionnaire après le troisième tour de boucle ?",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "15ee7169-f7d9-42b7-b309-22f2d5a2378f",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une compréhension que vous n'avez pas écrite.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Citez un endroit du programme où vous auriez pu en mettre une et où vous avez préféré une boucle. Dites pourquoi.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8257c641-8a66-44d1-a07b-0bb663e78664",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une erreur que vous avez faite.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " N'importe laquelle : le message exact, ce qui la causait, comment vous l'avez trouvée. Si vous n'en avez fait aucune, dites-le — mais c'est rare, et ce n'est pas ce qui est attendu.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ed067971-dc68-4691-a6b0-2a21873eb584",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La troisième question est notée comme les autres, et une erreur décrite honnêtement rapporte plus qu'un « tout a bien marché ». ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Savoir lire une erreur est au programme de la séance 3 ; commencez à en tenir la trace dès maintenant.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "45fd9448-b37e-43e9-ad14-86a32767b806",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "435dedd6-ff08-4639-a68d-fdc5aed23082",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Déclaration d'usage de l'IA",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d56d113b-5ad5-4671-90a2-39ee3e21a3cd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "En tête de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "analyse.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", un commentaire, même vide de contenu :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b7439358-90c3-4005-9443-13e40fab2005",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "# Usage d'IA : aucun\n# ou :\n# Usage d'IA : j'ai demandé à un assistant d'expliquer max(..., key=...).\n# Le code est écrit par moi.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f5d88f97-4ce3-49c1-b517-e51b168746a3",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rappel du plan de cours : les assistants sont autorisés pour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "comprendre",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pas pour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "produire",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " le code que vous remettez. Vous devrez pouvoir expliquer chaque ligne de votre programme si on vous le demande — et pour ce travail-là, la question portera sur la boucle de regroupement.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3274978a-f75a-4b38-9f48-90fa1c68d661",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "a39dcdf9-6a9b-461d-894d-23833cda45d6",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Grille d'évaluation",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9d43326f-b14b-4fbc-8f8e-606c54655c98",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Critère",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Points",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Détail",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le programme fonctionne",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "6",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Il s'exécute sans erreur et donne l'affichage exact attendu. 5 points pour le rapport complet, 1 point pour le comportement correct avec ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "SEUIL = 100000",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le regroupement",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "5",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Étapes 4 et 5. Usage de ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "get(cle, 0)",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", tri décroissant correct, pourcentages justes",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Compréhensions et ensembles",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le filtrage en compréhension, la colonne calculée, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sorted(set(…))",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sum",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " sur une compréhension, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "max(…, key=…)",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Style PEP 8",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "snake_case",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", quatre espaces, f-strings partout, noms de variables qui ne recouvrent rien",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Projet uv complet",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "pyproject.toml",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " et ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv.lock",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " présents, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": ".venv/",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " absent, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "donnees.py",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " inchangé, le projet se reconstruit avec ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv sync",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NOTES.md",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Les trois questions, répondues précisément. La question 1 vaut à elle seule la moitié du poste",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Total",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "20",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "7520e1ed-5eee-49f5-a633-00b521020e51",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pénalités, cumulables :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "77049fb6-e895-4947-b378-b2f4bfe77dd1",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Chaque ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "for i in range(len(...))",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "−1 point",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "donnees.py",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " modifié",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "−2 points",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Déclaration d'usage de l'IA absente",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "−2 points",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Retard",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Vous avez ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "72 tokens",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " pour le semestre, à poser vous-même sans justification : un token = une heure de report. Ensuite, −10 % par jour entamé, jusqu'à trois jours. Au-delà, non accepté",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "34356103-aabb-46ef-8c2f-2cc87b79ffc0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un point de bonus",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", dans la limite de 20 : ajoutez une dernière section qui donne, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "pour chaque département",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", le produit qui y rapporte le plus. Quatre lignes de résultat. C'est difficile, et c'est faisable avec ce que vous savez — c'est le défi de la section « Aller plus loin » du support de cours.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "aab893e5-9201-4639-8e80-8fd8a46f58f8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "0b9f1058-3d39-4c9d-a92b-b407163585d2",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois conseils",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0209319b-d38a-45d1-a834-6c6627b34748",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Faites l'étape 1 et affichez la liste entière.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Avant tout calcul, regardez à quoi ressemblent vos dictionnaires une fois la clé ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "montant",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ajoutée. Trente secondes qui vous en feront gagner trente minutes.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e0e4f48f-4421-4d41-b0b1-05359741ebce",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Écrivez le regroupement de l'étape 4 sur un exemple à trois lignes d'abord.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Copiez trois ventes dans un fichier à part, faites tourner la boucle, affichez le dictionnaire à chaque tour. Quand elle est juste sur trois, elle est juste sur dix.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "67e138c8-4099-4954-a49e-a128d822725b",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ne cherchez pas ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Counter",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "defaultdict",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ou ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "itertools.groupby",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Ils existent, ils sont dans la section « Aller plus loin » du support, et ils ne rapportent aucun point ici. Ce qui est évalué, c'est que vous sachiez écrire la boucle.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9607c99b-77bc-469e-a636-d85c46a3bf39",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
