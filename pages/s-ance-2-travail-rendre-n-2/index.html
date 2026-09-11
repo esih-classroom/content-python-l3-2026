@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="background-color: #FBF3DB;">Analyser un relevé de ventes</h2>
+<p><strong>À remettre avant le début de la séance 3</strong></p>
+<p><strong>Résultats d&#39;apprentissage évalués : RA2, RA3 — noté sur 20</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce qu&#39;on vous demande, en trois phrases</h2>
+<p>Vous recevez une <strong>liste de dictionnaires</strong> : dix ventes de produits agricoles, avec pour chacune le produit, sa catégorie, le département, la quantité et le prix unitaire. Vous devez écrire un programme qui produit un rapport chiffré à partir de ces données. Vous remettez un projet uv complet et un court texte qui explique trois de vos choix.</p>
+<p>Comptez deux heures. <strong>Ce travail n&#39;a rien d&#39;un exercice artificiel</strong> : c&#39;est exactement ce que vous ferez à la séance 5 avec pandas, en trois lignes au lieu de trente. Écrivez-le à la main maintenant, et pandas vous paraîtra évident plus tard.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les données</h2>
+<p>Le fichier <code>donnees.py</code> est déjà dans votre dépôt. <strong>Ne le modifiez pas.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code class="language-python">ventes = [
+    {&quot;produit&quot;: &quot;riz&quot;,      &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Ouest&quot;,      &quot;quantite&quot;: 120, &quot;prix_unitaire&quot;: 285.0},
+    {&quot;produit&quot;: &quot;mais&quot;,     &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Artibonite&quot;, &quot;quantite&quot;: 340, &quot;prix_unitaire&quot;: 95.0},
+    {&quot;produit&quot;: &quot;haricot&quot;,  &quot;categorie&quot;: &quot;legumes&quot;,  &quot;departement&quot;: &quot;Ouest&quot;,      &quot;quantite&quot;: 85,  &quot;prix_unitaire&quot;: 410.0},
+    {&quot;produit&quot;: &quot;banane&quot;,   &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Sud&quot;,        &quot;quantite&quot;: 200, &quot;prix_unitaire&quot;: 45.0},
+    {&quot;produit&quot;: &quot;mangue&quot;,   &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Sud&quot;,        &quot;quantite&quot;: 310, &quot;prix_unitaire&quot;: 30.0},
+    {&quot;produit&quot;: &quot;riz&quot;,      &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Artibonite&quot;, &quot;quantite&quot;: 500, &quot;prix_unitaire&quot;: 270.0},
+    {&quot;produit&quot;: &quot;avocat&quot;,   &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Ouest&quot;,      &quot;quantite&quot;: 150, &quot;prix_unitaire&quot;: 62.0},
+    {&quot;produit&quot;: &quot;haricot&quot;,  &quot;categorie&quot;: &quot;legumes&quot;,  &quot;departement&quot;: &quot;Nord&quot;,       &quot;quantite&quot;: 95,  &quot;prix_unitaire&quot;: 425.0},
+    {&quot;produit&quot;: &quot;igname&quot;,   &quot;categorie&quot;: &quot;legumes&quot;,  &quot;departement&quot;: &quot;Nord&quot;,       &quot;quantite&quot;: 180, &quot;prix_unitaire&quot;: 130.0},
+    {&quot;produit&quot;: &quot;mangue&quot;,   &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Ouest&quot;,      &quot;quantite&quot;: 260, &quot;prix_unitaire&quot;: 35.0},
+]</code></pre></div></div>
+<p>Dans votre programme <code>analyse.py</code>, la première ligne les récupère :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">from donnees import ventes</code></pre></div></div>
+<p>C&#39;est tout. Vous n&#39;avez pas à comprendre aujourd&#39;hui comment <code>from … import</code> fonctionne — c&#39;est la séance 3. Retenez que les données arrivent dans une variable <code>ventes</code>, et que le fichier d&#39;origine reste intact.</p>
+<blockquote>
+<p><strong>Regardez la forme de ces données avant d&#39;écrire une ligne.</strong> Une ligne par vente, une clé par colonne. C&#39;est un fichier CSV, écrit en Python. Toutes les données réelles ont cette forme.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">L&#39;affichage attendu</h2>
+<p>Votre programme doit produire <strong>exactement</strong> ceci :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span></div><pre><code>=== Relevé des ventes ===
+10 ventes, 7 produits distincts, 4 départements
+Chiffre d&#39;affaires total : 336825.00 HTG
+
+=== Chiffre d&#39;affaires par département ===
+Artibonite    167300.00 HTG    49.7 %
+Ouest          87450.00 HTG    26.0 %
+Nord           63775.00 HTG    18.9 %
+Sud            18300.00 HTG     5.4 %
+
+=== Chiffre d&#39;affaires par produit ===
+riz           169200.00 HTG
+haricot        75225.00 HTG
+mais           32300.00 HTG
+igname         23400.00 HTG
+mangue         18400.00 HTG
+avocat          9300.00 HTG
+banane          9000.00 HTG
+
+=== Les ventes de plus de 30000 HTG ===
+riz (Ouest) : 34200.00 HTG
+mais (Artibonite) : 32300.00 HTG
+haricot (Ouest) : 34850.00 HTG
+riz (Artibonite) : 135000.00 HTG
+haricot (Nord) : 40375.00 HTG
+
+Meilleure vente : riz en Artibonite, 135000.00 HTG
+Quantité moyenne par vente : 224.0
+Produits : avocat, banane, haricot, igname, mais, mangue, riz</code></pre></div></div>
+<p><strong>Les deux tableaux du milieu sont triés par montant décroissant.</strong> La liste des ventes de plus de 30 000, elle, garde l&#39;ordre du fichier d&#39;origine.</p>
+<h3>Les six étapes, dans l&#39;ordre</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ce qu&#39;il faut produire</th>
+<th>Ce que ça mobilise</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Une clé <code>montant</code> ajoutée à <strong>chaque</strong> vente, valant <code>quantite × prix_unitaire</code></td>
+<td>Une colonne calculée</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Le nombre de produits distincts et de départements distincts</td>
+<td>Un ensemble</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le chiffre d&#39;affaires total</td>
+<td><code>sum</code> sur une compréhension</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Le chiffre d&#39;affaires <strong>par département</strong>, avec sa part en pourcentage</td>
+<td>Un regroupement avec <code>get</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Le chiffre d&#39;affaires <strong>par produit</strong></td>
+<td>Le même regroupement, sur une autre clé</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Les ventes au-dessus du seuil, la meilleure vente, la quantité moyenne, la liste des produits</td>
+<td>Filtrer, <code>max(…, key=…)</code>, <code>sorted(set(…))</code></td>
+</tr>
+</tbody></table>
+<p><strong>L&#39;étape 4 est le cœur du travail.</strong> Si elle passe, tout le reste est de la variation.</p>
+<h3>Le seuil</h3>
+<p>En tête de <code>analyse.py</code> :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">SEUIL = 30000</code></pre></div></div>
+<p>Les majuscules signalent une valeur qu&#39;on ne change pas en cours de programme. <strong>Votre programme doit continuer à fonctionner si on met une autre valeur ici</strong> — le titre de la section s&#39;adapte tout seul. Ce sera vérifié avec <code>SEUIL = 100000</code>, qui ne doit laisser qu&#39;une seule vente.</p>
+<h3>La mise en forme des colonnes</h3>
+<p>Vous n&#39;avez pas encore vu l&#39;alignement dans les f-strings. <strong>On vous le donne</strong> — ce n&#39;est pas là-dessus que vous êtes évalué :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">print(f&quot;{dep:&lt;12} {montant:&gt;10.2f} HTG   {part:&gt;5.1f} %&quot;)
+print(f&quot;{produit:&lt;12} {montant:&gt;10.2f} HTG&quot;)</code></pre></div></div>
+<p><code>&lt;12</code> cale le texte <strong>à gauche</strong> sur douze caractères. <code>&gt;10.2f</code> cale le nombre <strong>à droite</strong> sur dix caractères, avec deux décimales. C&#39;est ce qui aligne les colonnes.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les contraintes d&#39;écriture</h2>
+<p>Ce sont elles qui font la différence entre 12 et 18.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ce qui est exigé</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Aucun <code>for i in range(len(...))</code>.</strong> Chaque occurrence coûte 1 point</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les regroupements des étapes 4 et 5 utilisent <code>get(cle, 0)</code>. Pas de test <code>if cle in …</code> en quatre lignes</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Le filtrage de l&#39;étape 6 est une <strong>compréhension de liste</strong>, sur une ligne</td>
+</tr>
+<tr>
+<td>4</td>
+<td>La liste des produits distincts est obtenue avec un <strong>ensemble</strong>, pas avec un test d&#39;appartenance dans une boucle</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Toutes les sorties passent par des f-strings. Aucune concaténation avec <code>+</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>snake_case</code>, quatre espaces d&#39;indentation. Aucune variable ne porte le nom d&#39;un outil du langage — pas de <code>sum</code>, <code>max</code>, <code>list</code>, <code>dict</code>, <code>set</code></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Le fichier <code>donnees.py</code> est <strong>inchangé</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Une remarque sur la contrainte 3.</strong> Filtrer se fait en compréhension ; regrouper ne se fait pas en compréhension. Si vous vous acharnez à écrire l&#39;étape 4 sur une ligne, vous perdrez une heure et vous produirez quelque chose d&#39;illisible. <strong>La boucle est la bonne réponse à l&#39;étape 4.</strong> Savoir quand <em>ne pas</em> écrire une compréhension fait partie de ce qu&#39;on évalue.</p>
+<p><strong>Une remarque sur l&#39;étape 1.</strong> Vous modifiez les dictionnaires de la liste <code>ventes</code>, sur place. Ce n&#39;est pas une faute : c&#39;est le geste normal pour ajouter une colonne. Mais souvenez-vous de la séance 1 — après cette boucle, les dictionnaires d&#39;origine <em>ont changé</em>. Vérifiez que ça ne vous surprend pas.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce que vous remettez</h2>
+<p>Vous avez reçu un <strong>dépôt privé à votre nom</strong>, <code>tp2-ventes-votre-nom</code>. Il contient déjà <code>donnees.py</code>, un <code>README.md</code> de travail et le squelette de <code>NOTES.md</code>.</p>
+<p>À la racine de ce dépôt, après l&#39;avoir récupéré :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-bash">uv init
+uv run main.py</code></pre></div></div></div>
+<p>Renommez ensuite <code>main.py</code> en <code>analyse.py</code>. <code>uv init</code> ne touche ni au <code>README.md</code> ni au <code>.gitignore</code> déjà présents, et ne crée pas de second dépôt Git.</p>
+<p>À la remise, le dépôt doit contenir :</p>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>analyse.py</code></td>
+<td>Votre programme, avec la déclaration d&#39;usage de l&#39;IA en tête</td>
+</tr>
+<tr>
+<td><code>NOTES.md</code></td>
+<td>Vos explications, voir ci-dessous</td>
+</tr>
+<tr>
+<td><code>donnees.py</code></td>
+<td><strong>Inchangé</strong></td>
+</tr>
+<tr>
+<td><code>pyproject.toml</code></td>
+<td>Créé par <code>uv init</code></td>
+</tr>
+<tr>
+<td><code>uv.lock</code></td>
+<td>Créé au premier <code>uv run</code></td>
+</tr>
+<tr>
+<td><code>.gitignore</code>, <code>README.md</code></td>
+<td>Déjà présents. Ne les supprimez pas</td>
+</tr>
+</tbody></table>
+<p>Puis :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-bash">git add .
+git commit -m &quot;Analyse du relevé de ventes&quot;
+git push</code></pre></div></div></div>
+<p><strong>Et vous fermez l&#39;issue du travail.</strong> C&#39;est ça, remettre : l&#39;heure de fermeture est l&#39;heure de remise. Tant que l&#39;issue est ouverte, le travail n&#39;est pas rendu, même si votre code est en ligne.</p>
+<p>Faites plusieurs commits pendant votre travail, pas un seul à la fin. Un commit par étape du tableau ci-dessus est un bon rythme.</p>
+<p>Pour vérifier que votre remise est complète : ouvrez la page du dépôt sur GitHub. <strong>Ce que vous y voyez est exactement ce que l&#39;enseignant voit.</strong></p>
+<blockquote>
+<p><strong>Si vous travaillez sur Google Colab.</strong> Remettez un carnet nommé <code>tp2-nom-prenom</code>, déposé dans le dépôt ou partagé par lien dans l&#39;issue. Collez la liste <code>ventes</code> dans la première cellule de code au lieu du <code>from donnees import ventes</code>, et signalez-le dans vos notes. Une cellule de texte tient lieu de <code>NOTES.md</code>. Signalez aussi dans l&#39;issue que c&#39;est votre voie. Même barème, à un point près : les 2 points « projet uv complet » deviennent 2 points « carnet propre, exécutable de haut en bas sans erreur ».</p>
+</blockquote>
+<h3>Le contenu de <code>NOTES.md</code></h3>
+<p><strong>Trois</strong> paragraphes courts cette fois, pas cinq. Répondez à ces trois questions précises :</p>
+<ol>
+<li><strong>L&#39;étape 4.</strong> Décrivez votre boucle de regroupement en français, ligne par ligne. Que contient le dictionnaire après le troisième tour de boucle ?</li>
+<li><strong>Une compréhension que vous n&#39;avez pas écrite.</strong> Citez un endroit du programme où vous auriez pu en mettre une et où vous avez préféré une boucle. Dites pourquoi.</li>
+<li><strong>Une erreur que vous avez faite.</strong> N&#39;importe laquelle : le message exact, ce qui la causait, comment vous l&#39;avez trouvée. Si vous n&#39;en avez fait aucune, dites-le — mais c&#39;est rare, et ce n&#39;est pas ce qui est attendu.</li>
+</ol>
+<p>La troisième question est notée comme les autres, et une erreur décrite honnêtement rapporte plus qu&#39;un « tout a bien marché ». <strong>Savoir lire une erreur est au programme de la séance 3 ; commencez à en tenir la trace dès maintenant.</strong></p>
+<h3>Déclaration d&#39;usage de l&#39;IA</h3>
+<p>En tête de <code>analyse.py</code>, un commentaire, même vide de contenu :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python"># Usage d&#39;IA : aucun
+# ou :
+# Usage d&#39;IA : j&#39;ai demandé à un assistant d&#39;expliquer max(..., key=...).
+# Le code est écrit par moi.</code></pre></div></div>
+<p>Rappel du plan de cours : les assistants sont autorisés pour <strong>comprendre</strong>, pas pour <strong>produire</strong> le code que vous remettez. Vous devrez pouvoir expliquer chaque ligne de votre programme si on vous le demande — et pour ce travail-là, la question portera sur la boucle de regroupement.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Grille d&#39;évaluation</h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Points</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Le programme fonctionne</strong></td>
+<td>6</td>
+<td>Il s&#39;exécute sans erreur et donne l&#39;affichage exact attendu. 5 points pour le rapport complet, 1 point pour le comportement correct avec <code>SEUIL = 100000</code></td>
+</tr>
+<tr>
+<td><strong>Le regroupement</strong></td>
+<td>5</td>
+<td>Étapes 4 et 5. Usage de <code>get(cle, 0)</code>, tri décroissant correct, pourcentages justes</td>
+</tr>
+<tr>
+<td><strong>Compréhensions et ensembles</strong></td>
+<td>4</td>
+<td>Le filtrage en compréhension, la colonne calculée, <code>sorted(set(…))</code>, <code>sum</code> sur une compréhension, <code>max(…, key=…)</code></td>
+</tr>
+<tr>
+<td><strong>Style PEP 8</strong></td>
+<td>2</td>
+<td><code>snake_case</code>, quatre espaces, f-strings partout, noms de variables qui ne recouvrent rien</td>
+</tr>
+<tr>
+<td><strong>Projet uv complet</strong></td>
+<td>2</td>
+<td><code>pyproject.toml</code> et <code>uv.lock</code> présents, <code>.venv/</code> absent, <code>donnees.py</code> inchangé, le projet se reconstruit avec <code>uv sync</code></td>
+</tr>
+<tr>
+<td><strong><code>NOTES.md</code></strong></td>
+<td>3</td>
+<td>Les trois questions, répondues précisément. La question 1 vaut à elle seule la moitié du poste</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>20</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Pénalités, cumulables :</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chaque <code>for i in range(len(...))</code></td>
+<td>−1 point</td>
+</tr>
+<tr>
+<td><code>donnees.py</code> modifié</td>
+<td>−2 points</td>
+</tr>
+<tr>
+<td>Déclaration d&#39;usage de l&#39;IA absente</td>
+<td>−2 points</td>
+</tr>
+<tr>
+<td>Retard</td>
+<td>Vous avez <strong>72 tokens</strong> pour le semestre, à poser vous-même sans justification : un token = une heure de report. Ensuite, −10 % par jour entamé, jusqu&#39;à trois jours. Au-delà, non accepté</td>
+</tr>
+</tbody></table>
+<p><strong>Un point de bonus</strong>, dans la limite de 20 : ajoutez une dernière section qui donne, <strong>pour chaque département</strong>, le produit qui y rapporte le plus. Quatre lignes de résultat. C&#39;est difficile, et c&#39;est faisable avec ce que vous savez — c&#39;est le défi de la section « Aller plus loin » du support de cours.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Trois conseils</h2>
+<ol>
+<li><strong>Faites l&#39;étape 1 et affichez la liste entière.</strong> Avant tout calcul, regardez à quoi ressemblent vos dictionnaires une fois la clé <code>montant</code> ajoutée. Trente secondes qui vous en feront gagner trente minutes.</li>
+<li><strong>Écrivez le regroupement de l&#39;étape 4 sur un exemple à trois lignes d&#39;abord.</strong> Copiez trois ventes dans un fichier à part, faites tourner la boucle, affichez le dictionnaire à chaque tour. Quand elle est juste sur trois, elle est juste sur dix.</li>
+<li><strong>Ne cherchez pas <code>Counter</code>, <code>defaultdict</code> ou <code>itertools.groupby</code>.</strong> Ils existent, ils sont dans la section « Aller plus loin » du support, et ils ne rapportent aucun point ici. Ce qui est évalué, c&#39;est que vous sachiez écrire la boucle.</li>
+</ol>
+<hr>
+<h2 style="background-color: #FBF3DB;">Rappel du calendrier</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Distribué</td>
+<td>Séance 2</td>
+</tr>
+<tr>
+<td>À remettre</td>
+<td>Avant le début de la séance 3</td>
+</tr>
+<tr>
+<td>Corrigé rendu</td>
+<td>Séance 4</td>
+</tr>
+</tbody></table>
+<p>La séance 3 porte sur les fonctions, le style, et la lecture des messages d&#39;erreur. Le programme que vous écrivez aujourd&#39;hui y servira de matière première : vous le découperez en fonctions.</p>
+
+</body>
+</html>
