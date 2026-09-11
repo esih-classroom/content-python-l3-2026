@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<p><strong>35 minutes — à faire seul ou à deux</strong></p>
+<p><strong>Résultats d&#39;apprentissage visés : RA2, RA3</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Comment travailler</h2>
+<p>Quatre exercices, dans l&#39;ordre. Ne passez pas au suivant tant que le précédent ne fonctionne pas.</p>
+<table>
+<thead>
+<tr>
+<th>Exercice</th>
+<th>Ce qu&#39;il demande</th>
+<th>Durée</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Le projet de la séance, et la boucle de la semaine dernière en une ligne</td>
+<td>4 min</td>
+<td><strong>Socle</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Découper, trier, copier une liste</td>
+<td>8 min</td>
+<td><strong>Socle</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Compter avec un dictionnaire</td>
+<td>10 min</td>
+<td><strong>Socle</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Une liste de dictionnaires : filtrer, calculer, classer</td>
+<td>8 min</td>
+<td>Extension</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Correction collective</td>
+<td>5 min</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Le socle, c&#39;est ce que tout le monde doit finir.</strong> Les exercices 0, 1 et 2 portent tout ce dont vous aurez besoin pour le travail à rendre n° 2 et pour la séance 3. L&#39;exercice 3 est un avant-goût du travail à rendre : si vous l&#39;avez fait, le travail sera nettement plus rapide.</p>
+<p><strong>Si vous n&#39;avez pas fini le socle en séance</strong>, terminez-le chez vous avant la séance 3. Et si vous bloquez, écrivez dans l&#39;issue du dépôt d&#39;exercices — c&#39;est fait pour ça, et vous n&#39;êtes jamais le seul à bloquer au même endroit.</p>
+<p><strong>Si vous travaillez sur Google Colab ou sur téléphone</strong>, chaque exercice a une variante indiquée. Vous ferez la même chose, sans les commandes <code>uv</code>.</p>
+<p><strong>Rappel de la règle du cours :</strong> on exécute avec <code>uv run fichier.py</code>, jamais avec <code>python fichier.py</code>.</p>
+<p><strong>Rappel de la règle d&#39;aujourd&#39;hui :</strong> une boucle <code>for</code> correcte vaut tous les points. Si la compréhension ne vient pas, écrivez la boucle et passez à la suite.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 0 — Le projet, et la ligne de la semaine dernière</h2>
+<p><em>4 minutes. <strong>Socle.</strong></em></p>
+<p>Dans un terminal :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-bash">uv init seance-02
+cd seance-02
+uv run main.py</code></pre></div></div></div>
+<p>Créez ensuite <code>exercice0.py</code> et collez-y ce que vous aviez écrit la semaine dernière :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-python">notes_etudiants = [12, 17, 9, 14, 18, 7, 15]
+
+notes_reussite = []
+for note in notes_etudiants:
+    if note &gt;= 10:
+        notes_reussite.append(note)
+
+moyenne = sum(notes_reussite) / len(notes_reussite)
+print(f&quot;Moyenne des reçus : {moyenne:.1f}&quot;)</code></pre></div></div>
+<p><strong>Ce qu&#39;on vous demande :</strong></p>
+<ol>
+<li>Exécutez-le. Notez l&#39;affichage obtenu — c&#39;est votre référence.</li>
+<li>Remplacez les quatre lignes de la boucle par <strong>une seule</strong> compréhension.</li>
+<li>Exécutez à nouveau. <strong>L&#39;affichage doit être identique au caractère près.</strong></li>
+</ol>
+<p>C&#39;est le seul exercice de la séance dont vous connaissez déjà la réponse attendue. Servez-vous-en : si le résultat change, c&#39;est la compréhension qui est fausse, pas le calcul.</p>
+<blockquote>
+<p><strong>Variante Colab / téléphone.</strong> Une cellule pour la version longue, une cellule pour la version courte. Gardez les deux à l&#39;écran, côte à côte.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 1 — Découper, trier, copier</h2>
+<p><em>8 minutes. <strong>Socle.</strong></em></p>
+<p>Dans <code>exercice1.py</code>, partez de ces deux listes :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">jours = [&quot;lundi&quot;, &quot;mardi&quot;, &quot;mercredi&quot;, &quot;jeudi&quot;, &quot;vendredi&quot;, &quot;samedi&quot;, &quot;dimanche&quot;]
+temperatures = [31, 29, 33, 35, 30, 28, 32]</code></pre></div></div>
+<p>Écrivez le code qui affiche, dans cet ordre :</p>
+<ol>
+<li>Les <strong>cinq premiers</strong> jours</li>
+<li>Le <strong>week-end</strong> — les deux derniers, sans écrire le chiffre 5 ni le chiffre 7</li>
+<li>Le <strong>dernier</strong> jour, sans utiliser <code>len</code></li>
+<li>La semaine <strong>à l&#39;envers</strong></li>
+<li>Un jour <strong>sur deux à partir de mardi</strong> — le résultat fait trois éléments</li>
+<li>Les <strong>trois températures les plus élevées</strong>, de la plus haute à la plus basse</li>
+</ol>
+<p><strong>Puis deux questions, en commentaire à la fin du fichier :</strong></p>
+<ol start="7">
+<li>Que vaut <code>jours[:3] + jours[3:]</code> ? Répondez d&#39;abord sans exécuter, puis vérifiez.</li>
+<li>Ce code ne fait pas ce qu&#39;on croit. Corrigez-le, et expliquez en une phrase ce qui n&#39;allait pas :</li>
+</ol>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">temperatures_triees = temperatures.sort()
+print(temperatures_triees)</code></pre></div></div>
+<p><strong>Une contrainte de style :</strong> à la question 6, la liste <code>temperatures</code> ne doit pas avoir changé à la fin du programme. Affichez-la en dernière ligne pour le prouver.</p>
+<blockquote>
+<p><strong>Indice pour la question 2.</strong> Les index négatifs comptent depuis la fin, et le découpage les accepte aussi.</p>
+</blockquote>
+<blockquote>
+<p><strong>Variante Colab / téléphone.</strong> Identique, en une seule cellule.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 2 — Compter</h2>
+<p><em>10 minutes. <strong>Socle</strong> — c&#39;est l&#39;exercice le plus important de la séance.</em></p>
+<p>Dans <code>exercice2.py</code> :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">texte = &quot;riz mais riz haricot riz mais banane&quot;
+mots = texte.split()</code></pre></div></div>
+<p><code>split()</code> découpe une chaîne sur les espaces et renvoie une liste. C&#39;est tout ce qu&#39;il faut savoir aujourd&#39;hui.</p>
+<p><strong>Ce qu&#39;on vous demande :</strong></p>
+<ol>
+<li>Construisez un dictionnaire <code>compte</code> qui donne, pour chaque mot, le nombre de fois où il apparaît. Utilisez <code>get(mot, 0)</code>.</li>
+<li>Affichez-le ligne par ligne, une ligne par mot, de la forme :</li>
+</ol>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code>riz : 3
+mais : 2
+haricot : 1
+banane : 1</code></pre></div></div>
+<ol start="3">
+<li>Affichez la liste des mots <strong>distincts</strong>, <strong>triés par ordre alphabétique</strong>.</li>
+<li>Affichez le mot qui revient le plus souvent.</li>
+<li>Construisez, avec une <strong>compréhension de dictionnaire</strong>, un dictionnaire ne gardant que les mots apparaissant <strong>au moins deux fois</strong>.</li>
+</ol>
+<p><strong>Puis une question, en commentaire à la fin du fichier :</strong></p>
+<ol start="6">
+<li>Réécrivez la ligne <code>compte[mot] = compte.get(mot, 0) + 1</code> <strong>sans utiliser <code>get</code></strong>. Votre version fait plus d&#39;une ligne — combien, et pourquoi ?</li>
+</ol>
+<blockquote>
+<p><strong>Indice pour la question 4.</strong> <code>max</code> accepte un <code>key=</code>. Sur un dictionnaire, <code>max(compte, key=compte.get)</code> parcourt les clés et compare les valeurs. Prenez trente secondes pour comprendre cette ligne avant de l&#39;écrire : elle réutilise deux choses vues aujourd&#39;hui.</p>
+</blockquote>
+<blockquote>
+<p><strong>Si la question 5 bloque</strong>, faites-la avec une boucle <code>for</code> et un <code>if</code>. C&#39;est juste, c&#39;est noté pareil, et vous y reviendrez.</p>
+</blockquote>
+<blockquote>
+<p><strong>Variante Colab / téléphone.</strong> Identique.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 3 — Une liste de dictionnaires</h2>
+<p><em>8 minutes. <strong>Extension</strong> — à faire si le socle est terminé.</em></p>
+<p>C&#39;est la forme que prennent toutes les données réelles, et c&#39;est l&#39;exercice qui ressemble le plus au travail à rendre.</p>
+<p>Dans <code>exercice3.py</code> :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-python">releves = [
+    {&quot;ville&quot;: &quot;Port-au-Prince&quot;, &quot;departement&quot;: &quot;Ouest&quot;,      &quot;temperature&quot;: 33, &quot;pluie&quot;: 0},
+    {&quot;ville&quot;: &quot;Jacmel&quot;,         &quot;departement&quot;: &quot;Sud-Est&quot;,    &quot;temperature&quot;: 29, &quot;pluie&quot;: 12},
+    {&quot;ville&quot;: &quot;Cap-Haitien&quot;,    &quot;departement&quot;: &quot;Nord&quot;,       &quot;temperature&quot;: 31, &quot;pluie&quot;: 5},
+    {&quot;ville&quot;: &quot;Les Cayes&quot;,      &quot;departement&quot;: &quot;Sud&quot;,        &quot;temperature&quot;: 30, &quot;pluie&quot;: 20},
+    {&quot;ville&quot;: &quot;Gonaives&quot;,       &quot;departement&quot;: &quot;Artibonite&quot;, &quot;temperature&quot;: 35, &quot;pluie&quot;: 0},
+    {&quot;ville&quot;: &quot;Hinche&quot;,         &quot;departement&quot;: &quot;Centre&quot;,     &quot;temperature&quot;: 28, &quot;pluie&quot;: 8},
+]</code></pre></div></div>
+<p>Affichez, dans cet ordre :</p>
+<ol>
+<li>Les <strong>noms</strong> des villes où il a fait <strong>31 degrés ou plus</strong></li>
+<li>La <strong>température moyenne</strong>, avec une décimale</li>
+<li>La ville <strong>la plus chaude</strong>, et sa température</li>
+<li>Les villes <strong>triées par pluie décroissante</strong> — les noms seulement</li>
+<li>Un <strong>dictionnaire</strong> <code>ville → température</code>, construit en une ligne</li>
+</ol>
+<p>Puis :</p>
+<ol start="6">
+<li>Ajoutez à <strong>chaque relevé</strong> une clé <code>sec</code>, valant <code>True</code> s&#39;il n&#39;a pas plu. Affichez ensuite les villes sèches.</li>
+</ol>
+<p><strong>Trois contraintes de style :</strong></p>
+<ul>
+<li>Aucun <code>for i in range(len(releves))</code></li>
+<li>Les questions 1, 4 et 5 tiennent chacune sur une ligne</li>
+<li>La moyenne s&#39;affiche avec une seule décimale</li>
+</ul>
+<blockquote>
+<p><strong>Indice pour la question 6.</strong> Une liste de dictionnaires se modifie sur place : <code>for r in releves:</code> puis <code>r[&quot;sec&quot;] = ...</code>. C&#39;est le seul endroit de l&#39;exercice où une compréhension serait le mauvais outil — vous ne construisez pas une nouvelle liste, vous enrichissez celle-ci.</p>
+</blockquote>
+<blockquote>
+<p><strong>Variante Colab / téléphone.</strong> Identique.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Si vous avez fini en avance</h2>
+<p>Reprenez <code>exercice3.py</code>. Les six relevés ont chacun un département différent, ce qui rend le regroupement inutile. Ajoutez ces trois lignes :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">releves.append({&quot;ville&quot;: &quot;Pétion-Ville&quot;, &quot;departement&quot;: &quot;Ouest&quot;,      &quot;temperature&quot;: 30, &quot;pluie&quot;: 3})
+releves.append({&quot;ville&quot;: &quot;Saint-Marc&quot;,   &quot;departement&quot;: &quot;Artibonite&quot;, &quot;temperature&quot;: 34, &quot;pluie&quot;: 0})
+releves.append({&quot;ville&quot;: &quot;Miragoâne&quot;,    &quot;departement&quot;: &quot;Nippes&quot;,     &quot;temperature&quot;: 32, &quot;pluie&quot;: 6})</code></pre></div></div>
+<p>Puis affichez, pour <strong>chaque département</strong>, la température moyenne de ses villes.</p>
+<p>Ce n&#39;est pas une compréhension. C&#39;est deux dictionnaires et une boucle — ou un dictionnaire dont les valeurs sont des listes. Les deux marchent ; comparez-les avec votre voisin.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">À la fin des exercices</h2>
+<p>Votre projet <code>seance-02</code> doit contenir :</p>
+<ul>
+<li><input disabled="" type="checkbox"> <code>exercice0.py</code></li>
+<li><input disabled="" type="checkbox"> <code>exercice1.py</code></li>
+<li><input disabled="" type="checkbox"> <code>exercice2.py</code></li>
+<li><input disabled="" type="checkbox"> <code>exercice3.py</code> <em>(extension)</em></li>
+</ul>
+<p><strong>Pour le rendre :</strong> déposez ces fichiers dans le dépôt <code>seance-02-exercices</code> que vous avez reçu, puis fermez son issue. L&#39;échéance est fixée à la veille de la séance 3.</p>
+<p>Ces exercices comptent pour la note de participation. <strong>On regarde qu&#39;ils sont faits, pas qu&#39;ils sont justes</strong> : un exercice tenté et raté vaut autant qu&#39;un exercice réussi.</p>
+<p>Gardez ce projet : l&#39;exercice 2 et l&#39;exercice 3 sont exactement les deux gestes du travail à rendre n° 2.</p>
+
+</body>
+</html>
