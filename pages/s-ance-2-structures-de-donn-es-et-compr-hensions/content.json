@@ -1,0 +1,3792 @@
+{
+  "blocks": [
+    {
+      "id": "40e205ba-cfc6-4c5a-969f-764dadea1067",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Support de cours ",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8e808a32-a1bc-41b6-b64a-ee6a651fb5ea",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "76807085-f983-4ab6-9dad-efcb5ef12f76",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce que vous saurez faire à la fin de cette séance",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "cf65eca4-0a21-4c1d-9313-84e59002f744",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Découper une liste, la modifier, et la copier sans vous tromper",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0aae1e3a-f4a3-42f7-9e77-ffee2978110b",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Choisir entre une liste, un tuple, un ensemble et un dictionnaire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ac007871-d037-45c2-9c5b-4222f382e533",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Manipuler une liste de dictionnaires la forme que prennent toutes les données réelles",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dae91dee-3b43-4bc6-a344-c883070d0c67",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Écrire une compréhension de liste et de dictionnaire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f396bf7f-ba3f-4587-9ccc-de17214cdb7a",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Cette séance est la plus importante du cours.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Les dictionnaires et les listes de dictionnaires sont ce sur quoi reposent les séances 4 et 5. Si un point ne passe pas aujourd'hui, ne le laissez pas passer : écrivez dans l'issue du dépôt d'exercices.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e07b2269-747c-4aa6-956f-c0da188114ab",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "fb5c1245-a448-4239-9c09-1154ce2d74be",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Avant de commencer — la semaine dernière",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "586ef2da-fc22-4a4b-8cd6-772d2bb69791",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous avez écrit ceci, à l'exercice 2 :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "06a07119-3565-426e-ac70-f09fe3c19538",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "notes_reussite = []\nfor note in notes_etudiants:\n    if note >= 10:\n        notes_reussite.append(note)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4eeecfc9-2032-4fc3-9b40-81a623ae4222",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Voici la même chose :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b3817170-cc77-41d5-be20-1e21438893f0",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "notes_reussite = [note for note in notes_etudiants if note >= 10]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "103579f8-8d86-4ede-b703-e381069ed1a1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est à ça que sert cette séance. Mais avant d'écrire la version courte, il faut connaître les structures — d'où les trois premiers modules.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "21fe3781-cbe6-4660-b799-fab56fb7c9aa",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "771d70cb-0796-4ca3-a831-ac2f1b34c885",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1. Les listes, pour de vrai",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e9d311b4-2990-4db8-b3e3-1c22277ff39d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La séance 1 a montré qu'une liste se parcourt. Elle se découpe aussi, et elle se copie mal.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "22bd62af-8341-4b32-97f8-d7b1d69a5934",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "bc274d30-a851-456a-bb84-b9d45594596a",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Indexation et index négatifs",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6069297b-2090-4908-98c9-e0699f48dc4f",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "jours = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\", \"samedi\", \"dimanche\"]\n\njours[0]     # 'lundi'\njours[-1]    # 'dimanche'   le dernier, sans calculer la longueur\njours[-2]    # 'samedi'",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5c15fb44-8da9-49bb-bf9b-799a60797c88",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'index négatif n'existe ni en C++ ni en PHP.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " En C++ il lirait de la mémoire au hasard ; en PHP il chercherait une clé qui s'appelle ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "-1",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". En Python, il compte depuis la fin. C'est un vrai confort : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ma_liste[-1]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " est toujours le dernier élément.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9e9e1e3a-ce3b-4d58-90f6-c20e649b6b7a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "3e580cc9-0213-4014-85ed-b89115d8f5db",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le découpage",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "17e2d44b-23bc-4084-834c-e37b76061aae",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "jours[:3]      # ['lundi', 'mardi', 'mercredi']       du début à 3 exclu\njours[5:]      # ['samedi', 'dimanche']               de 5 à la fin\njours[1:4]     # ['mardi', 'mercredi', 'jeudi']\njours[::2]     # un élément sur deux\njours[::-1]    # la liste à l'envers",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b5443381-330a-41e8-86a7-249c07cbe0d6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La borne de droite est exclue.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "jours[1:4]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " donne trois éléments, pas quatre. C'est déroutant au début, et c'est ce qui fait que ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "jours[:3]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "jours[3:]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " se recollent exactement : pas de recouvrement, pas de trou.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8f9d571e-e7fb-47be-810d-bbb21d43e8db",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le découpage ne plante jamais : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "jours[:99]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " renvoie toute la liste sans erreur.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5f0de3ef-bd83-4192-a0b5-5ba83599052a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "e07de882-e5d2-46c2-9b05-494b205c9cc6",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les méthodes qui servent",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d29e0c4b-59e8-4cae-9769-ee4c8b730466",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "courses = [\"riz\", \"mais\"]\n\ncourses.append(\"haricot\")      # ajoute à la fin\ncourses.insert(0, \"sel\")       # insère à une position\ncourses.remove(\"mais\")         # retire la première occurrence\ndernier = courses.pop()        # retire et renvoie le dernier\ncourses.sort()                 # trie SUR PLACE\nlen(courses)                   # la longueur",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "96d4e2f3-8f84-4033-b676-7ecb036de816",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un piège qui tombera dans les exercices :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2eaf8cf2-7c08-4bc4-b4c1-12387df26a4d",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "resultat = courses.sort()\nprint(resultat)     # None",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b8e5b62b-08c5-431e-a124-f33b4b1cab07",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "sort()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " trie la liste et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ne renvoie rien",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Si vous voulez une nouvelle liste triée sans toucher à l'originale, utilisez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sorted(courses)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ef164b8d-6212-44f6-a3a9-b6bcd7ccaa2d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Cette paire revient partout en Python : la ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "méthode",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " modifie l'objet, la ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "fonction",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " renvoie un nouvel objet. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "liste.sort()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " contre ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sorted(liste)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "liste.reverse()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " contre ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "reversed(liste)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b178342b-716c-4d58-8f13-8094b1f550ae",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "7ca34b6a-0285-4adb-a1e8-f90958e0f8fd",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Copier une liste",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "10488f4c-9bc0-44ae-ab48-9d3c2eec02b7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Souvenez-vous de la séance 1 :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2e5860fc-d02f-4c8c-b85c-9742d5deeae9",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "a = [1, 2, 3]\nb = a            # PAS une copie : deux étiquettes sur le même objet\nb.append(4)\nprint(a)         # [1, 2, 3, 4]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e4247cf7-690b-4ff7-ab5f-c16f3081e6ee",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pour obtenir une vraie copie :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2f890e26-c188-47fd-9ddd-1790cd27c181",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "c = a.copy()     # ou a[:]\nc.append(5)\nprint(a)         # inchangée",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3056274a-79d3-4847-93d4-189049acf186",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Si vous venez du PHP, attention",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : là-bas, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "$b = $a",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sur un tableau fait une vraie copie. Python fait exactement l'inverse. C'est le piège numéro un des développeurs PHP qui passent à Python, et il coûte des heures de débogage.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3f7bfe49-acd4-4b07-8a86-be7e833db5bd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "0a6f71c9-8d92-44d1-8c93-36c033a88b5f",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2. Tuples et ensembles",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "32760d1d-8bc4-4eb9-9bcb-77e3df42f062",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Deux structures, deux usages précis.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f3112a18-cd2b-4bb3-a1ad-80e32f9532a5",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "dfd73029-fecf-45d5-98eb-e010cedf6bf5",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le tuple : une liste qu'on ne modifie pas",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a5fbfcf0-c5da-4c27-bcdc-fb0a0041d11b",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "point = (3, 7)\npoint[0]          # 3\npoint[0] = 5      # erreur : un tuple ne se modifie pas",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c38b17ee-428d-44a8-b5fa-d20e8ddb0920",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce qui le rend utile, c'est le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "déballage",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fd31238e-4c7c-4efa-8cd4-9ab7030b82fe",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "x, y = point\nnom, note = \"Ana\", 17",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1812699d-deae-497c-a7bb-3d1397eba882",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Et vous l'utilisez déjà sans le savoir — le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "zip",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de la séance dernière déballait un tuple à chaque tour :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e08cb174-43c4-4e32-a611-e51306f54fb7",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "for nom, note in zip(noms, notes):\n    ...",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1702cd62-ca25-4652-87ff-b2d493b019d1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quand préférer un tuple à une liste :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " quand la donnée ne doit pas changer, et quand le nombre d'éléments fait partie du sens — des coordonnées, une paire, un retour à deux valeurs.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2647498c-a420-4a7f-a5e0-d85f89d9af2d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "6a625002-afe9-45ba-91b3-da3453389273",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'ensemble : l'unicité et l'appartenance",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "70457b69-fc4e-4fd9-a5fe-2e5eaa644c7c",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "produits = {\"riz\", \"mais\", \"riz\", \"haricot\"}\nprint(produits)             # {'riz', 'mais', 'haricot'} — les doublons ont disparu\n\n\"riz\" in produits           # True, et c'est immédiat même sur un million d'éléments",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d3c43abf-ab31-45ff-9603-c6e400f582e4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Deux usages, et c'est tout ce dont vous aurez besoin :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d62f5f46-20ff-4cac-a3c9-8ca0aca1b4cd",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "sans_doublons = set(ma_liste)\nproduits = sorted(set(ma_liste))      # dédoublonné et trié",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "93ba086b-ccec-4e2d-9b51-863b288e2723",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un ensemble n'a ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "pas d'ordre",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Si vous voulez un résultat ordonné, passez par ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sorted()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "beda3e9f-d3a3-4563-ab5f-866a1295d445",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "af6e7b37-88e8-47b8-beb0-ca2775df15bc",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "3. Les dictionnaires",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9fdd6375-0b0f-4605-952c-0c786628c769",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est la structure la plus utilisée de Python, et celle sur laquelle repose tout le reste du cours.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "63a2dd78-69ab-4c48-9307-81efe5737a62",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "etudiant = {\"nom\": \"Ana\", \"note\": 17, \"departement\": \"Ouest\"}\n\netudiant[\"nom\"]                    # 'Ana'\netudiant[\"note\"] = 18              # on modifie\netudiant[\"present\"] = True         # on ajoute une clé",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f74adccd-66ce-4bd6-8eec-3d0f97aa5141",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Si vous venez du PHP, c'est votre tableau associatif",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", avec la même syntaxe ou presque. Vous êtes en terrain connu. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Si vous venez du C++, c'est une ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "std::map",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", en beaucoup plus souple : les valeurs peuvent être de n'importe quel type, y compris d'autres dictionnaires.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6f714674-a911-4e29-9b89-bea790aa28da",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "5b6513cb-d500-4d80-b658-c0be4f7334d7",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La clé absente",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c153fd8f-c5b0-4055-af19-72ed6d5848a4",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "etudiant[\"adresse\"]                    # KeyError : la clé n'existe pas\n\netudiant.get(\"adresse\")                # None, pas d'erreur\netudiant.get(\"adresse\", \"inconnue\")    # 'inconnue', valeur par défaut\n\"adresse\" in etudiant                  # False",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e0f17f0b-969e-48b4-9373-e60c85fba95b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "get",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " avec une valeur par défaut est le geste le plus utile de la séance.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Il sert à compter :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8094f60d-ec83-47aa-98d3-d8655c8d30d4",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "mots = [\"riz\", \"mais\", \"riz\", \"haricot\", \"riz\"]\n\ncompte = {}\nfor mot in mots:\n    compte[mot] = compte.get(mot, 0) + 1\n\nprint(compte)      # {'riz': 3, 'mais': 1, 'haricot': 1}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ee1512ce-3668-459d-913f-345bb410d1de",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Relisez cette boucle jusqu'à ce qu'elle soit évidente. C'est le motif le plus réutilisable du cours : à la première rencontre du mot, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "get",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " renvoie 0, on écrit 1 ; ensuite on incrémente.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "95c90beb-fcb5-4519-b2ad-c9dec8538273",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "09bce01e-cb9f-4589-8750-857e8d2d88dc",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Parcourir un dictionnaire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ba27423a-43f6-42ef-8725-30e4d6badb27",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "for cle in etudiant:                       # les clés\n    print(cle)\n\nfor valeur in etudiant.values():           # les valeurs\n    print(valeur)\n\nfor cle, valeur in etudiant.items():       # les deux — c'est celui qu'on utilise\n    print(cle, \":\", valeur)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2e0a477c-8d0a-46c5-ad93-b98273056d7c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": ".items()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " renvoie des tuples, que l'on déballe — exactement comme ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "zip",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ce92d65e-bc18-48e9-863f-bdd0d35a426e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "58d05242-892b-4a4b-9568-13b955b7ed62",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une liste de dictionnaires est un tableau de données",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "48fc5d1a-f1b5-456e-a3d9-029e48afcf37",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est le point d'arrivée de la séance.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3efb085d-e873-4594-8422-9934d43d6d93",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "ventes = [\n    {\"produit\": \"riz\",     \"departement\": \"Ouest\",      \"quantite\": 120},\n    {\"produit\": \"mais\",    \"departement\": \"Artibonite\", \"quantite\": 340},\n    {\"produit\": \"haricot\", \"departement\": \"Ouest\",      \"quantite\": 85},\n]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7e7d1eb8-30d8-42cb-9419-b15faab8d6c0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Regardez la forme : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "une ligne par enregistrement, une clé par colonne.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " C'est exactement ce qu'est un fichier CSV, et exactement ce que sera un tableau pandas à la séance 5.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1aef1d07-eb7c-4b2b-ac2d-95f5912a2b23",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois opérations, qui reviendront toute l'année :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e96a9c82-6efa-452b-b056-510f9686ab52",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "# FILTRER\nouest = []\nfor v in ventes:\n    if v[\"departement\"] == \"Ouest\":\n        ouest.append(v)\n\n# CALCULER UNE COLONNE\nfor v in ventes:\n    v[\"total\"] = v[\"quantite\"] * 100\n\n# REGROUPER\npar_departement = {}\nfor v in ventes:\n    dep = v[\"departement\"]\n    par_departement[dep] = par_departement.get(dep, 0) + v[\"quantite\"]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3e3d54b6-4dfa-4000-9ada-ea3e8ba20a19",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ces trois boucles s'appellent ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "filtrer",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "calculer",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "regrouper",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". À la séance 5, pandas les fera en une ligne chacune — et vous comprendrez ce qu'il fait parce que vous les aurez écrites à la main.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "495357bb-6d04-44bf-b344-759e8a96fcfe",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "0d0b17dc-d31d-4732-966a-1a3accf93f49",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "4. Les compréhensions",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "aedc244b-6548-4e37-a7ec-6aa31bce71f2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "4631784b-df27-44c7-a287-08b01567731e",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La forme",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "83ab0123-defa-4a71-a95b-8b0c885b0cd2",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "# ce que vous avez écrit la semaine dernière\nresultat = []\nfor note in notes:\n    if note >= 10:\n        resultat.append(note)\n\n# la même chose\nresultat = [note for note in notes if note >= 10]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "35b6f101-71e3-473a-9c97-085035c3ef90",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Lisez-la à voix haute dans l'ordre où elle s'écrit :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a5e8a5c2-6670-439f-8a5a-8e71886c9d6b",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n« Une liste — ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "de",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "note",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "pour chaque",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "note",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "dans",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "notes",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "si",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "note >= 10",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " »\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "da326bf2-b0a7-42d0-9616-4cbc47f79389",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "En trois temps :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0c80ca2c-2d32-4dad-97ff-90966eb27a1d",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "[note for note in notes]                  # tout copier\n[note * 2 for note in notes]              # transformer\n[note for note in notes if note >= 10]    # filtrer",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2fd70a78-c041-4b32-adb6-32261bd0c9b3",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'ordre d'écriture est contre-intuitif",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : la transformation vient en premier, la source ensuite, la condition en dernier. Personne ne trouve ça naturel au début.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5636a0f8-9e38-401b-a3a0-0646df577304",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "26d8334a-dec4-45b8-aedc-022570e709ce",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois exemples",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6be58318-4ccd-4450-8296-2f4dfad0a97a",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "noms = [\"ana\", \"jean\", \"marie\"]\n\nmajuscules = [nom.upper() for nom in noms]         # ['ANA', 'JEAN', 'MARIE']\nlongs = [nom for nom in noms if len(nom) > 3]      # ['jean', 'marie']\nlongueurs = [len(nom) for nom in noms]             # [3, 4, 5]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fdf31a05-e99f-490b-b4f9-55c10b730e22",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "62bc4ffb-a0fc-47ca-97e6-cecc4195a78f",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La compréhension de dictionnaire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "541f5151-5336-4097-a75e-cc5b022322ec",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "prix = {\"riz\": 285, \"mais\": 95, \"haricot\": 410}\n\nen_dollars = {produit: valeur / 130 for produit, valeur in prix.items()}\nchers = {produit: valeur for produit, valeur in prix.items() if valeur > 200}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "20fbc179-bcb5-4572-b4f2-cf82fa3a1f21",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Même logique, avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "cle: valeur",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " devant le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e8ebb764-d871-4c34-9d24-b0f0b6760fde",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "3a0d5181-d53b-47b2-a6e2-c8c31d54bed3",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La règle du cours",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "85ed2711-f51a-48f2-b05b-d744932020df",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une compréhension tient sur une ligne et ne contient pas d'autre compréhension.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Dès qu'il vous faut deux conditions imbriquées ou une boucle dans une boucle, revenez à un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " classique : c'est plus lisible, et ce sera mieux noté.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "feaa8195-f6f9-4e36-88ec-8dd9c6750a2b",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Et si les compréhensions ne passent pas aujourd'hui, ce n'est pas grave.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Une boucle ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " correcte vaut tous les points au travail à rendre. La compréhension est un confort d'écriture, pas un critère d'évaluation. Écrivez la boucle juste plutôt que la compréhension fausse.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "538d7c10-6097-4bc1-861e-b92f6a6d9013",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "1eee9c17-cfef-43f9-9f20-819dd336e74e",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "5. Les outils qui reviendront tout le semestre",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d8309a78-9519-4fc1-a9a8-560dc4d75f70",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "# trier selon un critère\nventes_triees = sorted(ventes, key=lambda v: v[\"quantite\"], reverse=True)\n\n# le maximum selon un critère\nmeilleure = max(ventes, key=lambda v: v[\"quantite\"])\n\n# sum sur une compréhension\ntotal = sum(v[\"quantite\"] for v in ventes)\n\n# dédoublonner et trier\nproduits = sorted({v[\"produit\"] for v in ventes})",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0326fb95-062d-49ff-bc99-9f5626f5667b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Sur ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "lambda",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " c'est une petite fonction sans nom, écrite sur place. Vous en avez besoin aujourd'hui pour trier ; on la verra vraiment à la séance 3. Pour l'instant, retenez la forme : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "key=lambda v: v[\"quelque_chose\"]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fd87e205-81f1-41e3-aacf-6b72688d4add",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "f8fddf38-af46-415e-a86d-6e57170867a6",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À retenir de cette séance",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "29bfc55d-d818-45b7-9750-363e784084c9",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le découpage ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "[début:fin]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " exclut la borne de droite, et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "[-1]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " est le dernier élément",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "adfd3c16-4ce0-4101-9a6b-0f0171f6e837",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "liste.sort()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ne renvoie rien ; ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sorted(liste)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " renvoie une nouvelle liste",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6b5f4aa4-2899-45e6-af87-1706b3c7e382",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "b = a",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ne copie pas une liste. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "b = a.copy()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " si.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ec6cd7b5-aa1d-47f0-9822-9c7414dcd5c5",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "dictionnaire.get(cle, defaut)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " évite le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "KeyError",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — et sert à compter",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4ce23016-475b-4aed-8249-0d8aad42f563",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "liste de dictionnaires",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " est un tableau de données : une ligne par enregistrement, une clé par colonne",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7cd94bb6-6264-4092-80f1-a089aff718bd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "7ab04074-40f8-4feb-9d02-2f02ea4084a7",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Aide-mémoire : erreurs fréquentes",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ce6cbf0e-70dc-420b-955f-109f4dd26333",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Message d'erreur",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Cause probable",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "KeyError: 'xxx'",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Clé absente du dictionnaire. Utilisez ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": ".get()",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " ou testez avec ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "in",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TypeError: 'NoneType' object is not iterable",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Vous avez écrit ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "liste = liste.sort()",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ". ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sort()",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " ne renvoie rien",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "IndexError: list index out of range",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Index au-delà de la fin. Le découpage, lui, ne lève jamais cette erreur",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "TypeError: unhashable type: 'list'",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une liste utilisée comme clé de dictionnaire. Les clés doivent être immuables",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "SyntaxError",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " dans une compréhension",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "if",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " écrit avant le ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "for",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ou des crochets oubliés",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une liste change sans qu'on y touche",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "b = a",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " au lieu de ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "b = a.copy()",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "46e2aea3-b2b6-4a96-bf26-eb9b75261cfd",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "fdbb7414-9d51-4055-b179-c9b0f2d50e3e",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Aller plus loin",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fd41cd75-0d4f-4c58-8428-402090869edc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rien ici n'est au programme, rien n'est évalué, rien n'est nécessaire pour la séance 3.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Des portes ouvertes, à pousser ou pas.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7378d9d3-1302-4680-aea1-5af1123897ec",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "70578328-aa83-42de-afc5-7aff2f1dacd9",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "collections.Counter",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0888af29-12c5-45d5-b4e7-f1b26e351db5",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "from collections import Counter\ncompte = Counter(mots)\ncompte.most_common(3)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "80471524-f127-4004-aa5f-71b7b2600f29",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Fait en une ligne le comptage du module 3, et donne le classement en prime. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Pourquoi pas au cours :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " vous devez d'abord savoir écrire la boucle avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "get",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", sinon ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Counter",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " reste une boîte noire. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Servez-vous-en une fois que la boucle vous est évidente.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f58183e5-5fa2-43fb-ab3e-886f12801753",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "95770ecc-3713-4760-af42-45bea574e068",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "defaultdict",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8b604262-984a-4098-bdf2-481c73c3c797",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "from collections import defaultdict",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — un dictionnaire qui crée la valeur par défaut tout seul, ce qui évite le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "get(cle, 0)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Pourquoi pas au cours :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "get",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " suffit, et se lit sans documentation.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "16a97ce8-0fb1-482b-b31c-bb765a36cbf0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "6e77ae28-150f-4bab-8cda-e3f776e7abbd",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les opérations d'ensemble",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fc6ffc4e-6a95-431f-869e-5506112071b4",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "a | b     # union\na & b     # intersection\na - b     # différence",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "647e9429-da81-4f89-bd6d-6a8a9621fde8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Élégant, et utile le jour où vous comparerez deux listes d'identifiants. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Pourquoi pas au cours :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ça ne sert nulle part dans les quatre séances qui restent.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "602ae7c1-08ac-4639-b7ea-f876447c52e7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "a80b911a-126e-4b56-8d60-b37999c32e74",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "dict",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ordonné, et pourquoi on n'en parle pas",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "585bcd93-7350-43dd-81e3-77032b2bd2d2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Depuis Python 3.7, un dictionnaire conserve l'ordre d'insertion. Ça n'a l'air de rien et ça a changé beaucoup de code. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Où chercher :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " « What's New in Python 3.7 ».",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "42c34ca5-0874-46bd-9b22-5205aedf7c01",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "aa767506-610b-46f8-9c21-efa5df0a1cfd",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le découpage avec pas négatif",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "270f3063-8c7c-4a70-8a83-6bf22f75b3c4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "jours[::-1]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " inverse une liste. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "jours[5:1:-1]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " parcourt à reculons de 5 à 2. Rarement utile, toujours impressionnant.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4f89a0bb-2554-4200-b887-0058ee1eb845",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "802a8992-ce5b-48ee-86eb-bd1dac69a99c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "zip(*...)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — la transposition",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "19943ad4-4ef7-4c3f-a070-2e3af0fd35cd",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "paires = [(\"a\", 1), (\"b\", 2)]\nlettres, nombres = zip(*paires)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bd3b1e36-1a40-4bad-94e5-19c52d9ac7bc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'étoile déballe la liste en arguments séparés. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Où chercher :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " « unpacking argument lists » dans la documentation.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a59950b7-baff-496e-a2d6-9e81c4319452",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "2add05aa-7ae7-425c-b208-ccf84bd52ee8",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un défi",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6803dd39-a919-48f6-ac25-419bf1af4184",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À partir de la liste de ventes du travail à rendre, produisez un dictionnaire qui donne, pour chaque département, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "le produit qui y rapporte le plus",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — celui dont le chiffre d'affaires cumulé dans ce département est le plus élevé.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "14fc878d-4697-4bed-9dae-15516af88aac",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est difficile, et c'est faisable avec ce que vous savez aujourd'hui plus ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "max(..., key=...)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Il vous faudra regrouper sur ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "deux",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " clés à la fois, département et produit, puis chercher le maximum par département. Si vous y arrivez sans compréhension imbriquée, vous avez compris la séance.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9828319f-3b2a-4491-be1a-7d63c2fbc016",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce défi vaut ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "un point de bonus",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " au travail à rendre n° 2.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3154413e-e10c-4dab-8464-d53a4893f9c1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "629a3ffa-3cb9-479e-b74c-3ef499a5fc43",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pour aller plus loin — les liens",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0e734355-d9c4-4f9f-a1ea-960fd75c22c5",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Documentation Python, structures de données : ",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://docs.python.org/fr/3/tutorial/datastructures.html",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://docs.python.org/fr/3/tutorial/datastructures.html",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a75f3a18-bc87-4781-b822-e8ebf662c789",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Module ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "collections",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : ",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "https://docs.python.org/fr/3/library/collections.html",
+          "content": [
+            {
+              "type": "text",
+              "text": "https://docs.python.org/fr/3/library/collections.html",
+              "styles": {}
+            }
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a8204df7-dc4b-4259-80cf-e4f256cee564",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "9dd5d5a2-b304-4f86-bb60-e9cab1d2c3db",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Avant la prochaine séance",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "29cd6eb1-cc07-4bec-8830-54886259e834",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les exercices du socle sont dans le dépôt ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "seance-02-exercices",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et son issue est fermée",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9ba489f4-5cf0-49a3-afed-ad6a1f87822a",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le travail à rendre n° 2 est déposé, sous forme de projet uv complet",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5178cfe1-a4b8-4fe3-b5ef-f14f2ea7ba1e",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Je sais écrire une boucle de comptage avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "get(cle, 0)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sans regarder mes notes",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "01d49cd6-7420-4a20-84c0-9a13112b98b6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
