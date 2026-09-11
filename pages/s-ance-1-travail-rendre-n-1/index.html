@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="background-color: #FBF3DB;">Traduire un programme C++ ou PHP, puis l&#39;écrire en Python</h2>
+<p><strong>À remettre avant le début de la séance 2</strong></p>
+<p><strong>Résultats d&#39;apprentissage évalués : RA1, RA2 — noté sur 20</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce qu&#39;on vous demande, en trois phrases</h2>
+<p>Vous recevez le même programme dans deux langages, C++ et PHP, d&#39;une quarantaine de lignes chacun. <strong>Lisez celui que vous connaissez, ignorez l&#39;autre.</strong> Vous devez le réécrire en Python — pas le traduire mot à mot, mais l&#39;écrire comme on écrit en Python. Vous remettez un projet uv complet et un court texte qui explique cinq de vos choix.</p>
+<p>Comptez deux heures. Ce n&#39;est pas un travail difficile ; c&#39;est un travail où le style compte autant que le résultat.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Le programme à traduire</h2>
+<p>Les deux versions ci-dessous font exactement la même chose. Choisissez la vôtre.</p>
+<p><strong>En C++ — <code>releve_meteo.cpp</code></strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">C++</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span><span class="line-number">41</span><span class="line-number">42</span><span class="line-number">43</span><span class="line-number">44</span><span class="line-number">45</span><span class="line-number">46</span><span class="line-number">47</span><span class="line-number">48</span><span class="line-number">49</span></div><pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string jours[] = {&quot;lundi&quot;, &quot;mardi&quot;, &quot;mercredi&quot;, &quot;jeudi&quot;,
+                      &quot;vendredi&quot;, &quot;samedi&quot;, &quot;dimanche&quot;};
+    double temperatures[] = {31.2, 29.8, 33.5, 35.1, 30.0, 28.4, 32.7};
+    int taille = 7;
+
+    cout &lt;&lt; &quot;Seuil de chaleur (en degres) : &quot;;
+    double seuil;
+    cin &gt;&gt; seuil;
+
+    double somme = 0;
+    double maximum = temperatures[0];
+    double minimum = temperatures[0];
+    int nbChauds = 0;
+
+    for (int i = 0; i &lt; taille; i++) {
+        somme = somme + temperatures[i];
+        if (temperatures[i] &gt; maximum) {
+            maximum = temperatures[i];
+        }
+        if (temperatures[i] &lt; minimum) {
+            minimum = temperatures[i];
+        }
+        if (temperatures[i] &gt;= seuil) {
+            nbChauds = nbChauds + 1;
+        }
+    }
+
+    double moyenne = somme / taille;
+
+    cout &lt;&lt; &quot;--- Releve de la semaine ---&quot; &lt;&lt; endl;
+    for (int i = 0; i &lt; taille; i++) {
+        string marque = &quot;&quot;;
+        if (temperatures[i] &gt;= seuil) {
+            marque = &quot; (chaud)&quot;;
+        }
+        cout &lt;&lt; (i + 1) &lt;&lt; &quot;. &quot; &lt;&lt; jours[i] &lt;&lt; &quot; : &quot;
+             &lt;&lt; temperatures[i] &lt;&lt; marque &lt;&lt; endl;
+    }
+
+    cout &lt;&lt; &quot;Moyenne : &quot; &lt;&lt; moyenne &lt;&lt; endl;
+    cout &lt;&lt; &quot;Minimum : &quot; &lt;&lt; minimum &lt;&lt; &quot; / Maximum : &quot; &lt;&lt; maximum &lt;&lt; endl;
+    cout &lt;&lt; &quot;Jours au-dessus du seuil : &quot; &lt;&lt; nbChauds &lt;&lt; endl;
+    return 0;
+}</code></pre></div></div>
+<p><strong>En PHP — <code>releve_meteo.php</code></strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">PHP</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span><span class="line-number">39</span><span class="line-number">40</span></div><pre><code class="language-php">&lt;?php
+$jours = [&quot;lundi&quot;, &quot;mardi&quot;, &quot;mercredi&quot;, &quot;jeudi&quot;,
+          &quot;vendredi&quot;, &quot;samedi&quot;, &quot;dimanche&quot;];
+$temperatures = [31.2, 29.8, 33.5, 35.1, 30.0, 28.4, 32.7];
+
+echo &quot;Seuil de chaleur (en degres) : &quot;;
+$seuil = (float) trim(fgets(STDIN));
+
+$somme = 0;
+$maximum = $temperatures[0];
+$minimum = $temperatures[0];
+$nbChauds = 0;
+
+for ($i = 0; $i &lt; count($temperatures); $i++) {
+    $somme = $somme + $temperatures[$i];
+    if ($temperatures[$i] &gt; $maximum) {
+        $maximum = $temperatures[$i];
+    }
+    if ($temperatures[$i] &lt; $minimum) {
+        $minimum = $temperatures[$i];
+    }
+    if ($temperatures[$i] &gt;= $seuil) {
+        $nbChauds = $nbChauds + 1;
+    }
+}
+
+$moyenne = $somme / count($temperatures);
+
+echo &quot;--- Releve de la semaine ---\n&quot;;
+for ($i = 0; $i &lt; count($jours); $i++) {
+    $marque = &quot;&quot;;
+    if ($temperatures[$i] &gt;= $seuil) {
+        $marque = &quot; (chaud)&quot;;
+    }
+    echo ($i + 1) . &quot;. &quot; . $jours[$i] . &quot; : &quot; . $temperatures[$i] . $marque . &quot;\n&quot;;
+}
+
+echo &quot;Moyenne : &quot; . $moyenne . &quot;\n&quot;;
+echo &quot;Minimum : &quot; . $minimum . &quot; / Maximum : &quot; . $maximum . &quot;\n&quot;;
+echo &quot;Jours au-dessus du seuil : &quot; . $nbChauds . &quot;\n&quot;;</code></pre></div></div>
+<hr>
+<h2 style="background-color: #FBF3DB;">L&#39;affichage attendu</h2>
+<p>Votre programme doit produire <strong>exactement</strong> ceci, pour un seuil de <code>32</code> :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span></div><pre><code>Seuil de chaleur (en degrés) : 32
+--- Relevé de la semaine ---
+1. lundi : 31.2
+2. mardi : 29.8
+3. mercredi : 33.5 (chaud)
+4. jeudi : 35.1 (chaud)
+5. vendredi : 30.0
+6. samedi : 28.4
+7. dimanche : 32.7 (chaud)
+Moyenne : 31.5
+Minimum : 28.4 / Maximum : 35.1
+Jours au-dessus du seuil : 3</code></pre></div></div>
+<p><strong>Quatre différences avec le programme d&#39;origine, voulues :</strong></p>
+<ol>
+<li>Les accents. Le programme fourni écrit « Releve » et « degres » ; votre version écrit « Relevé » et « degrés ».</li>
+<li>La moyenne s&#39;affiche avec <strong>une seule décimale</strong>. Le C++ affichait <code>31.5286</code>, le PHP <code>31.528571428571</code>.</li>
+<li>Les températures gardent leur décimale : votre version écrit <code>30.0</code> là où le C++ et le PHP écrivent <code>30</code>. C&#39;est Python qui a raison ici — c&#39;est un nombre décimal, il s&#39;affiche comme tel. N&#39;ajoutez aucun formatage pour l&#39;obtenir, Python le fait seul.</li>
+<li>Les autres nombres s&#39;affichent tels quels, sans mise en forme.</li>
+</ol>
+<p><strong>Testez aussi avec les seuils <code>28</code> et <code>40</code>.</strong> Le premier doit marquer les sept jours, le second aucun. Ces deux cas seront exécutés à la correction.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les contraintes d&#39;écriture</h2>
+<p>Ce sont elles qui font la différence entre 10 et 18.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ce qui est exigé</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Aucun <code>for i in range(len(...))</code>.</strong> Chaque occurrence coûte 1 point</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Les quatre calculs — somme, minimum, maximum, moyenne — utilisent les outils que Python fournit. Une boucle qui recalcule à la main ce que <code>sum</code>, <code>min</code> ou <code>max</code> fait déjà est comptée comme une erreur de style</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Les deux listes se parcourent <strong>en parallèle</strong>. Vous avez vu l&#39;outil en cours</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Toutes les sorties passent par des f-strings. Aucune concaténation avec <code>+</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>snake_case</code>, quatre espaces d&#39;indentation, espaces autour des opérateurs</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Aucune variable ne porte le nom d&#39;un outil du langage — pas de <code>max</code>, <code>min</code>, <code>sum</code>, <code>list</code>, <code>type</code></td>
+</tr>
+</tbody></table>
+<p><strong>Une chose ne peut pas disparaître.</strong> Un des quatre calculs de la boucle d&#39;origine n&#39;a pas d&#39;équivalent tout fait en Python avec ce que vous savez aujourd&#39;hui : il vous restera une boucle. Trouvez laquelle, gardez-la, et écrivez-la proprement. Ne cherchez pas sur internet une écriture plus courte : elle existe, elle s&#39;apprend à la séance 2, et elle ne rapportera pas de point ici.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce que vous remettez</h2>
+<p>Vous avez reçu un <strong>dépôt privé à votre nom</strong>, <code>tp1-releve-meteo-votre-nom</code>. Il contient déjà les deux programmes d&#39;origine, un <code>README.md</code> de travail et le squelette de <code>NOTES.md</code>.</p>
+<p>À la racine de ce dépôt, après l&#39;avoir récupéré :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-bash">uv init
+uv run main.py</code></pre></div></div></div>
+<p>Renommez ensuite <code>main.py</code> en <code>releve.py</code>. <code>uv init</code> ne touche ni au <code>README.md</code> ni au <code>.gitignore</code> déjà présents, et ne crée pas de second dépôt Git.</p>
+<p>À la remise, le dépôt doit contenir :</p>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>releve.py</code></td>
+<td>Votre programme, avec la déclaration d&#39;usage de l&#39;IA en tête</td>
+</tr>
+<tr>
+<td><code>NOTES.md</code></td>
+<td>Vos explications, voir ci-dessous</td>
+</tr>
+<tr>
+<td><code>pyproject.toml</code></td>
+<td>Créé par <code>uv init</code></td>
+</tr>
+<tr>
+<td><code>uv.lock</code></td>
+<td>Créé au premier <code>uv run</code></td>
+</tr>
+<tr>
+<td><code>releve_meteo.cpp</code>, <code>releve_meteo.php</code>, <code>.gitignore</code>, <code>README.md</code></td>
+<td>Déjà présents. Ne les supprimez pas</td>
+</tr>
+</tbody></table>
+<p>Puis :</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-bash">git status
+git add .
+git commit -m &quot;Traduction du relevé météo et notes d&#39;écriture&quot;
+git push</code></pre></div></div></div>
+<p><strong>Et vous fermez l&#39;issue du travail.</strong> C&#39;est ça, remettre : l&#39;heure de fermeture est l&#39;heure de remise. Tant que l&#39;issue est ouverte, le travail n&#39;est pas rendu, même si votre code est en ligne.</p>
+<p>Faites plusieurs commits pendant votre travail, pas un seul à la fin.</p>
+<p><strong>Le <code>.venv/</code> ne doit pas partir dans le dépôt.</strong> uv le marque lui-même comme ignoré, vous ne risquez donc rien — mais prenez quand même le réflexe de regarder ce que <code>git status</code> affiche avant de commiter. Si vous y voyez des dizaines de fichiers que vous n&#39;avez pas écrits, arrêtez-vous et demandez.</p>
+<p>Pour vérifier que votre remise est complète : ouvrez la page du dépôt sur GitHub. <strong>Ce que vous y voyez est exactement ce que l&#39;enseignant voit.</strong></p>
+<blockquote>
+<p><strong>Si vous travaillez sur Google Colab.</strong> Remettez un carnet nommé <code>tp1-nom-prenom</code>, déposé dans le dépôt ou partagé par lien dans l&#39;issue. Une première cellule de texte tient lieu de <code>NOTES.md</code>, une deuxième cellule contient le programme. Le seuil, que vous ne pouvez pas saisir confortablement, est écrit en variable en tête de programme — signalez-le dans vos notes. Signalez aussi dans l&#39;issue que c&#39;est votre voie. Même barème, à un point près : les 2 points « projet uv complet » deviennent 2 points « carnet propre, exécutable de haut en bas sans erreur ».</p>
+</blockquote>
+<h3>Le contenu de <code>NOTES.md</code></h3>
+<p>Cinq paragraphes courts, un par choix. Pour chacun : ce que faisait le programme d&#39;origine, ce que vous avez écrit, pourquoi.</p>
+<p>Un exemple de ce qui est attendu — <strong>n&#39;utilisez pas celui-ci, il est déjà pris</strong> :</p>
+<blockquote>
+<p><strong>Les points-virgules.</strong> Le C++ comme le PHP en mettent à chaque fin d&#39;instruction. Je les ai tous supprimés : en Python, le retour à la ligne suffit. Python les tolère, mais un code qui en contient se repère immédiatement comme du code traduit.</p>
+</blockquote>
+<p>Trois lignes par choix suffisent. Ce qui est évalué, c&#39;est que vous ayez <em>décidé</em>, pas que vous ayez écrit long.</p>
+<h3>Déclaration d&#39;usage de l&#39;IA</h3>
+<p>En tête de <code>releve.py</code>, un commentaire, même vide de contenu :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python"># Usage d&#39;IA : aucun
+# ou :
+# Usage d&#39;IA : j&#39;ai demandé à un assistant d&#39;expliquer la fonction zip.
+# Le code est écrit par moi.</code></pre></div></div>
+<p>Rappel du plan de cours : les assistants sont autorisés pour <strong>comprendre</strong>, pas pour <strong>produire</strong> le code que vous remettez. Vous devrez pouvoir expliquer chaque ligne de votre programme si on vous le demande.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Grille d&#39;évaluation</h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Points</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Le programme fonctionne</strong></td>
+<td>6</td>
+<td>Il s&#39;exécute sans erreur et donne l&#39;affichage exact attendu pour les seuils 32, 28 et 40. 2 points par cas</td>
+</tr>
+<tr>
+<td><strong>Boucles et calculs idiomatiques</strong></td>
+<td>5</td>
+<td>Parcours direct des listes, parcours en parallèle des deux listes, usage de <code>sum</code>, <code>min</code>, <code>max</code>, <code>len</code></td>
+</tr>
+<tr>
+<td><strong>Style PEP 8</strong></td>
+<td>4</td>
+<td><code>snake_case</code>, quatre espaces, espaces autour des opérateurs, f-strings partout, noms de variables qui ne recouvrent rien</td>
+</tr>
+<tr>
+<td><strong>Projet uv complet</strong></td>
+<td>2</td>
+<td><code>pyproject.toml</code> et <code>uv.lock</code> présents, <code>.venv/</code> absent, le projet se reconstruit avec <code>uv sync</code></td>
+</tr>
+<tr>
+<td><strong><code>NOTES.md</code></strong></td>
+<td>3</td>
+<td>Cinq choix, chacun expliqué : ce que faisait le programme d&#39;origine, ce que vous avez écrit, pourquoi</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>20</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Pénalités, cumulables :</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chaque <code>for i in range(len(...))</code></td>
+<td>−1 point</td>
+</tr>
+<tr>
+<td>Déclaration d&#39;usage de l&#39;IA absente</td>
+<td>−2 points</td>
+</tr>
+<tr>
+<td>Retard</td>
+<td>Vous avez <strong>72 tokens</strong> pour le semestre, à poser vous-même sans justification : un token = une heure de report. Ensuite, −10 % par jour entamé, jusqu&#39;à trois jours. Au-delà, non accepté</td>
+</tr>
+</tbody></table>
+<p><strong>Un point de bonus</strong>, dans la limite de 20 : si votre programme gère proprement le cas où l&#39;utilisateur tape autre chose qu&#39;un nombre pour le seuil. Ce n&#39;est pas au programme aujourd&#39;hui — c&#39;est la séance 4. Cherchez si ça vous amuse, laissez tomber sinon.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Trois conseils</h2>
+<ol>
+<li><strong>Traduisez d&#39;abord littéralement, faites tourner, puis réécrivez.</strong> C&#39;est exactement l&#39;exercice 1 de la séance, en plus long. Ne sautez pas la première étape en croyant gagner du temps.</li>
+<li><strong>Relisez la contrainte n° 2 après avoir fini.</strong> Le réflexe « je calcule la somme dans une boucle » survit à tout, et c&#39;est la première chose qui sera regardée.</li>
+<li><strong>Écrivez <code>NOTES.md</code> en dernier, mais notez vos choix au fur et à mesure.</strong> Reconstituer après coup pourquoi on a fait quelque chose est plus long que de l&#39;écrire sur le moment.</li>
+</ol>
+<hr>
+<h2 style="background-color: #FBF3DB;">Rappel du calendrier</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Distribué</td>
+<td>Séance 1</td>
+</tr>
+<tr>
+<td>À remettre</td>
+<td>Avant le début de la séance 2</td>
+</tr>
+<tr>
+<td>Corrigé rendu</td>
+<td>Séance 3</td>
+</tr>
+</tbody></table>
+<p>La séance 2 porte sur les structures de données et les compréhensions. Vous y verrez, entre autres, l&#39;écriture courte que vous n&#39;avez pas le droit d&#39;utiliser ici.</p>
+
+</body>
+</html>
