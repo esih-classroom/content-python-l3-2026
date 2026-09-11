@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<p><strong>Support de cours — à conserver</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce que vous saurez faire à la fin de cette séance</h2>
+<ul>
+<li>Découper une liste, la modifier, et la copier sans vous tromper</li>
+<li>Choisir entre une liste, un tuple, un ensemble et un dictionnaire</li>
+<li>Manipuler une liste de dictionnaires — la forme que prennent toutes les données réelles</li>
+<li>Écrire une compréhension de liste et de dictionnaire</li>
+</ul>
+<blockquote>
+<p><strong>Cette séance est la plus importante du cours.</strong> Les dictionnaires et les listes de dictionnaires sont ce sur quoi reposent les séances 4 et 5. Si un point ne passe pas aujourd&#39;hui, ne le laissez pas passer : écrivez dans l&#39;issue du dépôt d&#39;exercices.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant de commencer — la semaine dernière</h2>
+<p>Vous avez écrit ceci, à l&#39;exercice 2 :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python">notes_reussite = []
+for note in notes_etudiants:
+    if note &gt;= 10:
+        notes_reussite.append(note)</code></pre></div></div>
+<p>Voici la même chose :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">notes_reussite = [note for note in notes_etudiants if note &gt;= 10]</code></pre></div></div>
+<p>C&#39;est à ça que sert cette séance. Mais avant d&#39;écrire la version courte, il faut connaître les structures — d&#39;où les trois premiers modules.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">1. Les listes, pour de vrai</h2>
+<p>La séance 1 a montré qu&#39;une liste se parcourt. Elle se découpe aussi, et elle se copie mal.</p>
+<h3>Indexation et index négatifs</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">jours = [&quot;lundi&quot;, &quot;mardi&quot;, &quot;mercredi&quot;, &quot;jeudi&quot;, &quot;vendredi&quot;, &quot;samedi&quot;, &quot;dimanche&quot;]
+
+jours[0]     # &#39;lundi&#39;
+jours[-1]    # &#39;dimanche&#39;   le dernier, sans calculer la longueur
+jours[-2]    # &#39;samedi&#39;</code></pre></div></div>
+<p><strong>L&#39;index négatif n&#39;existe ni en C++ ni en PHP.</strong> En C++ il lirait de la mémoire au hasard ; en PHP il chercherait une clé qui s&#39;appelle <code>-1</code>. En Python, il compte depuis la fin. C&#39;est un vrai confort : <code>ma_liste[-1]</code> est toujours le dernier élément.</p>
+<h3>Le découpage</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">jours[:3]      # [&#39;lundi&#39;, &#39;mardi&#39;, &#39;mercredi&#39;]       du début à 3 exclu
+jours[5:]      # [&#39;samedi&#39;, &#39;dimanche&#39;]               de 5 à la fin
+jours[1:4]     # [&#39;mardi&#39;, &#39;mercredi&#39;, &#39;jeudi&#39;]
+jours[::2]     # un élément sur deux
+jours[::-1]    # la liste à l&#39;envers</code></pre></div></div>
+<p><strong>La borne de droite est exclue.</strong> <code>jours[1:4]</code> donne trois éléments, pas quatre. C&#39;est déroutant au début, et c&#39;est ce qui fait que <code>jours[:3]</code> et <code>jours[3:]</code> se recollent exactement : pas de recouvrement, pas de trou.</p>
+<p>Le découpage ne plante jamais : <code>jours[:99]</code> renvoie toute la liste sans erreur.</p>
+<h3>Les méthodes qui servent</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-python">courses = [&quot;riz&quot;, &quot;mais&quot;]
+
+courses.append(&quot;haricot&quot;)      # ajoute à la fin
+courses.insert(0, &quot;sel&quot;)       # insère à une position
+courses.remove(&quot;mais&quot;)         # retire la première occurrence
+dernier = courses.pop()        # retire et renvoie le dernier
+courses.sort()                 # trie SUR PLACE
+len(courses)                   # la longueur</code></pre></div></div>
+<p><strong>Un piège qui tombera dans les exercices :</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">resultat = courses.sort()
+print(resultat)     # None</code></pre></div></div>
+<p><code>sort()</code> trie la liste et <strong>ne renvoie rien</strong>. Si vous voulez une nouvelle liste triée sans toucher à l&#39;originale, utilisez <code>sorted(courses)</code>.</p>
+<p>Cette paire revient partout en Python : la <strong>méthode</strong> modifie l&#39;objet, la <strong>fonction</strong> renvoie un nouvel objet. <code>liste.sort()</code> contre <code>sorted(liste)</code>, <code>liste.reverse()</code> contre <code>reversed(liste)</code>.</p>
+<h3>Copier une liste</h3>
+<p>Souvenez-vous de la séance 1 :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python">a = [1, 2, 3]
+b = a            # PAS une copie : deux étiquettes sur le même objet
+b.append(4)
+print(a)         # [1, 2, 3, 4]</code></pre></div></div>
+<p>Pour obtenir une vraie copie :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">c = a.copy()     # ou a[:]
+c.append(5)
+print(a)         # inchangée</code></pre></div></div>
+<blockquote>
+<p><strong>Si vous venez du PHP, attention</strong> : là-bas, <code>$b = $a</code> sur un tableau fait une vraie copie. Python fait exactement l&#39;inverse. C&#39;est le piège numéro un des développeurs PHP qui passent à Python, et il coûte des heures de débogage.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">2. Tuples et ensembles</h2>
+<p>Deux structures, deux usages précis.</p>
+<h3>Le tuple : une liste qu&#39;on ne modifie pas</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">point = (3, 7)
+point[0]          # 3
+point[0] = 5      # erreur : un tuple ne se modifie pas</code></pre></div></div>
+<p>Ce qui le rend utile, c&#39;est le <strong>déballage</strong> :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">x, y = point
+nom, note = &quot;Ana&quot;, 17</code></pre></div></div>
+<p>Et vous l&#39;utilisez déjà sans le savoir — le <code>zip</code> de la séance dernière déballait un tuple à chaque tour :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">for nom, note in zip(noms, notes):
+    ...</code></pre></div></div>
+<p><strong>Quand préférer un tuple à une liste :</strong> quand la donnée ne doit pas changer, et quand le nombre d&#39;éléments fait partie du sens — des coordonnées, une paire, un retour à deux valeurs.</p>
+<h3>L&#39;ensemble : l&#39;unicité et l&#39;appartenance</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python">produits = {&quot;riz&quot;, &quot;mais&quot;, &quot;riz&quot;, &quot;haricot&quot;}
+print(produits)             # {&#39;riz&#39;, &#39;mais&#39;, &#39;haricot&#39;} — les doublons ont disparu
+
+&quot;riz&quot; in produits           # True, et c&#39;est immédiat même sur un million d&#39;éléments</code></pre></div></div>
+<p>Deux usages, et c&#39;est tout ce dont vous aurez besoin :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">sans_doublons = set(ma_liste)
+produits = sorted(set(ma_liste))      # dédoublonné et trié</code></pre></div></div>
+<p>Un ensemble n&#39;a <strong>pas d&#39;ordre</strong>. Si vous voulez un résultat ordonné, passez par <code>sorted()</code>.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">3. Les dictionnaires</h2>
+<p><strong>C&#39;est la structure la plus utilisée de Python, et celle sur laquelle repose tout le reste du cours.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">etudiant = {&quot;nom&quot;: &quot;Ana&quot;, &quot;note&quot;: 17, &quot;departement&quot;: &quot;Ouest&quot;}
+
+etudiant[&quot;nom&quot;]                    # &#39;Ana&#39;
+etudiant[&quot;note&quot;] = 18              # on modifie
+etudiant[&quot;present&quot;] = True         # on ajoute une clé</code></pre></div></div>
+<blockquote>
+<p><strong>Si vous venez du PHP, c&#39;est votre tableau associatif</strong>, avec la même syntaxe ou presque. Vous êtes en terrain connu. <strong>Si vous venez du C++, c&#39;est une <code>std::map</code></strong>, en beaucoup plus souple : les valeurs peuvent être de n&#39;importe quel type, y compris d&#39;autres dictionnaires.</p>
+</blockquote>
+<h3>La clé absente</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">etudiant[&quot;adresse&quot;]                    # KeyError : la clé n&#39;existe pas
+
+etudiant.get(&quot;adresse&quot;)                # None, pas d&#39;erreur
+etudiant.get(&quot;adresse&quot;, &quot;inconnue&quot;)    # &#39;inconnue&#39;, valeur par défaut
+&quot;adresse&quot; in etudiant                  # False</code></pre></div></div>
+<p><strong><code>get</code> avec une valeur par défaut est le geste le plus utile de la séance.</strong> Il sert à compter :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-python">mots = [&quot;riz&quot;, &quot;mais&quot;, &quot;riz&quot;, &quot;haricot&quot;, &quot;riz&quot;]
+
+compte = {}
+for mot in mots:
+    compte[mot] = compte.get(mot, 0) + 1
+
+print(compte)      # {&#39;riz&#39;: 3, &#39;mais&#39;: 1, &#39;haricot&#39;: 1}</code></pre></div></div>
+<p>Relisez cette boucle jusqu&#39;à ce qu&#39;elle soit évidente. C&#39;est le motif le plus réutilisable du cours : à la première rencontre du mot, <code>get</code> renvoie 0, on écrit 1 ; ensuite on incrémente.</p>
+<h3>Parcourir un dictionnaire</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-python">for cle in etudiant:                       # les clés
+    print(cle)
+
+for valeur in etudiant.values():           # les valeurs
+    print(valeur)
+
+for cle, valeur in etudiant.items():       # les deux — c&#39;est celui qu&#39;on utilise
+    print(cle, &quot;:&quot;, valeur)</code></pre></div></div>
+<p><code>.items()</code> renvoie des tuples, que l&#39;on déballe — exactement comme <code>zip</code>.</p>
+<h3>Une liste de dictionnaires est un tableau de données</h3>
+<p><strong>C&#39;est le point d&#39;arrivée de la séance.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">ventes = [
+    {&quot;produit&quot;: &quot;riz&quot;,     &quot;departement&quot;: &quot;Ouest&quot;,      &quot;quantite&quot;: 120},
+    {&quot;produit&quot;: &quot;mais&quot;,    &quot;departement&quot;: &quot;Artibonite&quot;, &quot;quantite&quot;: 340},
+    {&quot;produit&quot;: &quot;haricot&quot;, &quot;departement&quot;: &quot;Ouest&quot;,      &quot;quantite&quot;: 85},
+]</code></pre></div></div>
+<p>Regardez la forme : <strong>une ligne par enregistrement, une clé par colonne.</strong> C&#39;est exactement ce qu&#39;est un fichier CSV, et exactement ce que sera un tableau pandas à la séance 5.</p>
+<p>Trois opérations, qui reviendront toute l&#39;année :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span></div><pre><code class="language-python"># FILTRER
+ouest = []
+for v in ventes:
+    if v[&quot;departement&quot;] == &quot;Ouest&quot;:
+        ouest.append(v)
+
+# CALCULER UNE COLONNE
+for v in ventes:
+    v[&quot;total&quot;] = v[&quot;quantite&quot;] * 100
+
+# REGROUPER
+par_departement = {}
+for v in ventes:
+    dep = v[&quot;departement&quot;]
+    par_departement[dep] = par_departement.get(dep, 0) + v[&quot;quantite&quot;]</code></pre></div></div>
+<p>Ces trois boucles s&#39;appellent <strong>filtrer</strong>, <strong>calculer</strong>, <strong>regrouper</strong>. À la séance 5, pandas les fera en une ligne chacune — et vous comprendrez ce qu&#39;il fait parce que vous les aurez écrites à la main.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">4. Les compréhensions</h2>
+<h3>La forme</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-python"># ce que vous avez écrit la semaine dernière
+resultat = []
+for note in notes:
+    if note &gt;= 10:
+        resultat.append(note)
+
+# la même chose
+resultat = [note for note in notes if note &gt;= 10]</code></pre></div></div>
+<p>Lisez-la à voix haute dans l&#39;ordre où elle s&#39;écrit :</p>
+<blockquote>
+<p>« Une liste — <strong>de</strong> <code>note</code> — <strong>pour chaque</strong> <code>note</code> <strong>dans</strong> <code>notes</code> — <strong>si</strong> <code>note &gt;= 10</code> »</p>
+</blockquote>
+<p>En trois temps :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">[note for note in notes]                  # tout copier
+[note * 2 for note in notes]              # transformer
+[note for note in notes if note &gt;= 10]    # filtrer</code></pre></div></div>
+<p><strong>L&#39;ordre d&#39;écriture est contre-intuitif</strong> : la transformation vient en premier, la source ensuite, la condition en dernier. Personne ne trouve ça naturel au début.</p>
+<h3>Trois exemples</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">noms = [&quot;ana&quot;, &quot;jean&quot;, &quot;marie&quot;]
+
+majuscules = [nom.upper() for nom in noms]         # [&#39;ANA&#39;, &#39;JEAN&#39;, &#39;MARIE&#39;]
+longs = [nom for nom in noms if len(nom) &gt; 3]      # [&#39;jean&#39;, &#39;marie&#39;]
+longueurs = [len(nom) for nom in noms]             # [3, 4, 5]</code></pre></div></div>
+<h3>La compréhension de dictionnaire</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python">prix = {&quot;riz&quot;: 285, &quot;mais&quot;: 95, &quot;haricot&quot;: 410}
+
+en_dollars = {produit: valeur / 130 for produit, valeur in prix.items()}
+chers = {produit: valeur for produit, valeur in prix.items() if valeur &gt; 200}</code></pre></div></div>
+<p>Même logique, avec <code>cle: valeur</code> devant le <code>for</code>.</p>
+<h3>La règle du cours</h3>
+<p><strong>Une compréhension tient sur une ligne et ne contient pas d&#39;autre compréhension.</strong> Dès qu&#39;il vous faut deux conditions imbriquées ou une boucle dans une boucle, revenez à un <code>for</code> classique : c&#39;est plus lisible, et ce sera mieux noté.</p>
+<blockquote>
+<p><strong>Et si les compréhensions ne passent pas aujourd&#39;hui, ce n&#39;est pas grave.</strong> Une boucle <code>for</code> correcte vaut tous les points au travail à rendre. La compréhension est un confort d&#39;écriture, pas un critère d&#39;évaluation. Écrivez la boucle juste plutôt que la compréhension fausse.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">5. Les outils qui reviendront tout le semestre</h2>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-python"># trier selon un critère
+ventes_triees = sorted(ventes, key=lambda v: v[&quot;quantite&quot;], reverse=True)
+
+# le maximum selon un critère
+meilleure = max(ventes, key=lambda v: v[&quot;quantite&quot;])
+
+# sum sur une compréhension
+total = sum(v[&quot;quantite&quot;] for v in ventes)
+
+# dédoublonner et trier
+produits = sorted({v[&quot;produit&quot;] for v in ventes})</code></pre></div></div>
+<p><strong>Sur <code>lambda</code> :</strong> c&#39;est une petite fonction sans nom, écrite sur place. Vous en avez besoin aujourd&#39;hui pour trier ; on la verra vraiment à la séance 3. Pour l&#39;instant, retenez la forme : <code>key=lambda v: v[&quot;quelque_chose&quot;]</code>.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">À retenir de cette séance</h2>
+<ol>
+<li>Le découpage <code>[début:fin]</code> exclut la borne de droite, et <code>[-1]</code> est le dernier élément</li>
+<li><code>liste.sort()</code> ne renvoie rien ; <code>sorted(liste)</code> renvoie une nouvelle liste</li>
+<li><code>b = a</code> ne copie pas une liste. <code>b = a.copy()</code> si.</li>
+<li><code>dictionnaire.get(cle, defaut)</code> évite le <code>KeyError</code> — et sert à compter</li>
+<li>Une <strong>liste de dictionnaires</strong> est un tableau de données : une ligne par enregistrement, une clé par colonne</li>
+</ol>
+<hr>
+<h2 style="background-color: #FBF3DB;">Aide-mémoire : erreurs fréquentes</h2>
+<table>
+<thead>
+<tr>
+<th>Message d&#39;erreur</th>
+<th>Cause probable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>KeyError: &#39;xxx&#39;</code></td>
+<td>Clé absente du dictionnaire. Utilisez <code>.get()</code> ou testez avec <code>in</code></td>
+</tr>
+<tr>
+<td><code>TypeError: &#39;NoneType&#39; object is not iterable</code></td>
+<td>Vous avez écrit <code>liste = liste.sort()</code>. <code>sort()</code> ne renvoie rien</td>
+</tr>
+<tr>
+<td><code>IndexError: list index out of range</code></td>
+<td>Index au-delà de la fin. Le découpage, lui, ne lève jamais cette erreur</td>
+</tr>
+<tr>
+<td><code>TypeError: unhashable type: &#39;list&#39;</code></td>
+<td>Une liste utilisée comme clé de dictionnaire. Les clés doivent être immuables</td>
+</tr>
+<tr>
+<td><code>SyntaxError</code> dans une compréhension</td>
+<td>Le <code>if</code> écrit avant le <code>for</code>, ou des crochets oubliés</td>
+</tr>
+<tr>
+<td>Une liste change sans qu&#39;on y touche</td>
+<td><code>b = a</code> au lieu de <code>b = a.copy()</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h2 style="background-color: #FBF3DB;">Aller plus loin</h2>
+<p><strong>Rien ici n&#39;est au programme, rien n&#39;est évalué, rien n&#39;est nécessaire pour la séance 3.</strong> Des portes ouvertes, à pousser ou pas.</p>
+<h3><code>collections.Counter</code></h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">from collections import Counter
+compte = Counter(mots)
+compte.most_common(3)</code></pre></div></div>
+<p>Fait en une ligne le comptage du module 3, et donne le classement en prime. <strong>Pourquoi pas au cours :</strong> vous devez d&#39;abord savoir écrire la boucle avec <code>get</code>, sinon <code>Counter</code> reste une boîte noire. <strong>Servez-vous-en une fois que la boucle vous est évidente.</strong></p>
+<h3><code>defaultdict</code></h3>
+<p><code>from collections import defaultdict</code> — un dictionnaire qui crée la valeur par défaut tout seul, ce qui évite le <code>get(cle, 0)</code>. <strong>Pourquoi pas au cours :</strong> <code>get</code> suffit, et se lit sans documentation.</p>
+<h3>Les opérations d&#39;ensemble</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">a | b     # union
+a &amp; b     # intersection
+a - b     # différence</code></pre></div></div>
+<p>Élégant, et utile le jour où vous comparerez deux listes d&#39;identifiants. <strong>Pourquoi pas au cours :</strong> ça ne sert nulle part dans les quatre séances qui restent.</p>
+<h3><code>dict</code> ordonné, et pourquoi on n&#39;en parle pas</h3>
+<p>Depuis Python 3.7, un dictionnaire conserve l&#39;ordre d&#39;insertion. Ça n&#39;a l&#39;air de rien et ça a changé beaucoup de code. <strong>Où chercher :</strong> « What&#39;s New in Python 3.7 ».</p>
+<h3>Le découpage avec pas négatif</h3>
+<p><code>jours[::-1]</code> inverse une liste. <code>jours[5:1:-1]</code> parcourt à reculons de 5 à 2. Rarement utile, toujours impressionnant.</p>
+<h3><code>zip(*...)</code> — la transposition</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">paires = [(&quot;a&quot;, 1), (&quot;b&quot;, 2)]
+lettres, nombres = zip(*paires)</code></pre></div></div>
+<p>L&#39;étoile déballe la liste en arguments séparés. <strong>Où chercher :</strong> « unpacking argument lists » dans la documentation.</p>
+<h3>Un défi</h3>
+<p>À partir de la liste de ventes du travail à rendre, produisez un dictionnaire qui donne, pour chaque département, <strong>le produit qui y rapporte le plus</strong> — celui dont le chiffre d&#39;affaires cumulé dans ce département est le plus élevé.</p>
+<p>C&#39;est difficile, et c&#39;est faisable avec ce que vous savez aujourd&#39;hui plus <code>max(..., key=...)</code>. Il vous faudra regrouper sur <strong>deux</strong> clés à la fois, département et produit, puis chercher le maximum par département. Si vous y arrivez sans compréhension imbriquée, vous avez compris la séance.</p>
+<p>Ce défi vaut <strong>un point de bonus</strong> au travail à rendre n° 2.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Pour aller plus loin — les liens</h2>
+<ul>
+<li>Documentation Python, structures de données : <a href="https://docs.python.org/fr/3/tutorial/datastructures.html">https://docs.python.org/fr/3/tutorial/datastructures.html</a></li>
+<li>Module <code>collections</code> : <a href="https://docs.python.org/fr/3/library/collections.html">https://docs.python.org/fr/3/library/collections.html</a></li>
+</ul>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant la prochaine séance</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Les exercices du socle sont dans le dépôt <code>seance-02-exercices</code> et son issue est fermée</li>
+<li><input disabled="" type="checkbox"> Le travail à rendre n° 2 est déposé, sous forme de projet uv complet</li>
+<li><input disabled="" type="checkbox"> Je sais écrire une boucle de comptage avec <code>get(cle, 0)</code> sans regarder mes notes</li>
+</ul>
+
+</body>
+</html>
