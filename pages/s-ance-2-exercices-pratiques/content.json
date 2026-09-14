@@ -2535,13 +2535,6 @@
           "type": "text",
           "text": " ",
           "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "(extension)",
-          "styles": {
-            "italic": true
-          }
         }
       ],
       "children": []
