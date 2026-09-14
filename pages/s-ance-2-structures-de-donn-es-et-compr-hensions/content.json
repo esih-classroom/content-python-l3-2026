@@ -2143,47 +2143,7 @@
         },
         {
           "type": "text",
-          "text": " classique : c'est plus lisible, et ce sera mieux noté.",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "feaa8195-f6f9-4e36-88ec-8dd9c6750a2b",
-      "type": "quote",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Et si les compréhensions ne passent pas aujourd'hui, ce n'est pas grave.",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " Une boucle ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "for",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " correcte vaut tous les points au travail à rendre. La compréhension est un confort d'écriture, pas un critère d'évaluation. Écrivez la boucle juste plutôt que la compréhension fausse.\n",
+          "text": " classique : c'est plus lisible, et ce sera mieux noté.\n",
           "styles": {}
         }
       ],
