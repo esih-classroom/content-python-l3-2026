@@ -1236,7 +1236,7 @@
         },
         {
           "type": "text",
-          "text": " — le résultat fait trois éléments",
+          "text": " - le résultat fait trois éléments",
           "styles": {}
         }
       ],
@@ -1897,34 +1897,6 @@
       "children": []
     },
     {
-      "id": "e8282718-bc04-4f0b-a2a5-2a198703c61b",
-      "type": "quote",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Variante Colab / téléphone.",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " Identique.\n",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
       "id": "56a37855-9a62-4949-a5d4-645cdcca2a58",
       "type": "paragraph",
       "props": {
@@ -2425,154 +2397,6 @@
         {
           "type": "text",
           "text": ". C'est le seul endroit de l'exercice où une compréhension serait le mauvais outil — vous ne construisez pas une nouvelle liste, vous enrichissez celle-ci.\n",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "81a5908f-ece9-45a2-8dbf-2d59c5667e10",
-      "type": "quote",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "\n",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "Variante Colab / téléphone.",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": " Identique.\n",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "99c76390-c515-4d9a-90e4-255c53e8e276",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [],
-      "children": []
-    },
-    {
-      "id": "a5480922-196c-4047-ae03-47a2aab4eb2e",
-      "type": "heading",
-      "props": {
-        "backgroundColor": "rgb(251, 243, 219)",
-        "textColor": "default",
-        "textAlignment": "left",
-        "level": 2,
-        "isToggleable": false
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Si vous avez fini en avance",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "e762713c-2606-4707-88f8-7db7505d3a68",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Reprenez ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "exercice3.py",
-          "styles": {
-            "code": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ". Les six relevés ont chacun un département différent, ce qui rend le regroupement inutile. Ajoutez ces trois lignes :",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "837469d0-bdd1-45a6-8f26-9044d9b4103a",
-      "type": "codeBlock",
-      "props": {
-        "language": "python"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "releves.append({\"ville\": \"Pétion-Ville\", \"departement\": \"Ouest\",      \"temperature\": 30, \"pluie\": 3})\nreleves.append({\"ville\": \"Saint-Marc\",   \"departement\": \"Artibonite\", \"temperature\": 34, \"pluie\": 0})\nreleves.append({\"ville\": \"Miragoâne\",    \"departement\": \"Nippes\",     \"temperature\": 32, \"pluie\": 6})",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "37492ba4-fe41-40b9-ac74-7e8e69472163",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Puis affichez, pour ",
-          "styles": {}
-        },
-        {
-          "type": "text",
-          "text": "chaque département",
-          "styles": {
-            "bold": true
-          }
-        },
-        {
-          "type": "text",
-          "text": ", la température moyenne de ses villes.",
-          "styles": {}
-        }
-      ],
-      "children": []
-    },
-    {
-      "id": "4325ba37-957a-4717-a9e1-c62fb587b315",
-      "type": "paragraph",
-      "props": {
-        "backgroundColor": "default",
-        "textColor": "default",
-        "textAlignment": "left"
-      },
-      "content": [
-        {
-          "type": "text",
-          "text": "Ce n'est pas une compréhension. C'est deux dictionnaires et une boucle — ou un dictionnaire dont les valeurs sont des listes. Les deux marchent ; comparez-les avec votre voisin.",
           "styles": {}
         }
       ],
