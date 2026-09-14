@@ -1949,13 +1949,6 @@
             "bold": true,
             "italic": true
           }
-        },
-        {
-          "type": "text",
-          "text": " — à faire si le socle est terminé.",
-          "styles": {
-            "italic": true
-          }
         }
       ],
       "children": []
