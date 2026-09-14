@@ -2290,7 +2290,7 @@
         },
         {
           "type": "text",
-          "text": "[début:fin]",
+          "text": "[début:fin:etape]",
           "styles": {
             "code": true
           }
