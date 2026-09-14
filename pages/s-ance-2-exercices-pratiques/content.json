@@ -1,0 +1,2826 @@
+{
+  "blocks": [
+    {
+      "id": "bcd4d5a1-2ea0-4456-b1dd-1bb4354c7e0f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "35 minutes",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5d1f5d5b-23c9-434c-b600-7242b11eda31",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Résultats d'apprentissage visés : RA2, RA3",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d4db7774-f6c3-4a88-a592-6d1bc2fe08cb",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "8cb66cbc-1928-48c3-a634-639ba85ccc64",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Comment travailler",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "35848875-6057-4d07-8afa-88c5109f9708",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quatre exercices, dans l'ordre. Ne passez pas au suivant tant que le précédent ne fonctionne pas.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e10d7c94-a978-491e-bf46-4627f36b7f9f",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Exercice",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce qu'il demande",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Durée",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "0",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le projet de la séance, et la boucle de la semaine dernière en une ligne",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Socle",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "1",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Découper, trier, copier une liste",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "8 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Socle",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Compter avec un dictionnaire",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "10 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Socle",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Une liste de dictionnaires : filtrer, calculer, classer",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "8 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Extension",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "—",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Correction collective",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "5 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "de2b2cb6-1c8d-4c11-96b7-b0c30243bf17",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le socle, c'est ce que tout le monde doit finir.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Les exercices 0, 1 et 2 portent tout ce dont vous aurez besoin pour le travail à rendre n° 2 et pour la séance 3. L'exercice 3 est un avant-goût du travail à rendre : si vous l'avez fait, le travail sera nettement plus rapide.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e28a186a-03e5-4e84-8bcb-be14c19ab655",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Si vous n'avez pas fini le socle en séance",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", terminez-le chez vous avant la séance 3. Et si vous bloquez, écrivez dans l'issue du dépôt d'exercices — c'est fait pour ça, et vous n'êtes jamais le seul à bloquer au même endroit.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6c9d0f50-b0dd-4312-836b-5d2cf9963d53",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Si vous travaillez sur Google Colab ou sur téléphone",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", chaque exercice a une variante indiquée. Vous ferez la même chose, sans les commandes ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "uv",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d8505b18-403a-4cc6-af58-71e19bac9981",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rappel de la règle du cours :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " on exécute avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "uv run fichier.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", jamais avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "python fichier.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dc9698c9-3dbc-4f36-83e3-4c28ef137b5e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rappel de la règle d'aujourd'hui :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " une boucle ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " correcte vaut tous les points. Si la compréhension ne vient pas, écrivez la boucle et passez à la suite.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "cdca8b24-7f9b-400e-9a80-b91014f1c917",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "236d7f49-7762-4a20-befb-821b703f91e2",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 0 — Le projet, et la ligne de la semaine dernière",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6a21364c-cd91-4e98-b2bb-762e2fba4272",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "4 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Socle.",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "cc1e515f-189d-41a6-a4f3-e338706bd945",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Dans un terminal :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6fa711b3-2c54-4061-8171-f17f4e535e5c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "765a8b18-5608-4669-992f-529380548a7b",
+      "type": "terminal",
+      "props": {
+        "code": "uv init seance-02\ncd seance-02\nuv run main.py",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "ee0cd00a-9dfc-4c12-af69-d2d8d837af91",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Créez ensuite ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice0.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et collez-y ce que vous aviez écrit la semaine dernière :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "16c1dc73-e8cb-4374-a3c5-ac89930d7da5",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "notes_etudiants = [12, 17, 9, 14, 18, 7, 15]\n\nnotes_reussite = []\nfor note in notes_etudiants:\n    if note >= 10:\n        notes_reussite.append(note)\n\nmoyenne = sum(notes_reussite) / len(notes_reussite)\nprint(f\"Moyenne des reçus : {moyenne:.1f}\")",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c843c718-f688-4f93-bd0f-9e8b5e6f085f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce qu'on vous demande :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "773d26a1-25b7-43af-934d-67f7180b7a2c",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exécutez-le. Notez l'affichage obtenu — c'est votre référence.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2129a635-1930-4124-a4ec-669518897e92",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Remplacez les quatre lignes de la boucle par ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "une seule",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " compréhension.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2d85aed4-00fb-4a84-acda-8212427100c5",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exécutez à nouveau. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "L'affichage doit être identique au caractère près.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a558e15f-4b9d-452a-80a7-d172588f6594",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est le seul exercice de la séance dont vous connaissez déjà la réponse attendue. Servez-vous-en : si le résultat change, c'est la compréhension qui est fausse, pas le calcul.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a945ab66-0aab-4552-9e6e-1424b716256d",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Variante Colab / téléphone.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Une cellule pour la version longue, une cellule pour la version courte. Gardez les deux à l'écran, côte à côte.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1a25d834-e25b-4e72-a64c-9b22782a2fc6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "e0bb817d-73ee-419c-bb5b-90d3774e6ed5",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 1 — Découper, trier, copier",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9166bf04-e112-484e-901a-56ccaf204c32",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "8 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Socle.",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "35b5b39b-70e0-4d3f-ba77-bb0e1759c85d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Dans ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice1.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", partez de ces deux listes :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ce3fcda2-e872-4971-9d30-66470acfbb65",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "jours = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\", \"vendredi\", \"samedi\", \"dimanche\"]\ntemperatures = [31, 29, 33, 35, 30, 28, 32]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "59798632-120b-48ea-9e81-31bd13d63f38",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Écrivez le code qui affiche, dans cet ordre :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a28ac47d-0afa-4c18-847c-7bededcee009",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "cinq premiers",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " jours",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5af1481e-ca89-45d0-8e6c-91cfa9359828",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "week-end",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — les deux derniers, sans écrire le chiffre 5 ni le chiffre 7",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d7d2a2f3-829d-4063-bdc2-8fc7c4f5c391",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "dernier",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " jour, sans utiliser ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "len",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "383388e0-ee1f-458d-be1a-2c36481e76ed",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La semaine ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "à l'envers",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ea070fee-87c3-495f-bf6a-6d73ded14b43",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un jour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sur deux à partir de mardi",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — le résultat fait trois éléments",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "632f8abb-5eaa-49c1-a9dc-4cf316183d23",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "trois températures les plus élevées",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", de la plus haute à la plus basse",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f827d690-c844-4acf-92a4-8ae8e7d59aed",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis deux questions, en commentaire à la fin du fichier :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "177cf27a-9cf7-4a21-9870-7cc2e4ba9d1a",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "start": 7
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Que vaut ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "jours[:3] + jours[3:]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ? Répondez d'abord sans exécuter, puis vérifiez.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "55c89897-2500-404d-a0d6-195965d00a22",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce code ne fait pas ce qu'on croit. Corrigez-le, et expliquez en une phrase ce qui n'allait pas :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f6f4264b-fc64-4c29-9f5c-1cef378bd250",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "temperatures_triees = temperatures.sort()\nprint(temperatures_triees)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6d867c7c-64d8-42fd-966a-ecd58d463bc0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une contrainte de style :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " à la question 6, la liste ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "temperatures",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ne doit pas avoir changé à la fin du programme. Affichez-la en dernière ligne pour le prouver.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e7aa1431-ec88-4647-b038-6e8d6056aaa4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "1bebb115-15ee-4470-b915-115ff5a46a82",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 2 - Compter",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "131caf55-b6d7-4849-af43-46548352fe4b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "10 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Socle",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " - c'est l'exercice le plus important de la séance.",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f05d0634-53b2-454f-b93c-ff0440bf9138",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Dans ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice2.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2f4cc132-b207-4cce-ab4b-05ccf1ad34de",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "texte = \"riz mais riz haricot riz mais banane\"\nmots = texte.split()",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4a73bda5-71d9-4519-b4bc-b2697721d832",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "split()",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " découpe une chaîne sur les espaces et renvoie une liste. C'est tout ce qu'il faut savoir aujourd'hui.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "28bda8f0-15df-48f2-ba1c-39d68e0c3d84",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce qu'on vous demande :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "20bfc726-e6bb-4356-97e9-289a45ced263",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Construisez un dictionnaire ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "compte",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " qui donne, pour chaque mot, le nombre de fois où il apparaît. Utilisez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "get(mot, 0)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a5ab7b91-f7ae-49ff-9cf6-59e54b28f4dd",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Affichez-le ligne par ligne, une ligne par mot, de la forme :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "984ca094-c717-4267-86a7-18b5540e48c3",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "riz : 3\nmais : 2\nharicot : 1\nbanane : 1",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5dd50fab-1607-4b80-bcc4-0b5a10615ae8",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "start": 3
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Affichez la liste des mots ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "distincts",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "triés par ordre alphabétique",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a5bfc604-3192-4ffe-a1f9-efb55801df1d",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Affichez le mot qui revient le plus souvent.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "15da9d11-d71a-4227-9019-5fe12f3fcdd5",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Construisez, avec une ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "compréhension de dictionnaire",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", un dictionnaire ne gardant que les mots apparaissant ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "au moins deux fois",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e62565dd-ffd9-4a07-a0e9-fc91d4bac637",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis une question, en commentaire à la fin du fichier :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e17f040c-0450-4dac-adec-afe3b23540e4",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "start": 6
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Réécrivez la ligne ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "compte[mot] = compte.get(mot, 0) + 1",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sans utiliser ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "get",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Votre version fait plus d'une ligne - combien, et pourquoi ?",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "273ff757-3d56-46ed-9b5b-7da29f887737",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Indice pour la question 4.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "max",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " accepte un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "key=",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Sur un dictionnaire, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "max(compte, key=compte.get)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " parcourt les clés et compare les valeurs. Prenez trente secondes pour comprendre cette ligne avant de l'écrire : elle réutilise deux choses vues aujourd'hui.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c10bd760-173d-477b-a929-4db973157c7c",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Si la question 5 bloque",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", faites-la avec une boucle ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "if",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". C'est juste, c'est noté pareil, et vous y reviendrez.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e8282718-bc04-4f0b-a2a5-2a198703c61b",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Variante Colab / téléphone.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Identique.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "56a37855-9a62-4949-a5d4-645cdcca2a58",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "5974e618-e8f4-4068-a8fa-8e33c55d33d8",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 3 - Une liste de dictionnaires",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f21ee2ff-7b28-4804-a52b-97affef68794",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "8 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Extension",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — à faire si le socle est terminé.",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0797d25c-345e-4188-b2a8-ecc71d4acac7",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C'est la forme que prennent toutes les données réelles, et c'est l'exercice qui ressemble le plus au travail à rendre.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "096a293c-8ecb-43a9-93a3-dac0cef89070",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Dans ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice3.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f8fc9c8a-3cec-4cfb-92f7-d8ea05d948e1",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "releves = [\n    {\"ville\": \"Port-au-Prince\", \"departement\": \"Ouest\",      \"temperature\": 33, \"pluie\": 0},\n    {\"ville\": \"Jacmel\",         \"departement\": \"Sud-Est\",    \"temperature\": 29, \"pluie\": 12},\n    {\"ville\": \"Cap-Haitien\",    \"departement\": \"Nord\",       \"temperature\": 31, \"pluie\": 5},\n    {\"ville\": \"Les Cayes\",      \"departement\": \"Sud\",        \"temperature\": 30, \"pluie\": 20},\n    {\"ville\": \"Gonaives\",       \"departement\": \"Artibonite\", \"temperature\": 35, \"pluie\": 0},\n    {\"ville\": \"Hinche\",         \"departement\": \"Centre\",     \"temperature\": 28, \"pluie\": 8},\n]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5a8c118c-434f-48ea-a9ee-f8ceaf813b33",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Affichez, dans cet ordre :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "718ce657-b96c-4091-bd83-5d70b83034e4",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "noms",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " des villes où il a fait ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "31 degrés ou plus",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d10fc17a-4bb0-473e-8ceb-18a133450258",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "température moyenne",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", avec une décimale",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c33dff5d-f1e1-47a9-aeac-25b7ae7f496e",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La ville ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "la plus chaude",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", et sa température",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0809e093-283f-489f-b92b-47921094432d",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les villes ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "triées par pluie décroissante",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " — les noms seulement",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "86ccc625-50ad-4e22-8cf9-3c4812f2c91e",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "dictionnaire",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "ville → température",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", construit en une ligne",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "166185d2-15e0-4dda-812f-a6a640534513",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "67cd8fba-0ea7-4a0f-9fc5-8b17392c1fd8",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "start": 6
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ajoutez à ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "chaque relevé",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " une clé ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sec",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", valant ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "True",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " s'il n'a pas plu. Affichez ensuite les villes sèches.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a3d726bd-80ae-4a01-ad52-4d8cea427fd6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois contraintes de style :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "232a5e02-7d66-4033-ae00-83a5482987a5",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Aucun ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for i in range(len(releves))",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3a8104bc-ee89-42d1-86c6-ab3526a76a14",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les questions 1, 4 et 5 tiennent chacune sur une ligne",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b13f18ed-d97e-4145-8f1b-39232fedb565",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La moyenne s'affiche avec une seule décimale",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dd644a60-4acc-47ce-bc7c-470520c7273d",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Indice pour la question 6.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Une liste de dictionnaires se modifie sur place : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for r in releves:",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " puis ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "r[\"sec\"] = ...",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". C'est le seul endroit de l'exercice où une compréhension serait le mauvais outil — vous ne construisez pas une nouvelle liste, vous enrichissez celle-ci.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "81a5908f-ece9-45a2-8dbf-2d59c5667e10",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Variante Colab / téléphone.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Identique.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "99c76390-c515-4d9a-90e4-255c53e8e276",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "a5480922-196c-4047-ae03-47a2aab4eb2e",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Si vous avez fini en avance",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e762713c-2606-4707-88f8-7db7505d3a68",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Reprenez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice3.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Les six relevés ont chacun un département différent, ce qui rend le regroupement inutile. Ajoutez ces trois lignes :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "837469d0-bdd1-45a6-8f26-9044d9b4103a",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "releves.append({\"ville\": \"Pétion-Ville\", \"departement\": \"Ouest\",      \"temperature\": 30, \"pluie\": 3})\nreleves.append({\"ville\": \"Saint-Marc\",   \"departement\": \"Artibonite\", \"temperature\": 34, \"pluie\": 0})\nreleves.append({\"ville\": \"Miragoâne\",    \"departement\": \"Nippes\",     \"temperature\": 32, \"pluie\": 6})",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "37492ba4-fe41-40b9-ac74-7e8e69472163",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis affichez, pour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "chaque département",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", la température moyenne de ses villes.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4325ba37-957a-4717-a9e1-c62fb587b315",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce n'est pas une compréhension. C'est deux dictionnaires et une boucle — ou un dictionnaire dont les valeurs sont des listes. Les deux marchent ; comparez-les avec votre voisin.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "74615ff4-6f70-4900-815f-7ae347376656",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "0fdb3d20-2878-4d33-9d31-2dc402c8e693",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À la fin des exercices",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a5e86d50-68d8-40d9-8c28-47897e6af727",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Votre projet ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "seance-02",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " doit contenir :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f157aa1d-9882-421b-bc07-19897ba39e11",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "exercice0.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "511e1da9-d114-40e0-8386-0eb3bcafb984",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "exercice1.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "33ca4d6b-278c-4c8a-b7b8-6a19217c5b6b",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "exercice2.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7b21f765-8a00-4064-910d-b687267e1295",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "exercice3.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "(extension)",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7e5bdad0-3096-4703-bbf4-4168cf7ba25b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pour le rendre :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " déposez ces fichiers dans le dépôt ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "seance-02-exercices",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que vous avez reçu, puis fermez son issue. L'échéance est fixée à la veille de la séance 3.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9142ebec-d8d1-4ec5-86b5-14ac14108d54",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ces exercices comptent pour la note de participation. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "On regarde qu'ils sont faits, pas qu'ils sont justes",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : un exercice tenté et raté vaut autant qu'un exercice réussi.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3e93f287-7f83-4dbf-bf17-f56fd530f432",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Gardez ce projet : l'exercice 2 et l'exercice 3 sont exactement les deux gestes du travail à rendre n° 2.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "daecdebf-f1aa-4b39-8456-6d7918854548",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
