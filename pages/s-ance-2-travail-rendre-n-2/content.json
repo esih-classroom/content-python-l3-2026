@@ -38,15 +38,7 @@
         "textColor": "default",
         "textAlignment": "left"
       },
-      "content": [
-        {
-          "type": "text",
-          "text": "À remettre avant le début de la séance 3",
-          "styles": {
-            "bold": true
-          }
-        }
-      ],
+      "content": [],
       "children": []
     },
     {
@@ -60,7 +52,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Résultats d'apprentissage évalués : RA2, RA3 — noté sur 20",
+          "text": "Résultats d'apprentissage évalués : RA2, RA3 - noté sur 20",
           "styles": {
             "bold": true
           }
@@ -245,6 +237,17 @@
         "textColor": "default",
         "textAlignment": "left"
       },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "65e62fe2-79c9-493d-9f27-dda3b8bd19ce",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
       "content": [
         {
           "type": "text",
@@ -289,6 +292,17 @@
         "textColor": "default",
         "textAlignment": "left"
       },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "4e283f02-0f18-4e8b-9504-2deb6e857096",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
       "content": [
         {
           "type": "text",
@@ -304,7 +318,7 @@
         },
         {
           "type": "text",
-          "text": " fonctionne — c'est la séance 3. Retenez que les données arrivent dans une variable ",
+          "text": " fonctionne  c'est la séance 3. Retenez que les données arrivent dans une variable ",
           "styles": {}
         },
         {
@@ -1080,7 +1094,7 @@
         },
         {
           "type": "text",
-          "text": " — le titre de la section s'adapte tout seul. Ce sera vérifié avec ",
+          "text": " le titre de la section s'adapte tout seul. Ce sera vérifié avec ",
           "styles": {}
         },
         {
@@ -1151,7 +1165,7 @@
         },
         {
           "type": "text",
-          "text": " — ce n'est pas là-dessus que vous êtes évalué :",
+          "text": " ce n'est pas là-dessus que vous êtes évalué :",
           "styles": {}
         }
       ],
@@ -1622,7 +1636,7 @@
                   },
                   {
                     "type": "text",
-                    "text": ", quatre espaces d'indentation. Aucune variable ne porte le nom d'un outil du langage — pas de ",
+                    "text": ", quatre espaces d'indentation. Aucune variable ne porte le nom d'un outil du langage pas de ",
                     "styles": {}
                   },
                   {
@@ -1830,7 +1844,7 @@
         },
         {
           "type": "text",
-          "text": ", sur place. Ce n'est pas une faute : c'est le geste normal pour ajouter une colonne. Mais souvenez-vous de la séance 1 — après cette boucle, les dictionnaires d'origine ",
+          "text": ", sur place. Ce n'est pas une faute : c'est le geste normal pour ajouter une colonne. Mais souvenez-vous de la séance 1 après cette boucle, les dictionnaires d'origine ",
           "styles": {}
         },
         {
@@ -2727,7 +2741,7 @@
         },
         {
           "type": "text",
-          "text": " N'importe laquelle : le message exact, ce qui la causait, comment vous l'avez trouvée. Si vous n'en avez fait aucune, dites-le — mais c'est rare, et ce n'est pas ce qui est attendu.",
+          "text": " N'importe laquelle : le message exact, ce qui la causait, comment vous l'avez trouvée. Si vous n'en avez fait aucune, dites-le mais c'est rare, et ce n'est pas ce qui est attendu.",
           "styles": {}
         }
       ],
@@ -2866,7 +2880,7 @@
         },
         {
           "type": "text",
-          "text": " le code que vous remettez. Vous devrez pouvoir expliquer chaque ligne de votre programme si on vous le demande — et pour ce travail-là, la question portera sur la boucle de regroupement.",
+          "text": " le code que vous remettez. Vous devrez pouvoir expliquer chaque ligne de votre programme si on vous le demande et pour ce travail-là, la question portera sur la boucle de regroupement.",
           "styles": {}
         }
       ],
@@ -3749,7 +3763,7 @@
         },
         {
           "type": "text",
-          "text": ", le produit qui y rapporte le plus. Quatre lignes de résultat. C'est difficile, et c'est faisable avec ce que vous savez — c'est le défi de la section « Aller plus loin » du support de cours.",
+          "text": ", le produit qui y rapporte le plus. Quatre lignes de résultat. C'est difficile, et c'est faisable avec ce que vous savez c'est le défi de la section « Aller plus loin » du support de cours.",
           "styles": {}
         }
       ],
