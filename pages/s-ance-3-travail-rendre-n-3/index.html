@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="background-color: #FBF3DB;">Le même rapport, en fonctions</h2>
+<p><strong>À remettre avant le début de la séance 4</strong></p>
+<p><strong>Résultats d&#39;apprentissage évalués : RA3, RA4  noté sur 20</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce qu&#39;on vous demande, en trois phrases</h2>
+<p>Vous reprenez l&#39;analyse de ventes du travail n° 2 et vous la <strong>découpez en cinq fonctions</strong>. Le jeu de données est plus gros  quinze ventes au lieu de dix, avec une colonne <code>mois</code> en plus  et le rapport demandé est plus riche, mais <strong>vous n&#39;écrirez pas plus de code qu&#39;avant</strong> : c&#39;est tout l&#39;intérêt de l&#39;exercice. Vous remettez un projet uv complet et un court texte.</p>
+<p>Comptez deux heures. <strong>Partez de votre propre copie du travail n° 2</strong>, même si elle était imparfaite : le corrigé vous a été rendu, servez-vous-en pour la réparer avant de la découper.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les données</h2>
+<p>Le fichier <code>donnees.py</code> est déjà dans votre dépôt. <strong>Ne le modifiez pas.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span></div><pre><code class="language-python">ventes = [
+    {&quot;produit&quot;: &quot;riz&quot;,     &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Ouest&quot;,      &quot;mois&quot;: &quot;janvier&quot;, &quot;quantite&quot;: 120, &quot;prix_unitaire&quot;: 285.0},
+    {&quot;produit&quot;: &quot;mais&quot;,    &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Artibonite&quot;, &quot;mois&quot;: &quot;janvier&quot;, &quot;quantite&quot;: 340, &quot;prix_unitaire&quot;: 95.0},
+    {&quot;produit&quot;: &quot;haricot&quot;, &quot;categorie&quot;: &quot;legumes&quot;,  &quot;departement&quot;: &quot;Ouest&quot;,      &quot;mois&quot;: &quot;janvier&quot;, &quot;quantite&quot;: 85,  &quot;prix_unitaire&quot;: 410.0},
+    {&quot;produit&quot;: &quot;banane&quot;,  &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Sud&quot;,        &quot;mois&quot;: &quot;janvier&quot;, &quot;quantite&quot;: 200, &quot;prix_unitaire&quot;: 45.0},
+    {&quot;produit&quot;: &quot;mangue&quot;,  &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Sud&quot;,        &quot;mois&quot;: &quot;janvier&quot;, &quot;quantite&quot;: 310, &quot;prix_unitaire&quot;: 30.0},
+    {&quot;produit&quot;: &quot;riz&quot;,     &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Artibonite&quot;, &quot;mois&quot;: &quot;fevrier&quot;, &quot;quantite&quot;: 500, &quot;prix_unitaire&quot;: 270.0},
+    {&quot;produit&quot;: &quot;avocat&quot;,  &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Ouest&quot;,      &quot;mois&quot;: &quot;fevrier&quot;, &quot;quantite&quot;: 150, &quot;prix_unitaire&quot;: 62.0},
+    {&quot;produit&quot;: &quot;haricot&quot;, &quot;categorie&quot;: &quot;legumes&quot;,  &quot;departement&quot;: &quot;Nord&quot;,       &quot;mois&quot;: &quot;fevrier&quot;, &quot;quantite&quot;: 95,  &quot;prix_unitaire&quot;: 425.0},
+    {&quot;produit&quot;: &quot;igname&quot;,  &quot;categorie&quot;: &quot;legumes&quot;,  &quot;departement&quot;: &quot;Nord&quot;,       &quot;mois&quot;: &quot;fevrier&quot;, &quot;quantite&quot;: 180, &quot;prix_unitaire&quot;: 130.0},
+    {&quot;produit&quot;: &quot;mangue&quot;,  &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Ouest&quot;,      &quot;mois&quot;: &quot;fevrier&quot;, &quot;quantite&quot;: 260, &quot;prix_unitaire&quot;: 35.0},
+    {&quot;produit&quot;: &quot;riz&quot;,     &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Sud&quot;,        &quot;mois&quot;: &quot;mars&quot;,    &quot;quantite&quot;: 210, &quot;prix_unitaire&quot;: 295.0},
+    {&quot;produit&quot;: &quot;mais&quot;,    &quot;categorie&quot;: &quot;cereales&quot;, &quot;departement&quot;: &quot;Nord&quot;,       &quot;mois&quot;: &quot;mars&quot;,    &quot;quantite&quot;: 275, &quot;prix_unitaire&quot;: 105.0},
+    {&quot;produit&quot;: &quot;igname&quot;,  &quot;categorie&quot;: &quot;legumes&quot;,  &quot;departement&quot;: &quot;Artibonite&quot;, &quot;mois&quot;: &quot;mars&quot;,    &quot;quantite&quot;: 140, &quot;prix_unitaire&quot;: 125.0},
+    {&quot;produit&quot;: &quot;banane&quot;,  &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Ouest&quot;,      &quot;mois&quot;: &quot;mars&quot;,    &quot;quantite&quot;: 320, &quot;prix_unitaire&quot;: 48.0},
+    {&quot;produit&quot;: &quot;avocat&quot;,  &quot;categorie&quot;: &quot;fruits&quot;,   &quot;departement&quot;: &quot;Sud&quot;,        &quot;mois&quot;: &quot;mars&quot;,    &quot;quantite&quot;: 190, &quot;prix_unitaire&quot;: 58.0},
+]</code></pre></div></div>
+<p>Dans <code>analyse.py</code>, la première ligne après la déclaration d&#39;IA :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">from donnees import ventes</code></pre></div></div>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les cinq fonctions à écrire</h2>
+<p><strong>Elles sont imposées</strong> : mêmes noms, mêmes paramètres, mêmes valeurs par défaut. C&#39;est ce qui rend la correction possible, et c&#39;est aussi ce qui vous évite de chercher un découpage.</p>
+<h3>1. <code>calculer_montants(lignes)</code></h3>
+<p>Ajoute une clé <code>montant</code> à chaque ligne, valant <code>quantite × prix_unitaire</code>. <strong>Ne renvoie rien</strong>  elle modifie la liste sur place.</p>
+<h3>2. <code>grouper_par(lignes, cle, valeur=&quot;montant&quot;)</code></h3>
+<p>Renvoie un dictionnaire qui associe chaque valeur de <code>cle</code> à la <strong>somme</strong> du champ <code>valeur</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">grouper_par(ventes, &quot;departement&quot;)                      # somme des montants
+grouper_par(ventes, &quot;categorie&quot;, valeur=&quot;quantite&quot;)     # somme des quantités</code></pre></div></div>
+<p><strong>C&#39;est la fonction centrale du travail.</strong> Un seul corps de boucle, qui remplace les quatre blocs copiés-collés de la semaine dernière.</p>
+<h3>3. <code>filtrer(lignes, cle, valeur)</code></h3>
+<p>Renvoie la liste des lignes dont le champ <code>cle</code> vaut exactement <code>valeur</code>. <strong>Une compréhension d&#39;une ligne.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">filtrer(ventes, &quot;departement&quot;, &quot;Ouest&quot;)</code></pre></div></div>
+<h3>4. <code>resume(lignes)</code></h3>
+<p>Renvoie <strong>trois valeurs</strong> : le nombre de lignes, le montant total, le montant moyen.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">nombre, total, moyenne = resume(ventes)</code></pre></div></div>
+<p><strong>Sur une liste vide, elle ne doit pas planter.</strong> À vous de décider ce qu&#39;elle renvoie dans ce cas  et de le dire dans <code>NOTES.md</code>.</p>
+<h3>5. <code>afficher_tableau(titre, totaux, unite=&quot;HTG&quot;)</code></h3>
+<p>Affiche un titre puis le dictionnaire, <strong>trié par valeur décroissante</strong>, une ligne vide à la fin.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">afficher_tableau(&quot;Par département&quot;, grouper_par(ventes, &quot;departement&quot;))
+afficher_tableau(&quot;Quantités par catégorie&quot;, grouper_par(ventes, &quot;categorie&quot;, valeur=&quot;quantite&quot;), unite=&quot;kg&quot;)</code></pre></div></div>
+<h3>Et une sixième, qui assemble : <code>rapport(lignes, seuil=30000)</code></h3>
+<p>Elle appelle les cinq autres et produit le rapport entier. <strong>Votre programme principal tient alors en deux lignes :</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">SEUIL = 30000
+
+rapport(ventes, seuil=SEUIL)</code></pre></div></div>
+<hr>
+<h2 style="background-color: #FBF3DB;">L&#39;affichage attendu</h2>
+<p>Votre programme doit produire <strong>exactement</strong> ceci :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span><span class="line-number">22</span><span class="line-number">23</span><span class="line-number">24</span><span class="line-number">25</span><span class="line-number">26</span><span class="line-number">27</span><span class="line-number">28</span><span class="line-number">29</span><span class="line-number">30</span><span class="line-number">31</span><span class="line-number">32</span><span class="line-number">33</span><span class="line-number">34</span><span class="line-number">35</span><span class="line-number">36</span><span class="line-number">37</span><span class="line-number">38</span></div><pre><code>=== Relevé des ventes ===
+15 ventes  total 471530.00 HTG  moyenne 31435.33 HTG
+
+=== Par département ===
+Artibonite    184800.00 HTG
+Ouest         102810.00 HTG
+Nord           92650.00 HTG
+Sud            91270.00 HTG
+
+=== Par produit ===
+riz           231150.00 HTG
+haricot        75225.00 HTG
+mais           61175.00 HTG
+igname         40900.00 HTG
+banane         24360.00 HTG
+avocat         20320.00 HTG
+mangue         18400.00 HTG
+
+=== Par mois ===
+fevrier       217175.00 HTG
+mars          134705.00 HTG
+janvier       119650.00 HTG
+
+=== Quantités par catégorie ===
+cereales        1445.00 kg
+fruits          1430.00 kg
+legumes          500.00 kg
+
+=== Les ventes de plus de 30000 HTG ===
+riz (Ouest, janvier) : 34200.00 HTG
+mais (Artibonite, janvier) : 32300.00 HTG
+haricot (Ouest, janvier) : 34850.00 HTG
+riz (Artibonite, fevrier) : 135000.00 HTG
+haricot (Nord, fevrier) : 40375.00 HTG
+riz (Sud, mars) : 61950.00 HTG
+
+=== Zoom sur l&#39;Ouest ===
+5 ventes  total 102810.00 HTG  moyenne 20562.00 HTG</code></pre></div></div>
+<p><strong>Quatre tableaux, et un seul corps de boucle pour les produire tous les quatre.</strong> Si vous avez écrit quatre boucles, vous n&#39;avez pas fait le travail.</p>
+<p><strong>Le « Zoom sur l&#39;Ouest »</strong> appelle <code>filtrer</code> puis <code>resume</code>. C&#39;est la démonstration que deux petites fonctions se composent.</p>
+<p>La mise en forme des colonnes, comme la semaine dernière :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">print(f&quot;{nom:&lt;12} {montant:&gt;10.2f} {unite}&quot;)</code></pre></div></div>
+<p><strong>Votre programme sera testé avec <code>SEUIL = 100000</code></strong>, qui ne doit laisser qu&#39;une seule vente dans la section filtrée, et dont le titre doit s&#39;adapter.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Les contraintes d&#39;écriture</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ce qui est exigé</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Les six fonctions ont exactement les noms et les paramètres imposés.</strong> C&#39;est la contrainte qui rend la correction possible</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Chaque fonction a une docstring d&#39;une ligne.</strong> Elle est notée pour la première fois</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Aucun <code>print</code> dans <code>calculer_montants</code>, <code>grouper_par</code>, <code>filtrer</code> ni <code>resume</code>.</strong> Elles calculent, elles n&#39;affichent pas</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Aucune variable globale n&#39;est lue à l&#39;intérieur d&#39;une fonction.</strong> Tout entre par les paramètres. <code>SEUIL</code> n&#39;apparaît qu&#39;au dernier appel</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Aucun <code>for i in range(len(...))</code>  <strong>−1 point par occurrence</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>filtrer</code> est une compréhension sur une ligne</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>snake_case</code>, quatre espaces, f-strings partout. Aucune variable nommée <code>sum</code>, <code>max</code>, <code>list</code>, <code>dict</code>, <code>set</code></td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>donnees.py</code> est <strong>inchangé</strong></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>La contrainte 4 est celle qui sépare les copies.</strong> Il est tentant d&#39;écrire <code>def grouper_par(cle):</code> et d&#39;utiliser <code>ventes</code> directement à l&#39;intérieur, puisque la variable existe. Ça marche  et la fonction devient inutilisable sur autre chose que <code>ventes</code>. Une fonction qui dépend de ce qu&#39;il y a autour d&#39;elle n&#39;est pas une fonction, c&#39;est un bloc de code avec un nom.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce que vous remettez</h2>
+<p>Vous avez reçu un <strong>dépôt privé à votre nom</strong>, <code>tp3-rapport-ventes</code>. Il contient déjà <code>donnees.py</code>, un <code>README.md</code> de travail et le squelette de <code>NOTES.md</code>.</p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-bash">uv init
+uv run main.py</code></pre></div></div></div>
+<p>Renommez <code>main.py</code> en <code>analyse.py</code>.</p>
+<p>À la remise, le dépôt doit contenir :</p>
+<table>
+<thead>
+<tr>
+<th>Fichier</th>
+<th>Contenu</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>analyse.py</code></td>
+<td>Votre programme, avec la déclaration d&#39;usage de l&#39;IA en tête</td>
+</tr>
+<tr>
+<td><code>NOTES.md</code></td>
+<td>Vos réponses, voir ci-dessous</td>
+</tr>
+<tr>
+<td><code>donnees.py</code></td>
+<td><strong>Inchangé</strong></td>
+</tr>
+<tr>
+<td><code>pyproject.toml</code> et <code>uv.lock</code></td>
+<td>Créés par <code>uv init</code> puis <code>uv run</code></td>
+</tr>
+<tr>
+<td><code>.gitignore</code>, <code>README.md</code></td>
+<td>Déjà présents</td>
+</tr>
+</tbody></table>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-bash">git add .
+git commit -m &quot;Rapport de ventes découpé en fonctions&quot;
+git push</code></pre></div></div></div>
+<p><strong>Et vous fermez l&#39;issue du travail.</strong> L&#39;heure de fermeture est l&#39;heure de remise.</p>
+<blockquote>
+<p><strong>Si vous travaillez sur Google Colab.</strong> Remettez un carnet nommé <code>tp3-nom-prenom</code>. Collez la liste <code>ventes</code> dans la première cellule au lieu du <code>from donnees import ventes</code>, <strong>une fonction par cellule</strong>, et l&#39;appel à <code>rapport</code> dans la dernière. Une cellule de texte tient lieu de <code>NOTES.md</code>. Signalez votre voie dans l&#39;issue. Même barème, à un point près : les 2 points « projet uv complet » deviennent 2 points « carnet propre, exécutable de haut en bas sans erreur ».</p>
+</blockquote>
+<h3>Le contenu de <code>NOTES.md</code></h3>
+<p>Quatre questions courtes.</p>
+<ol>
+<li><strong>Le gain, chiffré.</strong> Combien de lignes faisait votre <code>analyse.py</code> du travail n° 2 ? Combien fait celui-ci ? Le nouveau produit <strong>quatre</strong> tableaux au lieu de deux. Commentez en deux phrases.</li>
+<li><strong>La liste vide.</strong> Que renvoie votre <code>resume([])</code> ? Pourquoi ce choix, et quelle erreur évitez-vous ?</li>
+<li><strong>Une erreur que vous avez faite</strong>, avec son message exact, sa cause, et comment vous l&#39;avez trouvée. <strong>Dites explicitement quelle ligne du traceback vous a mis sur la piste.</strong></li>
+<li><strong>Une question de conception.</strong> Les quantités s&#39;affichent <code>1445.00 kg</code>, avec deux décimales inutiles. Que changeriez-vous  et à quel endroit  pour que <code>afficher_tableau</code> puisse afficher les montants avec deux décimales et les quantités sans ? <strong>Vous n&#39;avez pas à l&#39;implémenter.</strong> Décrivez.</li>
+</ol>
+<p>La question 3 est notée comme les autres. <strong>Une erreur décrite honnêtement rapporte plus qu&#39;un « tout a bien marché ».</strong></p>
+<h3>Déclaration d&#39;usage de l&#39;IA</h3>
+<p>En tête de <code>analyse.py</code> :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code class="language-python"># Usage d&#39;IA : aucun
+# ou :
+# Usage d&#39;IA : j&#39;ai demandé à un assistant d&#39;expliquer les arguments nommés.
+# Le code est écrit par moi.</code></pre></div></div>
+<p>Vous devrez pouvoir expliquer chaque ligne. Pour ce travail-là, la question portera sur <code>grouper_par</code>.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Grille d&#39;évaluation</h2>
+<table>
+<thead>
+<tr>
+<th>Critère</th>
+<th>Points</th>
+<th>Détail</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Le programme fonctionne</strong></td>
+<td>5</td>
+<td>Rapport complet et exact, sans erreur. 4 points pour le rapport, 1 point pour le comportement correct avec <code>SEUIL = 100000</code></td>
+</tr>
+<tr>
+<td><strong>Le découpage</strong></td>
+<td>6</td>
+<td>Les six fonctions, avec les noms et paramètres imposés. <code>grouper_par</code> employée quatre fois. <code>rapport</code> appelle les cinq autres. Le programme principal tient en deux lignes</td>
+</tr>
+<tr>
+<td><strong>Fonctions propres</strong></td>
+<td>4</td>
+<td>Aucun <code>print</code> dans les quatre fonctions de calcul, aucune globale lue à l&#39;intérieur, <code>resume</code> renvoie trois valeurs, <code>filtrer</code> tient sur une ligne</td>
+</tr>
+<tr>
+<td><strong>Docstrings et style</strong></td>
+<td>2</td>
+<td>Une docstring d&#39;une ligne par fonction ; <code>snake_case</code>, quatre espaces, f-strings</td>
+</tr>
+<tr>
+<td><strong>Projet uv complet</strong></td>
+<td>2</td>
+<td><code>pyproject.toml</code> et <code>uv.lock</code> présents, <code>.venv/</code> absent, <code>donnees.py</code> inchangé</td>
+</tr>
+<tr>
+<td><strong><code>NOTES.md</code></strong></td>
+<td>3</td>
+<td>Les quatre questions. La question 4 vaut un point à elle seule</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>20</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Pénalités, cumulables :</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chaque <code>for i in range(len(...))</code></td>
+<td>−1 point</td>
+</tr>
+<tr>
+<td>Une fonction qui lit une variable globale</td>
+<td>−1 point par fonction</td>
+</tr>
+<tr>
+<td><code>donnees.py</code> modifié</td>
+<td>−2 points</td>
+</tr>
+<tr>
+<td>Déclaration d&#39;usage de l&#39;IA absente</td>
+<td>−2 points</td>
+</tr>
+<tr>
+<td>Retard</td>
+<td><strong>72 tokens</strong> pour le semestre, un token = une heure. Ensuite −10 % par jour entamé, jusqu&#39;à trois jours</td>
+</tr>
+</tbody></table>
+<p><strong>Un point de bonus</strong>, dans la limite de 20 : écrivez une fonction <code>resume_par(lignes, cle)</code> qui renvoie un <strong>dictionnaire de dictionnaires</strong>  pour chaque valeur de <code>cle</code>, le nombre de ventes, le total et la moyenne. Dix lignes maximum, et elle a le droit d&#39;appeler <code>filtrer</code> et <code>resume</code>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">resume_par(ventes, &quot;departement&quot;)
+# {&#39;Ouest&#39;: {&#39;nombre&#39;: 5, &#39;total&#39;: 102810.0, &#39;moyenne&#39;: 20562.0}, ...}</code></pre></div></div>
+<hr>
+<h2 style="background-color: #FBF3DB;">Trois conseils</h2>
+<ol>
+<li><strong>Écrivez <code>grouper_par</code> en premier, et testez-la seule</strong> avant tout le reste. Si elle est juste, les quatre tableaux sont juste des appels.</li>
+<li><strong>Écrivez <code>rapport</code> en dernier.</strong> C&#39;est de l&#39;assemblage, et l&#39;assemblage est facile quand les pièces marchent.</li>
+<li><strong>Quand ça casse, lisez le traceback par le bas.</strong> C&#39;est le module 4 du cours, et c&#39;est le travail où il sert pour la première fois sur votre propre code.</li>
+</ol>
+<hr>
+<h2 style="background-color: #FBF3DB;">Rappel du calendrier</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Distribué</td>
+<td>Séance 3</td>
+</tr>
+<tr>
+<td>À remettre</td>
+<td>Avant le début de la séance 4</td>
+</tr>
+<tr>
+<td>Corrigé rendu</td>
+<td>Séance 5</td>
+</tr>
+</tbody></table>
+<p>La séance 4 porte sur NumPy. Les fonctions que vous écrivez aujourd&#39;hui sont les dernières que vous écrirez à la main pour calculer des sommes et des moyennes : à partir de la séance prochaine, la bibliothèque les fait pour vous. <strong>C&#39;est justement pour ça qu&#39;il fallait les écrire une fois.</strong></p>
+
+</body>
+</html>
