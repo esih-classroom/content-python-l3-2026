@@ -2152,22 +2152,7 @@
       "content": [
         {
           "type": "text",
-          "text": "6 minutes. ",
-          "styles": {
-            "italic": true
-          }
-        },
-        {
-          "type": "text",
-          "text": "Extension",
-          "styles": {
-            "bold": true,
-            "italic": true
-          }
-        },
-        {
-          "type": "text",
-          "text": "  à faire si le socle est terminé.",
+          "text": "6 minutes.",
           "styles": {
             "italic": true
           }
