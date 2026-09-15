@@ -1,0 +1,3006 @@
+{
+  "blocks": [
+    {
+      "id": "9c1ff8e8-aad1-49a9-a4fe-6e0a9ce70a3b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Résultats d'apprentissage visés : RA3, RA4",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "98dedde6-500e-4e50-9da6-ec0a68ef0800",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "9f621334-7ef7-4a00-97fc-e40545e599a2",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Comment travailler",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e7de777e-4d61-4137-b820-e8d4413f6966",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quatre exercices, dans l'ordre. Ne passez pas au suivant tant que le précédent ne fonctionne pas.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f9c0208c-840d-4049-89fa-de17a7b8b071",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Exercice",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce qu'il demande",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Durée",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "0",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le projet, et votre première fonction",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Socle",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "1",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Cinq programmes cassés diagnostiquer, pas réparer",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "12 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Socle",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Écrire trois fonctions qui s'appellent",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "10 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Socle",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Reprendre votre bulletin de la séance 1",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "6 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Extension",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Correction collective",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3 min",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "cf2d0268-43de-498d-9ed1-645132c5d397",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le socle, c'est ce que tout le monde doit finir.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " L'exercice 1 est le plus utile des quatre : il ne vous demande d'écrire aucun code, seulement de lire. Ne le survolez pas parce qu'il paraît facile.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d3708981-0765-431d-902a-a623a5dd56f2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Si vous n'avez pas fini le socle en séance",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", terminez-le chez vous avant la séance 4. Et si vous bloquez, écrivez dans l'issue du dépôt d'exercices.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "926e2c7e-5599-4233-a880-b78310d99fde",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Si vous travaillez sur Google Colab ou sur téléphone",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", tout fonctionne à l'identique aujourd'hui : les tracebacks de l'exercice 1 sont exactement les mêmes dans un carnet. Seul l'exercice 0 a une variante.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f93fa806-3655-461d-9197-c85fd80d01da",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rappel de la règle du cours :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " on exécute avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "uv run fichier.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", jamais avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "python fichier.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d92b6ad8-529f-473e-bf8f-58420baf7b45",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "b3ff8c6d-39c3-4b2f-a8e0-4062fd75fe68",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 0  Le projet, et votre première fonction",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bc79f5fa-c9c0-4629-8c61-5766a49e4e6b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "4 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Socle.",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e9fe5801-b31c-4215-b203-5fa581f3054b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d7e7d484-19c1-4564-a2c2-f697c1e17533",
+      "type": "terminal",
+      "props": {
+        "code": "uv init seance-03\ncd seance-03\nuv run main.py",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "fed8e39f-aacb-413e-ad3a-b7e00912578c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Créez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice0.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Écrivez une fonction ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "moyenne(notes)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " qui ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "renvoie",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " la moyenne d'une liste de nombres, puis appelez-la :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "33d12a8b-b35c-491b-978b-9972c2ff39b1",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "print(f\"Moyenne : {moyenne([12, 17, 9, 14, 18, 7, 15]):.2f}\")",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bd67b1db-c4e1-4c15-9215-c3b78323b617",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'affichage attendu :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6148476d-e300-44aa-bff2-78b78c656b49",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Moyenne : 13.14",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ca01c5dc-432b-411f-8dd0-84fc58894972",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis une question, en commentaire à la fin du fichier :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " remplacez le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "return",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de votre fonction par un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "print",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et exécutez à nouveau. Que se passe-t-il ? Recopiez le message d'erreur obtenu, et dites en une phrase pourquoi il apparaît.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "bfb8fd1a-0d1e-41e3-8aa8-f9f2a48fab94",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Remettez ensuite le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "return",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "  la suite de la séance en dépend.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "df12dfdc-69b3-4dbe-ab5e-8a3112345172",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Variante Colab / téléphone.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Une cellule pour la fonction, une cellule pour l'appel, une cellule de texte pour la réponse à la question.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "da33a1cb-4e8c-4a78-a068-6fb03890d5b0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "3ce0de3e-a2da-49db-946b-cbf4c159e040",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 1  Cinq programmes cassés",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ff4aeba0-9471-4067-a46e-c8a5b71c5ef4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "12 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Socle",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "  c'est l'exercice le plus important de la séance.",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8ebceb82-f4b2-4e98-8e70-bf51285d0164",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous ne devez rien réparer.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Pour chacun des cinq programmes, exécutez-le et répondez à ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "trois questions",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", dans ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "diagnostics.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3f2f6845-3416-4c7b-9f8f-a1a375476f0a",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "a)",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Quel est le ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "type",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " de l'erreur ? ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "(le dernier mot avant les deux-points de la dernière ligne)",
+                    "styles": {
+                      "italic": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "b)",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "À quelle ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "ligne de quel fichier",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " l'exécution s'est-elle arrêtée ?",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "c)",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Quelle ligne faut-il corriger, et pourquoi ? ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "(ce n'est pas toujours la même que la b)",
+                    "styles": {
+                      "italic": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "c418e5c9-79b9-43cf-98fd-c161e2d7b162",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une réponse en trois lignes par programme suffit. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "C'est la question c) qui compte.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4fce4dde-cecf-4229-b11e-f83efac71619",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Créez les cinq fichiers dans votre projet, ou récupérez-les depuis le dépôt d'exercices.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4fd1b1e1-8b8a-4175-a65b-bc1b1ef5a77a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "9599f5be-4a04-443f-9470-e22dd664ab3b",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "bug1.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e17dd8ff-a531-499d-8e6d-039646b88cfd",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "def moyenne(notes):\n    somme = sum(notes)\n    print(somme / len(notes))\n\n<p></p>\n\nresultat = moyenne([12, 17, 14])\nprint(f\"La moyenne est {resultat:.1f}\")",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7ee77006-39ad-4fa6-b566-5b52a9d9f484",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "432487f8-c54f-4a54-98b1-df5ef5926a48",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "bug2.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c629d9c3-c0c9-44b4-9e3e-3a1d29bc4a98",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "def surface(longueur, largeur):\n    return longueur * largeur\n\n<p></p>\n\nprint(\"Surface :\", surface(5))",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "826bf0d7-35f3-4779-820d-a87c7672432c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "f990e90d-75f8-4733-8e5d-9ebb8617ddd1",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "bug3.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fbebcd40-f78b-49f4-88fd-b1993734ac12",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "notes = [15, 12, 18]\n\n<p></p>\n\ndef afficher(liste):\n    for valeur in liste:\n        print(note)\n\n<p></p>\n\nafficher(notes)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "13fab94c-63cd-42f4-90f0-d542f9ad88cc",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Attention sur celui-ci.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Python vous propose une correction dans le message. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Elle est fausse.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Dites pourquoi  c'est la vraie question de ce programme.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f20bcd82-1313-4b99-a5f2-17f2915fef80",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "1a00bebb-d42a-4ef7-a354-ee46d40f665f",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "bug4.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3695fceb-ef8a-4c91-988c-8ac997fb948b",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "def total_panier(prix):\n    somme = 0\n    for p in prix:\n        somme = somme + p\n    return somme\n\n<p></p>\n\npanier = [1200, 350, \"800\"]\nprint(\"Total :\", total_panier(panier))",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a4180d53-dc61-42bd-88c6-dd07df6d1ecc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "a2547df2-44d2-41ea-919c-7d40161ad8d9",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "bug5.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1b5c7473-f10a-4b96-87be-9945a6fae5f3",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "def moyenne_classe(bulletins):\n    total = 0\n    for eleve in bulletins:\n        total = total + eleve[\"moyenne\"]\n    return total / len(bulletins)\n\n<p></p>\n\nclasse = [\n    {\"nom\": \"Ana\", \"moyenne\": 14.3},\n    {\"nom\": \"Jean\", \"moyenne\": 9.3},\n    {\"nom\": \"Marie\"},\n]\nprint(moyenne_classe(classe))",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "86311125-3776-47b8-b454-8128f5ca9acf",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une dernière question, à la fin de ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "diagnostics.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " dans lequel de ces cinq programmes la fonction est-elle ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "correcte",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et le problème ailleurs ? Il y en a plus d'un.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "cd6802b5-16ad-4dde-992c-da16920aa7c4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "aba425fb-c229-457d-b5ee-807064f7979c",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 2  Trois fonctions qui s'appellent",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8d5090fb-5732-48c4-b351-12548dc0f21b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "10 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Socle.",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e0822e60-62bb-4fe5-9c2e-749cf1dbfa8a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Dans ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice2.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", écrivez ces trois fonctions, dans cet ordre. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Chacune doit avoir une docstring d'une ligne.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "167f6ff0-246f-4308-b4ec-933b88f4acd0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "1. ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "est_reussie(note, seuil=10)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "  renvoie ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "True",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " si la note atteint le seuil, ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "False",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sinon.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "595a5134-d3f9-4cb0-b7ba-3b199f9358e3",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "est_reussie(12)              # True\nest_reussie(9)               # False\nest_reussie(9, seuil=8)      # True",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9624a78f-0e12-4b86-94f2-eea32c3e6537",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "2. ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "notes_reussies(notes, seuil=10)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "  renvoie la liste des notes qui atteignent le seuil. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Elle doit appeler ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "est_reussie",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "10a807a9-edeb-487f-bedb-1653f74539a5",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "notes = [12, 17, 9, 14, 18, 7, 15]\nnotes_reussies(notes)               # [12, 17, 14, 18, 15]\nnotes_reussies(notes, seuil=15)     # [17, 18, 15]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "59292ae4-c412-487a-bff6-2461869321bf",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "3. ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "resume_notes(notes)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "  renvoie ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "deux valeurs",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " : le nombre de notes reçues et leur moyenne. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Elle doit appeler ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "notes_reussies",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b061a7a2-420a-418f-aba4-8bec4c2e4a13",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "nombre, moyenne = resume_notes(notes)\nprint(f\"{nombre} reçus, moyenne {moyenne:.1f}\")",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "5f583b6c-392e-4854-b438-3ca3d5dec653",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "5 reçus, moyenne 15.2",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a793f685-bf10-47a6-829a-d4049dced6b0",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Ce ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "15.2",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " est celui de la séance 1 et de la séance 2.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Si vous obtenez autre chose, l'erreur est dans vos fonctions, pas dans le calcul.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d7a35e05-95e7-4cd9-aab6-702c13e2310e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois contraintes :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b406b62a-a187-4716-937b-2354f6ec0c40",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "notes_reussies",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "doit",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " appeler ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "est_reussie",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ne recopiez pas la condition",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b973a2e3-708b-4f07-95d1-c031b65b8654",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Aucun ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "print",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " à l'intérieur des trois fonctions. Elles renvoient, elles n'affichent pas",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "98ddfbec-764a-4df5-8cec-8d6c09033f88",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une docstring d'une ligne par fonction",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b5a6cd21-4c31-4e83-a002-0983e9341385",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis une question, en commentaire :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que doit renvoyer ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "resume_notes([3, 5, 8])",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", où personne n'est reçu ? Faites en sorte que votre programme ne plante pas, et dites en une phrase quelle erreur vous avez évitée.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "23a77367-c7d0-4571-8fb8-9cf75d860740",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "ac97518f-c7df-4b90-b4a4-60d80db73026",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Exercice 3  Votre bulletin de la séance 1",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "34b10233-dc21-4ca0-afba-1618cada8b9b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "6 minutes. ",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "Extension",
+          "styles": {
+            "bold": true,
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "  à faire si le socle est terminé.",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8b547b95-e97b-4bed-a96e-474dd407affe",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Reprenez le ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "bulletin.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de l'exercice 3 de la séance 1. Dans ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice3.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", réécrivez-le avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "deux fonctions",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8f46cde0-acb5-4ee3-924d-c4823d3b1a4e",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "mention(moyenne)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " renvoie ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "\"très bien\"",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "\"bien\"",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "\"passable\"",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ou ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "\"insuffisant\"",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8460085f-df60-452f-aec3-8c8adb5531a0",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "bulletin(nom, notes, avec_mention=True)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " renvoie la ligne complète, et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "appelle ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "mention",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7f28a29f-e7f8-4647-88f2-a0b41fde0bdc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis, sans ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "input",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", à partir de ces deux listes :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "279d370b-576f-48df-8bff-af5fc18fceb6",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "noms = [\"Ana\", \"Jean\", \"Marie\"]\nnotes = [[12, 17, 14], [9, 11, 8], [18, 16, 19]]",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7e12ed06-db03-4cef-ac02-e1590db4e261",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Affichez les trois bulletins, puis une quatrième ligne pour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Luc",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", avec les notes ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "[15, 15, 15]",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sans mention",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8ec93b2b-137b-4076-a31b-5b9f1dceb9ea",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'affichage attendu :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4cfbaf70-dc5e-4bd5-8721-3e0c78cd91e7",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ana : moyenne 14.3 sur 20  mention bien\nJean : moyenne 9.3 sur 20  mention insuffisant\nMarie : moyenne 17.7 sur 20  mention très bien\nLuc : moyenne 15.0 sur 20",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "39ae3441-7a2f-4255-a837-94eef8368882",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois contraintes de style :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "8c1dc962-76db-4783-9c12-9c6c240fe3e5",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Aucun ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "for i in range(len(...))",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " les deux listes se parcourent en parallèle",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a65f996f-afa3-4b06-bcc8-345542367b4f",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "mention",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " utilise plusieurs ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "return",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pas une variable qu'on modifie",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0b01f635-5fdb-4840-ab63-217e783613f5",
+      "type": "bulletListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une docstring par fonction",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "61b9bdf7-2188-4fcd-b813-133baf3a0713",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "c5e5fa9f-da55-4339-b6cd-9597833ebdb7",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Si vous avez fini en avance",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "25810430-a892-4693-a98b-ab91c49868ca",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ajoutez à ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exercice3.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " une fonction ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "classement(noms, notes)",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " qui renvoie la liste des noms ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "triés par moyenne décroissante",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "aebf05a0-2f61-4abe-ad5c-4b780ce27ba4",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "classement(noms, notes)      # ['Marie', 'Ana', 'Jean']",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6457e5d8-43e0-44a2-934c-6327fa0d5acc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un indice et un seul : ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "sorted",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " accepte un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "key=",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", et vous avez besoin d'associer chaque nom à sa moyenne avant de trier.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b0e56735-b74c-47c2-af7e-a2a50edd9427",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "c0ea2942-5904-45fb-99ed-2ed428c31971",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À la fin des exercices",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2c7bbaeb-a5f5-4b50-81c1-b3e5433bf0b4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Votre projet ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "seance-03",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " doit contenir :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0eccd59d-5e1c-4b36-a829-6bb0ce855eb1",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "exercice0.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d0915514-097d-4e65-8858-1758ef126341",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "diagnostics.md",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "38879c07-dea9-423d-ad50-a9b13b940933",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "exercice2.py",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "11bb3635-8957-46a9-8d84-9f118b46e589",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "exercice3.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "(extension)",
+          "styles": {
+            "italic": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "63ffe0e7-b685-4168-af73-827d8d45fff8",
+      "type": "checkListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "checked": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "bug1.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " à ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "bug5.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "laissés cassés",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", on ne les répare pas",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d0e843a4-73b6-4afc-8488-f1319ba171d0",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pour le rendre :",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " déposez ces fichiers dans le dépôt ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "seance-03-exercices",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " que vous avez reçu, puis fermez son issue. L'échéance est fixée à la veille de la séance 4.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dc63c4a4-3bcd-45a3-bcff-bacbb828c6c4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ces exercices comptent pour la note de participation. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "On regarde qu'ils sont faits, pas qu'ils sont justes.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1a2d3fdf-03b8-41c3-ab9d-265f7e665765",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Gardez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "diagnostics.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " sous la main pour le reste du semestre : les cinq erreurs de l'exercice 1 sont celles que vous reverrez le plus souvent en NumPy et en pandas.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "20fd4a45-b22d-4e12-9d04-6a435f1dd94e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
