@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<p><strong>Support de cours — à conserver</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Ce que vous saurez faire à la fin de cette séance</h2>
+<ul>
+<li>Écrire une fonction, avec des paramètres et une valeur de retour</li>
+<li>Utiliser des valeurs par défaut et des arguments nommés</li>
+<li><strong>Lire un message d&#39;erreur Python et trouver la ligne fautive</strong></li>
+<li>Découper un programme en fonctions qui font chacune une chose</li>
+</ul>
+<blockquote>
+<p><strong>Le point le plus utile de cette séance est le module 4.</strong> Il ne s&#39;agit pas d&#39;une notion de plus : c&#39;est ce qui vous permettra de vous débloquer seul pendant les trois séances qui restent. Un traceback n&#39;est pas une punition, c&#39;est un rapport.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant de commencer — votre propre code</h2>
+<p>Voici deux blocs de votre travail à rendre n° 2 :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span></div><pre><code class="language-python">par_departement = {}
+for vente in ventes:
+    departement = vente[&quot;departement&quot;]
+    par_departement[departement] = par_departement.get(departement, 0) + vente[&quot;montant&quot;]
+
+par_produit = {}
+for vente in ventes:
+    produit = vente[&quot;produit&quot;]
+    par_produit[produit] = par_produit.get(produit, 0) + vente[&quot;montant&quot;]</code></pre></div></div>
+<p><strong>Qu&#39;est-ce qui change entre les deux ?</strong> Un mot. Le nom de la clé.</p>
+<p>Vous avez copié quatre lignes pour changer un mot. Cette séance sert à ne plus le faire.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">1. Pourquoi une fonction</h2>
+<p>La même chose, écrite une fois :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">def grouper_par(lignes, cle):
+    resultat = {}
+    for ligne in lignes:
+        resultat[ligne[cle]] = resultat.get(ligne[cle], 0) + ligne[&quot;montant&quot;]
+    return resultat</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">par_departement = grouper_par(ventes, &quot;departement&quot;)
+par_produit = grouper_par(ventes, &quot;produit&quot;)
+par_categorie = grouper_par(ventes, &quot;categorie&quot;)      # gratuit</code></pre></div></div>
+<p><strong>Regardez la troisième ligne.</strong> Le regroupement par catégorie n&#39;était demandé nulle part, et il n&#39;a coûté aucune ligne de code. C&#39;est ça, une fonction : pas une décoration, un gain.</p>
+<h3>La syntaxe, à côté de ce que vous connaissez</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>C / C++</th>
+<th>PHP</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Déclaration</td>
+<td><code>int f(int a)</code></td>
+<td><code>function f($a)</code></td>
+<td><code>def f(a):</code></td>
+</tr>
+<tr>
+<td>Type de retour</td>
+<td>Déclaré</td>
+<td>Facultatif</td>
+<td>Aucun</td>
+</tr>
+<tr>
+<td>Types des paramètres</td>
+<td>Déclarés</td>
+<td>Facultatifs</td>
+<td>Aucun</td>
+</tr>
+<tr>
+<td>Corps</td>
+<td>Entre accolades</td>
+<td>Entre accolades</td>
+<td><strong>Indenté</strong></td>
+</tr>
+<tr>
+<td>Retour</td>
+<td><code>return</code></td>
+<td><code>return</code></td>
+<td><code>return</code></td>
+</tr>
+</tbody></table>
+<p>En Python, <strong>on ne déclare aucun type</strong>. La fonction accepte ce qu&#39;on lui donne et ne se plaint qu&#39;à l&#39;exécution — d&#39;où l&#39;importance du module 4.</p>
+<blockquote>
+<p><strong>Si vous n&#39;avez jamais écrit de fonction</strong>, retenez ceci et rien d&#39;autre pour l&#39;instant : une fonction, c&#39;est un bout de programme qu&#39;on nomme, pour pouvoir le redemander plus tard sans le réécrire.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">2. Écrire une fonction</h2>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span></div><pre><code class="language-python">def mention(moyenne):
+    &quot;&quot;&quot;Renvoie la mention correspondant à une moyenne sur 20.&quot;&quot;&quot;
+    if moyenne &gt;= 16:
+        return &quot;très bien&quot;
+    elif moyenne &gt;= 14:
+        return &quot;bien&quot;
+    elif moyenne &gt;= 10:
+        return &quot;passable&quot;
+    return &quot;insuffisant&quot;
+
+&lt;p&gt;&lt;/p&gt;
+
+def bulletin(nom, notes):
+    &quot;&quot;&quot;Construit la ligne de bulletin d&#39;un étudiant.&quot;&quot;&quot;
+    moyenne = sum(notes) / len(notes)
+    return f&quot;{nom} : moyenne {moyenne:.1f} sur 20 — mention {mention(moyenne)}&quot;</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">print(bulletin(&quot;Ana&quot;, [12, 17, 14]))
+print(bulletin(&quot;Jean&quot;, [9, 11, 8]))
+print(bulletin(&quot;Marie&quot;, [18, 16, 19]))</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code>Ana : moyenne 14.3 sur 20 — mention bien
+Jean : moyenne 9.3 sur 20 — mention insuffisant
+Marie : moyenne 17.7 sur 20 — mention très bien</code></pre></div></div>
+<p><strong>Trois choses :</strong></p>
+<ol>
+<li><code>mention</code> a <strong>quatre <code>return</code></strong>. Dès qu&#39;un <code>return</code> s&#39;exécute, la fonction s&#39;arrête — il n&#39;y a pas besoin de <code>else</code> après un <code>return</code>.</li>
+<li><code>bulletin</code> <strong>appelle</strong> <code>mention</code>. Une fonction en appelle une autre : c&#39;est tout le mécanisme du découpage.</li>
+<li>C&#39;est votre <code>bulletin.py</code> de la séance 1. La boucle est devenue un appel.</li>
+</ol>
+<h3>Le <code>return</code> oublié</h3>
+<p><strong>C&#39;est l&#39;erreur numéro un quand on débute en Python.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">def moyenne(notes):
+    print(sum(notes) / len(notes))      # print, pas return
+
+m = moyenne([10, 20])
+print(m + 1)</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span></div><pre><code>15.0
+Traceback (most recent call last):
+  File &quot;moyenne.py&quot;, line 5, in &lt;module&gt;
+    print(m + 1)
+          ~~^~~
+TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;</code></pre></div></div>
+<p>Le <code>15.0</code> s&#39;est bien affiché : le calcul était juste. Mais la fonction n&#39;a <strong>rien renvoyé</strong>, donc <code>m</code> vaut <code>None</code>, et l&#39;addition casse une ligne plus loin.</p>
+<blockquote>
+<h3><code>print</code> montre. <code>return</code> donne.</h3>
+<p>Une fonction qui affiche au lieu de renvoyer ne peut pas être utilisée par une autre fonction. Retenez cette phrase, elle vaut le reste de la page.</p>
+</blockquote>
+<p><strong>Toute fonction Python renvoie quelque chose.</strong> Sans <code>return</code>, elle renvoie <code>None</code>. C&#39;est exactement pour ça que <code>liste.sort()</code> renvoie <code>None</code> — vous l&#39;avez rencontré à la séance 2 sans savoir pourquoi.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">3. Les paramètres</h2>
+<h3>Valeurs par défaut et arguments nommés</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span></div><pre><code class="language-python">def bulletin(nom, notes, avec_mention=True):
+    moyenne = sum(notes) / len(notes)
+    ligne = f&quot;{nom} : moyenne {moyenne:.1f} sur 20&quot;
+    if avec_mention:
+        ligne = f&quot;{ligne} — mention {mention(moyenne)}&quot;
+    return ligne</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">bulletin(&quot;Ana&quot;, [12, 17, 14])                          # Ana : moyenne 14.3 sur 20 — mention bien
+bulletin(&quot;Luc&quot;, [15, 15, 15], avec_mention=False)      # Luc : moyenne 15.0 sur 20
+bulletin(notes=[10, 10, 10], nom=&quot;Paul&quot;)               # l&#39;ordre n&#39;importe plus</code></pre></div></div>
+<p>Deux règles :</p>
+<ul>
+<li>Un paramètre à valeur par défaut <strong>se place après</strong> ceux qui n&#39;en ont pas. Sinon Python refuse le fichier : <code>SyntaxError: non-default argument follows default argument</code>.</li>
+<li>Nommer l&#39;argument à l&#39;appel rend l&#39;appel lisible. <code>bulletin(&quot;Luc&quot;, notes, False)</code> ne dit rien ; <code>avec_mention=False</code> dit tout.</li>
+</ul>
+<blockquote>
+<p><strong>PHP</strong> a les valeurs par défaut depuis toujours et les arguments nommés depuis PHP 8 — vous êtes en terrain connu. <strong>C++</strong> a les valeurs par défaut mais pas les arguments nommés : c&#39;est un gain net.</p>
+</blockquote>
+<h3>Renvoyer plusieurs valeurs</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">def statistiques(nombres):
+    return min(nombres), max(nombres), sum(nombres) / len(nombres)
+
+bas, haut, moyenne = statistiques([12, 17, 9, 14, 18, 7, 15])
+print(bas, haut, moyenne)      # 7 18 13.142857142857142</code></pre></div></div>
+<p>C&#39;est le <strong>tuple</strong> de la séance 2 : la fonction renvoie un seul objet, qu&#39;on déballe à l&#39;arrivée. Sans déballage, on obtient <code>(7, 18, 13.142857142857142)</code>.</p>
+<p>En C++ il faudrait une structure ; en PHP un tableau à ré-indexer. Ici, une virgule.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">4. Lire un message d&#39;erreur</h2>
+<p><strong>C&#39;est la partie de cette séance qui vous servira le plus souvent.</strong></p>
+<h3>La règle : on lit un traceback par le bas</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code>Traceback (most recent call last):
+  File &quot;bulletin.py&quot;, line 8, in &lt;module&gt;
+    print(bulletin(&quot;Ana&quot;, []))
+          ^^^^^^^^^^^^^^^^^^^
+  File &quot;bulletin.py&quot;, line 5, in bulletin
+    m = moyenne(notes)
+        ^^^^^^^^^^^^^^
+  File &quot;bulletin.py&quot;, line 2, in moyenne
+    return sum(notes) / len(notes)
+           ~~~~~~~~~~~^~~~~~~~~~~~
+ZeroDivisionError: division by zero</code></pre></div></div>
+<table>
+<thead>
+<tr>
+<th>Où regarder</th>
+<th>Ce qu&#39;on y trouve</th>
+<th>Ici</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1. La dernière ligne</strong></td>
+<td>Le <strong>type</strong> de l&#39;erreur et son message</td>
+<td><code>ZeroDivisionError: division by zero</code></td>
+</tr>
+<tr>
+<td><strong>2. Le bloc juste au-dessus</strong></td>
+<td>Le fichier, la ligne et le code <strong>où ça a cassé</strong></td>
+<td><code>bulletin.py</code>, ligne 2</td>
+</tr>
+<tr>
+<td><strong>3. Les flèches <code>^^^</code> ou <code>~~~^~~~</code></strong></td>
+<td>L&#39;endroit exact dans la ligne</td>
+<td>la division</td>
+</tr>
+<tr>
+<td><strong>4. En remontant</strong></td>
+<td><strong>Qui a appelé qui</strong></td>
+<td><code>&lt;module&gt;</code> → <code>bulletin</code> → <code>moyenne</code></td>
+</tr>
+</tbody></table>
+<p><strong>Le réflexe à casser :</strong> lire de haut en bas et s&#39;arrêter au premier <code>File</code>. Le premier <code>File</code>, c&#39;est votre <code>print</code> — il n&#39;a rien fait de mal. <strong>La ligne fautive est en bas.</strong></p>
+<p>Ici, la cause réelle n&#39;est même pas à la ligne 2 : c&#39;est la <strong>liste vide</strong> passée à la ligne 8. Le traceback vous donne les deux bouts de la chaîne, à vous de choisir lequel réparer.</p>
+<blockquote>
+<p><strong>Les flèches <code>^^^</code> n&#39;existent que depuis Python 3.11</strong>, et la façon dont elles soulignent varie un peu selon la version. Si votre sortie diffère légèrement de celle d&#39;un camarade, ce n&#39;est pas une erreur d&#39;installation. <strong>La dernière ligne et le numéro de ligne, eux, ne varient jamais.</strong></p>
+</blockquote>
+<h3>Les huit erreurs que vous rencontrerez</h3>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Ce qui s&#39;est passé</th>
+<th>Où chercher</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>NameError: name &#39;note&#39; is not defined. Did you mean: &#39;notes&#39;?</code></td>
+<td>Nom jamais défini — souvent une faute de frappe</td>
+<td><strong>Lisez la fin de la ligne : Python vous souffle la réponse</strong></td>
+</tr>
+<tr>
+<td><code>TypeError: bonjour() missing 1 required positional argument: &#39;nom&#39;</code></td>
+<td>Fonction appelée sans un de ses paramètres</td>
+<td>L&#39;appel, pas la fonction</td>
+</tr>
+<tr>
+<td><code>TypeError: unsupported operand type(s) for +: &#39;NoneType&#39; and &#39;int&#39;</code></td>
+<td>Vous utilisez le résultat d&#39;une fonction qui ne renvoie rien</td>
+<td>Le <code>return</code> manquant</td>
+</tr>
+<tr>
+<td><code>TypeError: unsupported operand type(s) for +=: &#39;int&#39; and &#39;str&#39;</code></td>
+<td>Un nombre et une chaîne mélangés</td>
+<td>Un <code>input</code> non converti, neuf fois sur dix</td>
+</tr>
+<tr>
+<td><code>UnboundLocalError: cannot access local variable &#39;n&#39; where it is not associated with a value</code></td>
+<td>Vous lisez une variable locale avant de lui donner une valeur</td>
+<td>La première ligne de la fonction</td>
+</tr>
+<tr>
+<td><code>IndentationError</code> / <code>TabError</code></td>
+<td>Indentation incohérente, tabulations et espaces mélangés</td>
+<td>Réglez VS Code une fois : quatre espaces</td>
+</tr>
+<tr>
+<td><code>KeyError: &#39;xxx&#39;</code></td>
+<td>Clé absente d&#39;un dictionnaire</td>
+<td><code>get(cle, defaut)</code> — c&#39;est la séance 2</td>
+</tr>
+<tr>
+<td><code>ZeroDivisionError: division by zero</code></td>
+<td>Une liste vide dont vous calculez la moyenne</td>
+<td><code>len(...)</code> vaut 0</td>
+</tr>
+</tbody></table>
+<p><strong>La première mérite qu&#39;on s&#39;y arrête.</strong> Depuis Python 3.10, l&#39;interpréteur propose une correction quand le nom ressemble à un nom existant. Beaucoup de gens ne lisent pas la fin de la ligne et passent à côté de la réponse écrite devant eux.</p>
+<h3>La portée : une variable de fonction reste dans sa fonction</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-python">compteur = 0
+
+def incrementer():
+    compteur = 10
+    return compteur
+
+print(incrementer(), compteur)      # 10 0</code></pre></div></div>
+<p>Le <code>compteur</code> du dehors n&#39;a pas bougé. Une variable créée dans une fonction <strong>n&#39;existe que dans la fonction</strong>.</p>
+<p>Et voici le symptôme quand on croit le contraire :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">def compteur():
+    n = n + 1        # UnboundLocalError
+    return n</code></pre></div></div>
+<p>Python voit une affectation à <code>n</code> dans la fonction, donc <code>n</code> est locale — et vous la lisez avant de l&#39;avoir écrite.</p>
+<p><strong>La solution n&#39;est pas de rendre la variable globale.</strong> C&#39;est de passer la valeur en paramètre et de renvoyer le résultat.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">5. Découper un programme</h2>
+<h3>Votre travail à rendre n° 2, en fonctions</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span><span class="line-number">15</span><span class="line-number">16</span><span class="line-number">17</span><span class="line-number">18</span><span class="line-number">19</span><span class="line-number">20</span><span class="line-number">21</span></div><pre><code class="language-python">def calculer_montants(lignes):
+    &quot;&quot;&quot;Ajoute une clé &#39;montant&#39; à chaque ligne.&quot;&quot;&quot;
+    for ligne in lignes:
+        ligne[&quot;montant&quot;] = ligne[&quot;quantite&quot;] * ligne[&quot;prix_unitaire&quot;]
+
+&lt;p&gt;&lt;/p&gt;
+
+def grouper_par(lignes, cle, valeur=&quot;montant&quot;):
+    &quot;&quot;&quot;Regroupe les lignes par &#39;cle&#39; et somme le champ &#39;valeur&#39;.&quot;&quot;&quot;
+    resultat = {}
+    for ligne in lignes:
+        resultat[ligne[cle]] = resultat.get(ligne[cle], 0) + ligne[valeur]
+    return resultat
+
+&lt;p&gt;&lt;/p&gt;
+
+def afficher_tableau(titre, totaux, largeur=12):
+    &quot;&quot;&quot;Affiche un dictionnaire trié par valeur décroissante.&quot;&quot;&quot;
+    print(f&quot;=== {titre} ===&quot;)
+    for nom, montant in sorted(totaux.items(), key=lambda paire: paire[1], reverse=True):
+        print(f&quot;{nom:&lt;{largeur}} {montant:&gt;10.2f} HTG&quot;)</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-python">calculer_montants(ventes)
+afficher_tableau(&quot;Par département&quot;, grouper_par(ventes, &quot;departement&quot;))
+afficher_tableau(&quot;Par produit&quot;, grouper_par(ventes, &quot;produit&quot;))
+afficher_tableau(&quot;Par catégorie&quot;, grouper_par(ventes, &quot;categorie&quot;))
+
+print(grouper_par(ventes, &quot;departement&quot;, valeur=&quot;quantite&quot;))
+# {&#39;Ouest&#39;: 615, &#39;Artibonite&#39;: 840, &#39;Sud&#39;: 510, &#39;Nord&#39;: 275}</code></pre></div></div>
+<p><strong>La dernière ligne donne les quantités au lieu des montants, et elle a coûté un mot.</strong> Avec trois blocs copiés-collés, il aurait fallu en écrire un quatrième.</p>
+<h3>Les trois règles de découpage</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>Une fonction fait une chose.</strong> Si son nom contient « et », coupez-la en deux</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Une fonction qui calcule ne devrait pas afficher.</strong> Une fonction qui fait les deux ne se réutilise pas</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Le nom est un verbe.</strong> <code>calculer_montants</code>, <code>grouper_par</code>, <code>afficher_tableau</code></td>
+</tr>
+</tbody></table>
+<h3>Les docstrings</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">def grouper_par(lignes, cle, valeur=&quot;montant&quot;):
+    &quot;&quot;&quot;Regroupe les lignes par &#39;cle&#39; et somme le champ &#39;valeur&#39;.&quot;&quot;&quot;</code></pre></div></div>
+<p>Trois guillemets, <strong>première ligne du corps</strong>, une phrase. Et voici pourquoi ça sert :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">help(grouper_par)</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code>Help on function grouper_par in module __main__:
+
+grouper_par(lignes, cle, valeur=&#39;montant&#39;)
+    Regroupe les lignes par &#39;cle&#39; et somme le champ &#39;valeur&#39;.</code></pre></div></div>
+<p>C&#39;est la même mécanique que pour <code>sum</code> ou <code>sorted</code> : leur documentation, c&#39;est leur docstring.</p>
+<p><strong>À partir du travail à rendre n° 3, la docstring est notée.</strong> Une ligne suffit — et une ligne suffit vraiment.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">À retenir de cette séance</h2>
+<ol>
+<li><code>print</code> montre, <code>return</code> donne. Une fonction sans <code>return</code> renvoie <code>None</code></li>
+<li>Un paramètre à valeur par défaut se place après les autres ; nommer l&#39;argument à l&#39;appel rend l&#39;appel lisible</li>
+<li>Une fonction peut renvoyer plusieurs valeurs — c&#39;est un tuple, qu&#39;on déballe</li>
+<li><strong>Un traceback se lit par le bas</strong> : le type, puis la ligne fautive, puis qui a appelé qui</li>
+<li>Une variable créée dans une fonction n&#39;existe que dans la fonction</li>
+</ol>
+<hr>
+<h2 style="background-color: #FBF3DB;">Aide-mémoire : erreurs fréquentes</h2>
+<table>
+<thead>
+<tr>
+<th>Message d&#39;erreur</th>
+<th>Cause probable</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>SyntaxError: expected &#39;:&#39;</code></td>
+<td>Deux-points oublié après la ligne <code>def</code></td>
+</tr>
+<tr>
+<td><code>IndentationError: expected an indented block after function definition on line N</code></td>
+<td>Corps de fonction collé à la marge</td>
+</tr>
+<tr>
+<td><code>NameError: name &#39;X&#39; is not defined</code></td>
+<td>Fonction appelée avant d&#39;être définie, ou faute de frappe — <strong>lisez le « Did you mean »</strong></td>
+</tr>
+<tr>
+<td><code>TypeError: f() missing 1 required positional argument</code></td>
+<td>Un paramètre oublié à l&#39;appel</td>
+</tr>
+<tr>
+<td><code>TypeError: f() takes 2 positional arguments but 3 were given</code></td>
+<td>Un argument de trop</td>
+</tr>
+<tr>
+<td><code>TypeError: ... &#39;NoneType&#39; ...</code></td>
+<td><strong>Presque toujours un <code>return</code> manquant</strong></td>
+</tr>
+<tr>
+<td><code>UnboundLocalError</code></td>
+<td>Variable locale lue avant d&#39;être écrite</td>
+</tr>
+<tr>
+<td><code>SyntaxError: non-default argument follows default argument</code></td>
+<td>Un paramètre sans défaut placé après un paramètre à valeur par défaut</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 style="background-color: #FBF3DB;">Aller plus loin</h2>
+<p><strong>Rien ici n&#39;est au programme, rien n&#39;est évalué, rien n&#39;est nécessaire pour la séance 4.</strong> Des portes ouvertes, à pousser ou pas.</p>
+<h3>Le piège de la liste par défaut</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span></div><pre><code class="language-python">def ajouter(element, liste=[]):
+    liste.append(element)
+    return liste
+
+print(ajouter(&quot;a&quot;))     # [&#39;a&#39;]
+print(ajouter(&quot;b&quot;))     # [&#39;a&#39;, &#39;b&#39;]     ← !
+print(ajouter(&quot;c&quot;))     # [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</code></pre></div></div>
+<p>La liste par défaut est créée <strong>une seule fois, à la définition de la fonction</strong> : tous les appels partagent la même. C&#39;est un cousin direct du <code>b = a</code> de la séance 1, et c&#39;est le piège le plus célèbre du langage.</p>
+<p>La correction :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">def ajouter(element, liste=None):
+    if liste is None:
+        liste = []
+    liste.append(element)
+    return liste</code></pre></div></div>
+<p><strong>Pourquoi pas au cours :</strong> il ne tombe que sur du code qui vit longtemps, et le temps manque. Mais vous le rencontrerez un jour, et vous aurez mis une heure à le trouver si vous ne l&#39;avez jamais vu.</p>
+<h3><code>try</code> / <code>except</code> — attraper une erreur</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span></div><pre><code class="language-python">try:
+    seuil = int(input(&quot;Seuil : &quot;))
+except ValueError:
+    print(&quot;Ce n&#39;est pas un nombre.&quot;)
+    seuil = 30</code></pre></div></div>
+<p><strong>Pourquoi ce n&#39;est pas au cours :</strong> avec six séances, savoir <strong>lire</strong> une erreur vaut plus que savoir l&#39;attraper — et attraper une erreur qu&#39;on ne sait pas lire produit du code qui échoue en silence, ce qui est pire que du code qui plante. <strong>Où chercher :</strong> documentation Python, « Errors and Exceptions ».</p>
+<h3><code>*args</code> et <code>**kwargs</code></h3>
+<p>Une fonction qui accepte un nombre quelconque d&#39;arguments. Vous l&#39;avez déjà utilisé sans le savoir : <code>print(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;)</code>. <strong>Où chercher :</strong> « arbitrary argument lists ».</p>
+<h3>Les annotations de type</h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">def moyenne(notes: list[float]) -&gt; float:
+    return sum(notes) / len(notes)</code></pre></div></div>
+<p>Python ne vérifie rien à l&#39;exécution — c&#39;est de la documentation exécutable, que VS Code utilise pour vous aider. <strong>Pourquoi pas au cours :</strong> ça ajoute une syntaxe sans rien changer au comportement. <strong>Utile dès que votre code dépasse deux cents lignes.</strong></p>
+<h3>Les fonctions récursives</h3>
+<p>Une fonction qui s&#39;appelle elle-même. Vous connaissez peut-être le principe en C++. En Python c&#39;est identique, avec une limite de profondeur d&#39;environ mille appels.</p>
+<h3>Un défi</h3>
+<p>Écrivez une fonction <code>resume(lignes, cle)</code> qui renvoie <strong>un dictionnaire de dictionnaires</strong> : pour chaque valeur de <code>cle</code>, le nombre de lignes, le montant total et le montant moyen.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">resume(ventes, &quot;departement&quot;)
+# {&#39;Ouest&#39;: {&#39;nombre&#39;: 4, &#39;total&#39;: 87450.0, &#39;moyenne&#39;: 21862.5}, ...}</code></pre></div></div>
+<p>Une seule fonction, moins de dix lignes, pas de compréhension imbriquée. Si vous y arrivez, vous avez compris à la fois la séance 2 et la séance 3.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Pour aller plus loin — les liens</h2>
+<ul>
+<li>Documentation Python, définir des fonctions : <a href="https://docs.python.org/fr/3/tutorial/controlflow.html#defining-functions">https://docs.python.org/fr/3/tutorial/controlflow.html#defining-functions</a></li>
+<li>Documentation Python, erreurs et exceptions : <a href="https://docs.python.org/fr/3/tutorial/errors.html">https://docs.python.org/fr/3/tutorial/errors.html</a></li>
+<li>PEP 257, les docstrings : <a href="https://peps.python.org/pep-0257/">https://peps.python.org/pep-0257/</a></li>
+</ul>
+<hr>
+<h2 style="background-color: #FBF3DB;">Avant la prochaine séance</h2>
+<ul>
+<li><input disabled="" type="checkbox"> Les exercices du socle sont dans le dépôt <code>seance-03-exercices</code> et son issue est fermée</li>
+<li><input disabled="" type="checkbox"> Le travail à rendre n° 3 est déposé, sous forme de projet uv complet</li>
+<li><input disabled="" type="checkbox"> Je sais dire, devant un traceback, quelle ligne de <strong>mon</strong> code est en cause</li>
+</ul>
+
+</body>
+</html>
