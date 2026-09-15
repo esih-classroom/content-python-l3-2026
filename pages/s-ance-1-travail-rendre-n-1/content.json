@@ -1,0 +1,2946 @@
+{
+  "blocks": [
+    {
+      "id": "b9559a78-ba07-4073-acdd-f2461e1d21b1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "a7b62da7-b777-4631-93f4-e1b075999064",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Traduire un programme C++ ou PHP, puis l'écrire en Python",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7ebf3b81-61d5-4d5f-9186-669b1fbc8a9c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À remettre avant le début de la séance 2",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fd19efc6-f684-4223-8c3b-69293efdab43",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Résultats d'apprentissage évalués : RA1, RA2 — noté sur 20",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dab0a859-97de-4861-abc1-b34e31a30c9b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "3fef1de1-8b37-4c01-b2fd-a8662b58f554",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce qu'on vous demande, en trois phrases",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1602fca4-6b2d-4899-ae55-540d5dbef319",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous recevez le même programme dans deux langages, C++ et PHP, d'une quarantaine de lignes chacun. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Lisez celui que vous connaissez, ignorez l'autre.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Vous devez le réécrire en Python — pas le traduire mot à mot, mais l'écrire comme on écrit en Python. Vous remettez un projet uv complet et un court texte qui explique cinq de vos choix.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "fb808a68-12a2-4550-9014-7af1b5099814",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Comptez deux heures. Ce n'est pas un travail difficile ; c'est un travail où le style compte autant que le résultat.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "a3daff2c-ab5c-4c30-b340-3aaf5e265218",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "0a4e320e-9105-433f-810f-69025f6a1fbc",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le programme à traduire",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e6eae383-f255-48e9-be24-7121f610df25",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les deux versions ci-dessous font exactement la même chose. Choisissez la vôtre.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "e9ac4dc7-f492-4c7a-b88d-6d66ece2fffa",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "En C++ — ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "releve_meteo.cpp",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c1cf1d0b-5c20-4d0c-b107-c5203bc75ca6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "C++",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "464bf38b-c056-4671-beaa-1f600608c6de",
+      "type": "codeBlock",
+      "props": {
+        "language": "cpp"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "#include <iostream>\n#include <string>\nusing namespace std;\n\nint main() {\n    string jours[] = {\"lundi\", \"mardi\", \"mercredi\", \"jeudi\",\n                      \"vendredi\", \"samedi\", \"dimanche\"};\n    double temperatures[] = {31.2, 29.8, 33.5, 35.1, 30.0, 28.4, 32.7};\n    int taille = 7;\n\n    cout << \"Seuil de chaleur (en degres) : \";\n    double seuil;\n    cin >> seuil;\n\n    double somme = 0;\n    double maximum = temperatures[0];\n    double minimum = temperatures[0];\n    int nbChauds = 0;\n\n    for (int i = 0; i < taille; i++) {\n        somme = somme + temperatures[i];\n        if (temperatures[i] > maximum) {\n            maximum = temperatures[i];\n        }\n        if (temperatures[i] < minimum) {\n            minimum = temperatures[i];\n        }\n        if (temperatures[i] >= seuil) {\n            nbChauds = nbChauds + 1;\n        }\n    }\n\n    double moyenne = somme / taille;\n\n    cout << \"--- Releve de la semaine ---\" << endl;\n    for (int i = 0; i < taille; i++) {\n        string marque = \"\";\n        if (temperatures[i] >= seuil) {\n            marque = \" (chaud)\";\n        }\n        cout << (i + 1) << \". \" << jours[i] << \" : \"\n             << temperatures[i] << marque << endl;\n    }\n\n    cout << \"Moyenne : \" << moyenne << endl;\n    cout << \"Minimum : \" << minimum << \" / Maximum : \" << maximum << endl;\n    cout << \"Jours au-dessus du seuil : \" << nbChauds << endl;\n    return 0;\n}",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0cb979d7-f073-45e5-b83d-4869f47b4aad",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "En PHP — ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "releve_meteo.php",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2af58027-0149-4fef-ba47-15b56b474fe8",
+      "type": "codeBlock",
+      "props": {
+        "language": "php"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "<?php\n$jours = [\"lundi\", \"mardi\", \"mercredi\", \"jeudi\",\n          \"vendredi\", \"samedi\", \"dimanche\"];\n$temperatures = [31.2, 29.8, 33.5, 35.1, 30.0, 28.4, 32.7];\n\necho \"Seuil de chaleur (en degres) : \";\n$seuil = (float) trim(fgets(STDIN));\n\n$somme = 0;\n$maximum = $temperatures[0];\n$minimum = $temperatures[0];\n$nbChauds = 0;\n\nfor ($i = 0; $i < count($temperatures); $i++) {\n    $somme = $somme + $temperatures[$i];\n    if ($temperatures[$i] > $maximum) {\n        $maximum = $temperatures[$i];\n    }\n    if ($temperatures[$i] < $minimum) {\n        $minimum = $temperatures[$i];\n    }\n    if ($temperatures[$i] >= $seuil) {\n        $nbChauds = $nbChauds + 1;\n    }\n}\n\n$moyenne = $somme / count($temperatures);\n\necho \"--- Releve de la semaine ---\\n\";\nfor ($i = 0; $i < count($jours); $i++) {\n    $marque = \"\";\n    if ($temperatures[$i] >= $seuil) {\n        $marque = \" (chaud)\";\n    }\n    echo ($i + 1) . \". \" . $jours[$i] . \" : \" . $temperatures[$i] . $marque . \"\\n\";\n}\n\necho \"Moyenne : \" . $moyenne . \"\\n\";\necho \"Minimum : \" . $minimum . \" / Maximum : \" . $maximum . \"\\n\";\necho \"Jours au-dessus du seuil : \" . $nbChauds . \"\\n\";",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "297a3b51-a329-4b09-b065-c77a69d8f7b1",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "1f3ab2ca-ecb7-4a04-b650-512df8944d04",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "L'affichage attendu",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7f315257-6964-4c40-af3c-b1f170b47fe8",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Votre programme doit produire ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "exactement",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ceci, pour un seuil de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "32",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "53299aad-98ca-4efa-abb9-40ccf10b2433",
+      "type": "codeBlock",
+      "props": {
+        "language": "javascript"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Seuil de chaleur (en degrés) : 32\n--- Relevé de la semaine ---\n1. lundi : 31.2\n2. mardi : 29.8\n3. mercredi : 33.5 (chaud)\n4. jeudi : 35.1 (chaud)\n5. vendredi : 30.0\n6. samedi : 28.4\n7. dimanche : 32.7 (chaud)\nMoyenne : 31.5\nMinimum : 28.4 / Maximum : 35.1\nJours au-dessus du seuil : 3",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "7f44977a-6f99-42d4-b734-1b6c41ce95ef",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Quatre différences avec le programme d'origine, voulues :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "33932945-87df-4e0b-a3e9-850a115c1cfd",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les accents. Le programme fourni écrit « Releve » et « degres » ; votre version écrit « Relevé » et « degrés ».",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f5826722-0f2f-4e83-9b04-9564f1324a47",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "La moyenne s'affiche avec ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "une seule décimale",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Le C++ affichait ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "31.5286",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", le PHP ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "31.528571428571",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3271c255-5312-43fb-9c4f-662c3386f232",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les températures gardent leur décimale : votre version écrit ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "30.0",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " là où le C++ et le PHP écrivent ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "30",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". C'est Python qui a raison ici — c'est un nombre décimal, il s'affiche comme tel. N'ajoutez aucun formatage pour l'obtenir, Python le fait seul.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "64488ba5-d413-4d25-9e30-3334e9102bf8",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les autres nombres s'affichent tels quels, sans mise en forme.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "520e53ff-e748-4697-9243-5ce7cd843c17",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Testez aussi avec les seuils ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "28",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " et ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "40",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Le premier doit marquer les sept jours, le second aucun. Ces deux cas seront exécutés à la correction.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "98b738b5-a37d-4831-becb-c416a228d26b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "d01bb0e0-813b-401f-90db-b5f960420759",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Les contraintes d'écriture",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1f7b384e-321f-4f12-8fc7-bc61c281590c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce sont elles qui font la différence entre 10 et 18.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b414713f-320e-46c3-a1c7-1465a39bb513",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Ce qui est exigé",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "1",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Aucun ",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": "for i in range(len(...))",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ".",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " Chaque occurrence coûte 1 point",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Les quatre calculs — somme, minimum, maximum, moyenne — utilisent les outils que Python fournit. Une boucle qui recalcule à la main ce que ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sum",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "min",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " ou ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "max",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " fait déjà est comptée comme une erreur de style",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Les deux listes se parcourent ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "en parallèle",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ". Vous avez vu l'outil en cours",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Toutes les sorties passent par des f-strings. Aucune concaténation avec ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "+",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "5",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "snake_case",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", quatre espaces d'indentation, espaces autour des opérateurs",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "6",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Aucune variable ne porte le nom d'un outil du langage — pas de ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "max",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "min",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sum",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "list",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "type",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "f040c0c8-4d85-4b98-8efd-13858a6c775f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Une chose ne peut pas disparaître.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Un des quatre calculs de la boucle d'origine n'a pas d'équivalent tout fait en Python avec ce que vous savez aujourd'hui : il vous restera une boucle. Trouvez laquelle, gardez-la, et écrivez-la proprement. Ne cherchez pas sur internet une écriture plus courte : elle existe, elle s'apprend à la séance 2, et elle ne rapportera pas de point ici.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "0e53e305-c74b-49ff-aa6b-4e96743744ed",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "58c5257c-ad5f-4663-8a73-399e6d06cef5",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Ce que vous remettez",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "90579d5e-fcbe-4062-95e5-b99881e07814",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Vous avez reçu un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "dépôt privé à votre nom",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "tp1-releve-meteo-votre-nom",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". Il contient déjà les deux programmes d'origine, un ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "README.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " de travail et le squelette de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NOTES.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b59ca1a2-4090-422d-a4ef-0f9ee48ebda2",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À la racine de ce dépôt, après l'avoir récupéré :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2cf3f036-7cea-4fd3-add7-a3478fbe6ba6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "af3f7426-63c2-4f79-8483-2235de1c992b",
+      "type": "terminal",
+      "props": {
+        "code": "uv init\nuv run main.py",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "4a874dad-df92-4017-9d75-1706c8e77cdc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Renommez ensuite ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "main.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " en ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "releve.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ". ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "uv init",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ne touche ni au ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "README.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ni au ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": ".gitignore",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " déjà présents, et ne crée pas de second dépôt Git.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ee7f79b9-b443-4e7b-96a9-eb7e0585c14c",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "À la remise, le dépôt doit contenir :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "daae9663-68b5-4b12-b846-d7a4d2267afc",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Fichier",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Contenu",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "releve.py",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Votre programme, avec la déclaration d'usage de l'IA en tête",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NOTES.md",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Vos explications, voir ci-dessous",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "pyproject.toml",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Créé par ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv init",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "uv.lock",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Créé au premier ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv run",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "releve_meteo.cpp",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "releve_meteo.php",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": ".gitignore",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "README.md",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Déjà présents. Ne les supprimez pas",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "22f595f6-902d-4afe-aa78-d5195cfc7e0f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Puis :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "ced6ad75-415c-493b-8f38-82d6fcf55413",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Terminal",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "884a6f99-3bd8-4f48-b16d-6e0a206f0b96",
+      "type": "terminal",
+      "props": {
+        "code": "git status\ngit add .\ngit commit -m \"Traduction du relevé météo et notes d'écriture\"\ngit push",
+        "title": "Terminal"
+      },
+      "children": []
+    },
+    {
+      "id": "4a9167fd-190b-4a81-be65-c4145c7f815d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Et vous fermez l'issue du travail.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " C'est ça, remettre : l'heure de fermeture est l'heure de remise. Tant que l'issue est ouverte, le travail n'est pas rendu, même si votre code est en ligne.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d460bbfd-3fd2-4500-a6e1-292d780e0a2e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Faites plusieurs commits pendant votre travail, pas un seul à la fin.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9a2a3904-b965-4025-8c7d-23e37d0b65c9",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ".venv/",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " ne doit pas partir dans le dépôt.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " uv le marque lui-même comme ignoré, vous ne risquez donc rien — mais prenez quand même le réflexe de regarder ce que ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "git status",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " affiche avant de commiter. Si vous y voyez des dizaines de fichiers que vous n'avez pas écrits, arrêtez-vous et demandez.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "9554aae1-7a7c-4df2-af82-f3749d75322d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pour vérifier que votre remise est complète : ouvrez la page du dépôt sur GitHub. ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Ce que vous y voyez est exactement ce que l'enseignant voit.",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "99e5cedb-7c62-4a4b-9e49-a7d49e64b19e",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Si vous travaillez sur Google Colab.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Remettez un carnet nommé ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "tp1-nom-prenom",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", déposé dans le dépôt ou partagé par lien dans l'issue. Une première cellule de texte tient lieu de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NOTES.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", une deuxième cellule contient le programme. Le seuil, que vous ne pouvez pas saisir confortablement, est écrit en variable en tête de programme — signalez-le dans vos notes. Signalez aussi dans l'issue que c'est votre voie. Même barème, à un point près : les 2 points « projet uv complet » deviennent 2 points « carnet propre, exécutable de haut en bas sans erreur ».\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "d8461b0c-e97b-4818-9c91-113ce0479f2f",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "c7ee4a7f-f74d-4550-a30f-e15a49d391f1",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Le contenu de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "NOTES.md",
+          "styles": {
+            "code": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c378d856-43ea-4248-9649-4187dea15bc6",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Cinq paragraphes courts, un par choix. Pour chacun : ce que faisait le programme d'origine, ce que vous avez écrit, pourquoi.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "33420b5f-e3bf-4c6d-b5e4-36978a59287a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un exemple de ce qui est attendu — ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "n'utilisez pas celui-ci, il est déjà pris",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "32480bda-3d83-452c-8c99-42c6410fcef9",
+      "type": "quote",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "\n",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "Les points-virgules.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Le C++ comme le PHP en mettent à chaque fin d'instruction. Je les ai tous supprimés : en Python, le retour à la ligne suffit. Python les tolère, mais un code qui en contient se repère immédiatement comme du code traduit.\n",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "b103045d-f9ec-4355-8523-862baaa653ac",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois lignes par choix suffisent. Ce qui est évalué, c'est que vous ayez ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "décidé",
+          "styles": {
+            "italic": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pas que vous ayez écrit long.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "2d3af540-9e6e-467f-8e2f-66308115d2cc",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "8ef7d868-ef55-4db2-8c8e-2737db0a9bf4",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 3,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Déclaration d'usage de l'IA",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "974e9fe7-0fd7-4fb6-ae04-59e80f9ee14b",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "En tête de ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "releve.py",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", un commentaire, même vide de contenu :",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "94ac1b39-6535-4e04-9da2-8c01a8a7ce1f",
+      "type": "codeBlock",
+      "props": {
+        "language": "python"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "# Usage d'IA : aucun\n# ou :\n# Usage d'IA : j'ai demandé à un assistant d'expliquer la fonction zip.\n# Le code est écrit par moi.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "4a36613f-2e87-4441-8fb6-e02aa7c225ac",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Rappel du plan de cours : les assistants sont autorisés pour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "comprendre",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", pas pour ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "produire",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " le code que vous remettez. Vous devrez pouvoir expliquer chaque ligne de votre programme si on vous le demande.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "6837d645-1426-4ec2-82cd-ef11c9a08d42",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "7068d651-fdcd-4449-bd8f-fdaeb4dd4681",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Grille d'évaluation",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "c5445f9e-d142-4265-8823-e23600ffd6de",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Critère",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Points",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Détail",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Le programme fonctionne",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "6",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Il s'exécute sans erreur et donne l'affichage exact attendu pour les seuils 32, 28 et 40. 2 points par cas",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Boucles et calculs idiomatiques",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "5",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Parcours direct des listes, parcours en parallèle des deux listes, usage de ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "sum",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "min",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "max",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "len",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Style PEP 8",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "4",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "snake_case",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ", quatre espaces, espaces autour des opérateurs, f-strings partout, noms de variables qui ne recouvrent rien",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Projet uv complet",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "2",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "pyproject.toml",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " et ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv.lock",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " présents, ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": ".venv/",
+                    "styles": {
+                      "code": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " absent, le projet se reconstruit avec ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "uv sync",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "NOTES.md",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "3",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Cinq choix, chacun expliqué : ce que faisait le programme d'origine, ce que vous avez écrit, pourquoi",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Total",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "20",
+                    "styles": {
+                      "bold": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "29954a4c-d630-4499-a106-e960d0a51e7e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Pénalités, cumulables :",
+          "styles": {
+            "bold": true
+          }
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "f4e66a8b-ca3f-42b2-b799-cd12cac5cc1f",
+      "type": "table",
+      "props": {
+        "textColor": "default"
+      },
+      "content": {
+        "type": "tableContent",
+        "columnWidths": [
+          null,
+          null
+        ],
+        "headerRows": 1,
+        "rows": [
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Chaque ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "for i in range(len(...))",
+                    "styles": {
+                      "code": true
+                    }
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "−1 point",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Déclaration d'usage de l'IA absente",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "−2 points",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          },
+          {
+            "cells": [
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Retard",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              },
+              {
+                "type": "tableCell",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Vous avez ",
+                    "styles": {}
+                  },
+                  {
+                    "type": "text",
+                    "text": "72 tokens",
+                    "styles": {
+                      "bold": true
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " pour le semestre, à poser vous-même sans justification : un token = une heure de report. Ensuite, −10 % par jour entamé, jusqu'à trois jours. Au-delà, non accepté",
+                    "styles": {}
+                  }
+                ],
+                "props": {
+                  "colspan": 1,
+                  "rowspan": 1,
+                  "backgroundColor": "default",
+                  "textColor": "default",
+                  "textAlignment": "left"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "c8aea665-2edf-49f3-a942-1ab33ad8f57d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Un point de bonus",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": ", dans la limite de 20 : si votre programme gère proprement le cas où l'utilisateur tape autre chose qu'un nombre pour le seuil. Ce n'est pas au programme aujourd'hui — c'est la séance 4. Cherchez si ça vous amuse, laissez tomber sinon.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "1ba9912c-bf52-4f00-bec9-79690e5d47a4",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "e59cbc4d-1799-4dee-8bc8-bc5386a5b11b",
+      "type": "heading",
+      "props": {
+        "backgroundColor": "rgb(251, 243, 219)",
+        "textColor": "default",
+        "textAlignment": "left",
+        "level": 2,
+        "isToggleable": false
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Trois conseils",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "3ba2d797-70f2-478b-8e42-29d764e0780d",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Traduisez d'abord littéralement, faites tourner, puis réécrivez.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " C'est exactement l'exercice 1 de la séance, en plus long. Ne sautez pas la première étape en croyant gagner du temps.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "889a5f21-6f6a-4391-9b72-34e047b461ac",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Relisez la contrainte n° 2 après avoir fini.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Le réflexe « je calcule la somme dans une boucle » survit à tout, et c'est la première chose qui sera regardée.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "14c49f02-80bb-44f0-bb1b-bd3e3819193c",
+      "type": "numberedListItem",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Écrivez ",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": "NOTES.md",
+          "styles": {
+            "code": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " en dernier, mais notez vos choix au fur et à mesure.",
+          "styles": {
+            "bold": true
+          }
+        },
+        {
+          "type": "text",
+          "text": " Reconstituer après coup pourquoi on a fait quelque chose est plus long que de l'écrire sur le moment.",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "dd23eb8b-f58d-470d-8b14-e27202af0f9e",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
