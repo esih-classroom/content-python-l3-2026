@@ -1312,7 +1312,7 @@
       "content": [
         {
           "type": "text",
-          "text": "def moyenne(notes):\n    somme = sum(notes)\n    print(somme / len(notes))\n\n<p></p>\n\nresultat = moyenne([12, 17, 14])\nprint(f\"La moyenne est {resultat:.1f}\")",
+          "text": "def moyenne(notes):\n    somme = sum(notes)\n    print(somme / len(notes))\n\nresultat = moyenne([12, 17, 14])\nprint(f\"La moyenne est {resultat:.1f}\")",
           "styles": {}
         }
       ],
@@ -1359,7 +1359,7 @@
       "content": [
         {
           "type": "text",
-          "text": "def surface(longueur, largeur):\n    return longueur * largeur\n\n<p></p>\n\nprint(\"Surface :\", surface(5))",
+          "text": "def surface(longueur, largeur):\n    return longueur * largeur\n\nprint(\"Surface :\", surface(5))",
           "styles": {}
         }
       ],
@@ -1406,7 +1406,7 @@
       "content": [
         {
           "type": "text",
-          "text": "notes = [15, 12, 18]\n\n<p></p>\n\ndef afficher(liste):\n    for valeur in liste:\n        print(note)\n\n<p></p>\n\nafficher(notes)",
+          "text": "notes = [15, 12, 18]\n\ndef afficher(liste):\n    for valeur in liste:\n        print(note)\n\nafficher(notes)",
           "styles": {}
         }
       ],
@@ -1493,7 +1493,7 @@
       "content": [
         {
           "type": "text",
-          "text": "def total_panier(prix):\n    somme = 0\n    for p in prix:\n        somme = somme + p\n    return somme\n\n<p></p>\n\npanier = [1200, 350, \"800\"]\nprint(\"Total :\", total_panier(panier))",
+          "text": "def total_panier(prix):\n    somme = 0\n    for p in prix:\n        somme = somme + p\n    return somme\n\npanier = [1200, 350, \"800\"]\nprint(\"Total :\", total_panier(panier))",
           "styles": {}
         }
       ],
@@ -1540,7 +1540,7 @@
       "content": [
         {
           "type": "text",
-          "text": "def moyenne_classe(bulletins):\n    total = 0\n    for eleve in bulletins:\n        total = total + eleve[\"moyenne\"]\n    return total / len(bulletins)\n\n<p></p>\n\nclasse = [\n    {\"nom\": \"Ana\", \"moyenne\": 14.3},\n    {\"nom\": \"Jean\", \"moyenne\": 9.3},\n    {\"nom\": \"Marie\"},\n]\nprint(moyenne_classe(classe))",
+          "text": "def moyenne_classe(bulletins):\n    total = 0\n    for eleve in bulletins:\n        total = total + eleve[\"moyenne\"]\n    return total / len(bulletins)\n\nclasse = [\n    {\"nom\": \"Ana\", \"moyenne\": 14.3},\n    {\"nom\": \"Jean\", \"moyenne\": 9.3},\n    {\"nom\": \"Marie\"},\n]\nprint(moyenne_classe(classe))",
           "styles": {}
         }
       ],
