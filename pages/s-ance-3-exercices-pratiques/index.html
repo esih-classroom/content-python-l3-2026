@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 85%;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem 0;
+    }
+    pre {
+      background: #f5f5f5;
+      padding: 1rem;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', Courier, monospace;
+      background: #f5f5f5;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<p><strong>35 minutes  à faire seul ou à deux</strong></p>
+<p><strong>Résultats d&#39;apprentissage visés : RA3, RA4</strong></p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Comment travailler</h2>
+<p>Quatre exercices, dans l&#39;ordre. Ne passez pas au suivant tant que le précédent ne fonctionne pas.</p>
+<table>
+<thead>
+<tr>
+<th>Exercice</th>
+<th>Ce qu&#39;il demande</th>
+<th>Durée</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Le projet, et votre première fonction</td>
+<td>4 min</td>
+<td><strong>Socle</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td><strong>Cinq programmes cassés  diagnostiquer, pas réparer</strong></td>
+<td>12 min</td>
+<td><strong>Socle</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Écrire trois fonctions qui s&#39;appellent</td>
+<td>10 min</td>
+<td><strong>Socle</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Reprendre votre bulletin de la séance 1</td>
+<td>6 min</td>
+<td>Extension</td>
+</tr>
+<tr>
+<td></td>
+<td>Correction collective</td>
+<td>3 min</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Le socle, c&#39;est ce que tout le monde doit finir.</strong> L&#39;exercice 1 est le plus utile des quatre : il ne vous demande d&#39;écrire aucun code, seulement de lire. Ne le survolez pas parce qu&#39;il paraît facile.</p>
+<p><strong>Si vous n&#39;avez pas fini le socle en séance</strong>, terminez-le chez vous avant la séance 4. Et si vous bloquez, écrivez dans l&#39;issue du dépôt d&#39;exercices.</p>
+<p><strong>Si vous travaillez sur Google Colab ou sur téléphone</strong>, tout fonctionne à l&#39;identique aujourd&#39;hui : les tracebacks de l&#39;exercice 1 sont exactement les mêmes dans un carnet. Seul l&#39;exercice 0 a une variante.</p>
+<p><strong>Rappel de la règle du cours :</strong> on exécute avec <code>uv run fichier.py</code>, jamais avec <code>python fichier.py</code>.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 0  Le projet, et votre première fonction</h2>
+<p><em>4 minutes. <strong>Socle.</strong></em></p>
+<div class="terminal-block"><div class="terminal-header"><div class="terminal-dots"><span></span><span></span><span></span></div><span class="terminal-title">Terminal</span></div><div class="code-block"><div class="code-header"><span class="code-lang">bash</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-bash">uv init seance-03
+cd seance-03
+uv run main.py</code></pre></div></div></div>
+<p>Créez <code>exercice0.py</code>. Écrivez une fonction <code>moyenne(notes)</code> qui <strong>renvoie</strong> la moyenne d&#39;une liste de nombres, puis appelez-la :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">print(f&quot;Moyenne : {moyenne([12, 17, 9, 14, 18, 7, 15]):.2f}&quot;)</code></pre></div></div>
+<p>L&#39;affichage attendu :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code>Moyenne : 13.14</code></pre></div></div>
+<p><strong>Puis une question, en commentaire à la fin du fichier :</strong> remplacez le <code>return</code> de votre fonction par un <code>print</code> et exécutez à nouveau. Que se passe-t-il ? Recopiez le message d&#39;erreur obtenu, et dites en une phrase pourquoi il apparaît.</p>
+<p>Remettez ensuite le <code>return</code>  la suite de la séance en dépend.</p>
+<blockquote>
+<p><strong>Variante Colab / téléphone.</strong> Une cellule pour la fonction, une cellule pour l&#39;appel, une cellule de texte pour la réponse à la question.</p>
+</blockquote>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 1  Cinq programmes cassés</h2>
+<p><em>12 minutes. <strong>Socle</strong>  c&#39;est l&#39;exercice le plus important de la séance.</em></p>
+<p><strong>Vous ne devez rien réparer.</strong> Pour chacun des cinq programmes, exécutez-le et répondez à <strong>trois questions</strong>, dans <code>diagnostics.md</code> :</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>a)</strong></td>
+<td>Quel est le <strong>type</strong> de l&#39;erreur ? <em>(le dernier mot avant les deux-points de la dernière ligne)</em></td>
+</tr>
+<tr>
+<td><strong>b)</strong></td>
+<td>À quelle <strong>ligne de quel fichier</strong> l&#39;exécution s&#39;est-elle arrêtée ?</td>
+</tr>
+<tr>
+<td><strong>c)</strong></td>
+<td>Quelle ligne faut-il corriger, et pourquoi ? <em>(ce n&#39;est pas toujours la même que la b)</em></td>
+</tr>
+</tbody></table>
+<p>Une réponse en trois lignes par programme suffit. <strong>C&#39;est la question c) qui compte.</strong></p>
+<p>Créez les cinq fichiers dans votre projet, ou récupérez-les depuis le dépôt d&#39;exercices.</p>
+<h3><code>bug1.py</code></h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span></div><pre><code class="language-python">def moyenne(notes):
+    somme = sum(notes)
+    print(somme / len(notes))
+
+&lt;p&gt;&lt;/p&gt;
+
+resultat = moyenne([12, 17, 14])
+print(f&quot;La moyenne est {resultat:.1f}&quot;)</code></pre></div></div>
+<h3><code>bug2.py</code></h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span></div><pre><code class="language-python">def surface(longueur, largeur):
+    return longueur * largeur
+
+&lt;p&gt;&lt;/p&gt;
+
+print(&quot;Surface :&quot;, surface(5))</code></pre></div></div>
+<h3><code>bug3.py</code></h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span></div><pre><code class="language-python">notes = [15, 12, 18]
+
+&lt;p&gt;&lt;/p&gt;
+
+def afficher(liste):
+    for valeur in liste:
+        print(note)
+
+&lt;p&gt;&lt;/p&gt;
+
+afficher(notes)</code></pre></div></div>
+<blockquote>
+<p><strong>Attention sur celui-ci.</strong> Python vous propose une correction dans le message. <strong>Elle est fausse.</strong> Dites pourquoi  c&#39;est la vraie question de ce programme.</p>
+</blockquote>
+<h3><code>bug4.py</code></h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span></div><pre><code class="language-python">def total_panier(prix):
+    somme = 0
+    for p in prix:
+        somme = somme + p
+    return somme
+
+&lt;p&gt;&lt;/p&gt;
+
+panier = [1200, 350, &quot;800&quot;]
+print(&quot;Total :&quot;, total_panier(panier))</code></pre></div></div>
+<h3><code>bug5.py</code></h3>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span><span class="line-number">5</span><span class="line-number">6</span><span class="line-number">7</span><span class="line-number">8</span><span class="line-number">9</span><span class="line-number">10</span><span class="line-number">11</span><span class="line-number">12</span><span class="line-number">13</span><span class="line-number">14</span></div><pre><code class="language-python">def moyenne_classe(bulletins):
+    total = 0
+    for eleve in bulletins:
+        total = total + eleve[&quot;moyenne&quot;]
+    return total / len(bulletins)
+
+&lt;p&gt;&lt;/p&gt;
+
+classe = [
+    {&quot;nom&quot;: &quot;Ana&quot;, &quot;moyenne&quot;: 14.3},
+    {&quot;nom&quot;: &quot;Jean&quot;, &quot;moyenne&quot;: 9.3},
+    {&quot;nom&quot;: &quot;Marie&quot;},
+]
+print(moyenne_classe(classe))</code></pre></div></div>
+<p><strong>Une dernière question, à la fin de <code>diagnostics.md</code> :</strong> dans lequel de ces cinq programmes la fonction est-elle <strong>correcte</strong> et le problème ailleurs ? Il y en a plus d&#39;un.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 2  Trois fonctions qui s&#39;appellent</h2>
+<p><em>10 minutes. <strong>Socle.</strong></em></p>
+<p>Dans <code>exercice2.py</code>, écrivez ces trois fonctions, dans cet ordre. <strong>Chacune doit avoir une docstring d&#39;une ligne.</strong></p>
+<p><strong>1. <code>est_reussie(note, seuil=10)</code></strong>  renvoie <code>True</code> si la note atteint le seuil, <code>False</code> sinon.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">est_reussie(12)              # True
+est_reussie(9)               # False
+est_reussie(9, seuil=8)      # True</code></pre></div></div>
+<p><strong>2. <code>notes_reussies(notes, seuil=10)</code></strong>  renvoie la liste des notes qui atteignent le seuil. <strong>Elle doit appeler <code>est_reussie</code>.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span></div><pre><code class="language-python">notes = [12, 17, 9, 14, 18, 7, 15]
+notes_reussies(notes)               # [12, 17, 14, 18, 15]
+notes_reussies(notes, seuil=15)     # [17, 18, 15]</code></pre></div></div>
+<p><strong>3. <code>resume_notes(notes)</code></strong>  renvoie <strong>deux valeurs</strong> : le nombre de notes reçues et leur moyenne. <strong>Elle doit appeler <code>notes_reussies</code>.</strong></p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">nombre, moyenne = resume_notes(notes)
+print(f&quot;{nombre} reçus, moyenne {moyenne:.1f}&quot;)</code></pre></div></div>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code>5 reçus, moyenne 15.2</code></pre></div></div>
+<blockquote>
+<p><strong>Ce <code>15.2</code> est celui de la séance 1 et de la séance 2.</strong> Si vous obtenez autre chose, l&#39;erreur est dans vos fonctions, pas dans le calcul.</p>
+</blockquote>
+<p><strong>Trois contraintes :</strong></p>
+<ul>
+<li><code>notes_reussies</code> <strong>doit</strong> appeler <code>est_reussie</code>  ne recopiez pas la condition</li>
+<li>Aucun <code>print</code> à l&#39;intérieur des trois fonctions. Elles renvoient, elles n&#39;affichent pas</li>
+<li>Une docstring d&#39;une ligne par fonction</li>
+</ul>
+<p><strong>Puis une question, en commentaire :</strong> que doit renvoyer <code>resume_notes([3, 5, 8])</code>, où personne n&#39;est reçu ? Faites en sorte que votre programme ne plante pas, et dites en une phrase quelle erreur vous avez évitée.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">Exercice 3  Votre bulletin de la séance 1</h2>
+<p><em>6 minutes. <strong>Extension</strong>  à faire si le socle est terminé.</em></p>
+<p>Reprenez le <code>bulletin.py</code> de l&#39;exercice 3 de la séance 1. Dans <code>exercice3.py</code>, réécrivez-le avec <strong>deux fonctions</strong> :</p>
+<ul>
+<li><code>mention(moyenne)</code>  renvoie <code>&quot;très bien&quot;</code>, <code>&quot;bien&quot;</code>, <code>&quot;passable&quot;</code> ou <code>&quot;insuffisant&quot;</code></li>
+<li><code>bulletin(nom, notes, avec_mention=True)</code>  renvoie la ligne complète, et <strong>appelle <code>mention</code></strong></li>
+</ul>
+<p>Puis, sans <code>input</code>, à partir de ces deux listes :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span></div><pre><code class="language-python">noms = [&quot;Ana&quot;, &quot;Jean&quot;, &quot;Marie&quot;]
+notes = [[12, 17, 14], [9, 11, 8], [18, 16, 19]]</code></pre></div></div>
+<p>Affichez les trois bulletins, puis une quatrième ligne pour <code>Luc</code>, avec les notes <code>[15, 15, 15]</code> et <strong>sans mention</strong>.</p>
+<p>L&#39;affichage attendu :</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Code</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span><span class="line-number">2</span><span class="line-number">3</span><span class="line-number">4</span></div><pre><code>Ana : moyenne 14.3 sur 20  mention bien
+Jean : moyenne 9.3 sur 20  mention insuffisant
+Marie : moyenne 17.7 sur 20  mention très bien
+Luc : moyenne 15.0 sur 20</code></pre></div></div>
+<p><strong>Trois contraintes de style :</strong></p>
+<ul>
+<li>Aucun <code>for i in range(len(...))</code>  les deux listes se parcourent en parallèle</li>
+<li><code>mention</code> utilise plusieurs <code>return</code>, pas une variable qu&#39;on modifie</li>
+<li>Une docstring par fonction</li>
+</ul>
+<hr>
+<h2 style="background-color: #FBF3DB;">Si vous avez fini en avance</h2>
+<p>Ajoutez à <code>exercice3.py</code> une fonction <code>classement(noms, notes)</code> qui renvoie la liste des noms <strong>triés par moyenne décroissante</strong>.</p>
+<div class="code-block"><div class="code-header"><span class="code-lang">Python</span></div><div class="code-body"><div class="line-numbers"><span class="line-number">1</span></div><pre><code class="language-python">classement(noms, notes)      # [&#39;Marie&#39;, &#39;Ana&#39;, &#39;Jean&#39;]</code></pre></div></div>
+<p>Un indice et un seul : <code>sorted</code> accepte un <code>key=</code>, et vous avez besoin d&#39;associer chaque nom à sa moyenne avant de trier.</p>
+<hr>
+<h2 style="background-color: #FBF3DB;">À la fin des exercices</h2>
+<p>Votre projet <code>seance-03</code> doit contenir :</p>
+<ul>
+<li><input disabled="" type="checkbox"> <code>exercice0.py</code></li>
+<li><input disabled="" type="checkbox"> <code>diagnostics.md</code></li>
+<li><input disabled="" type="checkbox"> <code>exercice2.py</code></li>
+<li><input disabled="" type="checkbox"> <code>exercice3.py</code> <em>(extension)</em></li>
+<li><input disabled="" type="checkbox"> <code>bug1.py</code> à <code>bug5.py</code>  <strong>laissés cassés</strong>, on ne les répare pas</li>
+</ul>
+<p><strong>Pour le rendre :</strong> déposez ces fichiers dans le dépôt <code>seance-03-exercices</code> que vous avez reçu, puis fermez son issue. L&#39;échéance est fixée à la veille de la séance 4.</p>
+<p>Ces exercices comptent pour la note de participation. <strong>On regarde qu&#39;ils sont faits, pas qu&#39;ils sont justes.</strong></p>
+<p>Gardez <code>diagnostics.md</code> sous la main pour le reste du semestre : les cinq erreurs de l&#39;exercice 1 sont celles que vous reverrez le plus souvent en NumPy et en pandas.</p>
+
+</body>
+</html>
