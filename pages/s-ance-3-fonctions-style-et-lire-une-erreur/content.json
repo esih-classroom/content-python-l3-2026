@@ -1035,7 +1035,7 @@
         },
         {
           "type": "text",
-          "text": " s'exécute, la fonction s'arrête — il n'y a pas besoin de ",
+          "text": " s'exécute, la fonction s'arrête il n'y a pas besoin de ",
           "styles": {}
         },
         {
@@ -1516,7 +1516,7 @@
       "content": [
         {
           "type": "text",
-          "text": "bulletin(\"Ana\", [12, 17, 14])                          # Ana : moyenne 14.3 sur 20 — mention bien\nbulletin(\"Luc\", [15, 15, 15], avec_mention=False)      # Luc : moyenne 15.0 sur 20\nbulletin(notes=[10, 10, 10], nom=\"Paul\")               # l'ordre n'importe plus",
+          "text": "bulletin(\"Ana\", [12, 17, 14])                          # Ana : moyenne 14.3 sur 20  mention bien\nbulletin(\"Luc\", [15, 15, 15], avec_mention=False)      # Luc : moyenne 15.0 sur 20\nbulletin(notes=[10, 10, 10], nom=\"Paul\")               # l'ordre n'importe plus",
           "styles": {}
         }
       ],
@@ -1665,7 +1665,7 @@
         },
         {
           "type": "text",
-          "text": " a les valeurs par défaut depuis toujours et les arguments nommés depuis PHP 8 — vous êtes en terrain connu. ",
+          "text": " a les valeurs par défaut depuis toujours et les arguments nommés depuis PHP 8  vous êtes en terrain connu. ",
           "styles": {}
         },
         {
@@ -2956,7 +2956,7 @@
                   },
                   {
                     "type": "text",
-                    "text": " — c'est la séance 2",
+                    "text": " c'est la séance 2",
                     "styles": {}
                   }
                 ],
@@ -3215,7 +3215,7 @@
         },
         {
           "type": "text",
-          "text": " est locale — et vous la lisez avant de l'avoir écrite.",
+          "text": " est locale et vous la lisez avant de l'avoir écrite.",
           "styles": {}
         }
       ],
@@ -3659,7 +3659,7 @@
         },
         {
           "type": "text",
-          "text": " Une ligne suffit — et une ligne suffit vraiment.",
+          "text": " Une ligne suffit et une ligne suffit vraiment.",
           "styles": {}
         }
       ],
@@ -3778,7 +3778,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Une fonction peut renvoyer plusieurs valeurs — c'est un tuple, qu'on déballe",
+          "text": "Une fonction peut renvoyer plusieurs valeurs c'est un tuple, qu'on déballe",
           "styles": {}
         }
       ],
@@ -4020,12 +4020,12 @@
                 "content": [
                   {
                     "type": "text",
-                    "text": "Fonction appelée avant d'être définie, ou faute de frappe — ",
+                    "text": "Fonction appelée avant d'être définie, ou faute de frappe  ",
                     "styles": {}
                   },
                   {
                     "type": "text",
-                    "text": "lisez le « Did you mean »",
+                    "text": "liez le « Did you mean »",
                     "styles": {
                       "bold": true
                     }
@@ -4500,7 +4500,7 @@
         },
         {
           "type": "text",
-          "text": " — attraper une erreur",
+          "text": " attraper une erreur",
           "styles": {}
         }
       ],
@@ -4551,7 +4551,7 @@
         },
         {
           "type": "text",
-          "text": " une erreur vaut plus que savoir l'attraper — et attraper une erreur qu'on ne sait pas lire produit du code qui échoue en silence, ce qui est pire que du code qui plante. ",
+          "text": " une erreur vaut plus que savoir l'attraper et attraper une erreur qu'on ne sait pas lire produit du code qui échoue en silence, ce qui est pire que du code qui plante. ",
           "styles": {}
         },
         {
@@ -4710,7 +4710,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Python ne vérifie rien à l'exécution — c'est de la documentation exécutable, que VS Code utilise pour vous aider. ",
+          "text": "Python ne vérifie rien à l'exécution c'est de la documentation exécutable, que VS Code utilise pour vous aider. ",
           "styles": {}
         },
         {
@@ -4921,7 +4921,7 @@
       "content": [
         {
           "type": "text",
-          "text": "Pour aller plus loin — les liens",
+          "text": "Pour aller plus loin les liens",
           "styles": {}
         }
       ],
